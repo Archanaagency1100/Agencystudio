@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgencyEleven100 | Create Without Limits</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --bg-charcoal: #111111;
+            --text-dark: #050505;
+            --text-light: #fff;
+            --accent-yellow: #e5b400;
+            --font-main: "Inter", sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+        }
+
+        /* Utility Classes */
+        .text-accent { color: var(--accent-yellow); }
+        .btn-yellow {
+            background-color: var(--accent-yellow);
+            color: var(--text-dark);
+            font-weight: 700;
+            border-radius: 4px;
+            padding: 10px 25px;
+            text-transform: uppercase;
+            border: none;
+        }
+        .btn-outline-light-custom {
+            border: 1px solid var(--text-light);
+            color: var(--text-light);
+            padding: 10px 25px;
+            text-transform: uppercase;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(5, 5, 5, 0.95);
+            border-bottom: 1px solid #222;
+        }
+        .nav-link { color: var(--text-light) !important; font-size: 0.9rem; }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=2071') no-repeat center center/cover;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        /* Brands */
+        .brand-bar img {
+            height: 30px;
+            filter: grayscale(1) brightness(2);
+            opacity: 0.7;
+            margin: 20px;
+        }
+
+        /* Services Grid */
+        .service-card {
+            background: var(--bg-charcoal);
+            border: 1px solid #222;
+            padding: 30px;
+            height: 100%;
+            transition: 0.3s;
+            position: relative;
+        }
+        .service-card:hover { border-color: var(--accent-yellow); }
+        .service-number { color: var(--accent-yellow); font-weight: bold; margin-bottom: 10px; }
+        .service-icon { float: right; color: var(--accent-yellow); font-size: 1.5rem; }
+
+        /* Stats */
+        .stat-box { border-left: 1px solid #222; padding: 20px; }
+        .stat-number { font-size: 3rem; font-weight: 900; color: var(--accent-yellow); }
+
+        /* Work Gallery */
+        .work-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border: 1px solid #222;
+            filter: brightness(0.7);
+            transition: 0.3s;
+        }
+        .work-img:hover { filter: brightness(1); }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: var(--bg-charcoal);
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .client-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong class="text-light">AGENCYELEVEN100</strong></a>
+            <button class="navbar-toggler btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <button class="btn btn-yellow">Book Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="text-accent mb-0">PREMIUM STUDIO. POWERFUL PRODUCTIONS.</p>
+                    <h1 class="hero-title">CREATE<br>WITHOUT<br><span class="text-accent">LIMITS</span></h1>
+                    <p class="lead mb-4 text-secondary">A modern production space designed for creators, cinematic productions, and high-quality content experiences.</p>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-yellow">Book Studio</button>
+                        <button class="btn btn-outline-light-custom">View Our Work</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-5 text-center border-bottom border-secondary brand-bar">
+        <p class="small text-secondary mb-4">TRUSTED BY CREATORS & BRANDS</p>
+        <div class="d-flex flex-wrap justify-content-center align-items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Sony_logo.svg" alt="Sony">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Canon_logo.svg" alt="Canon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Adobe_Corporate_Logo.svg" alt="Adobe">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Sennheiser_Logo.svg" alt="Sennheiser">
+        </div>
+    </div>
+
+    <section class="py-5 container">
+        <div class="text-center mb-5">
+            <p class="text-accent mb-0">OUR SERVICES</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="service-card">
+                    <i class="fa-solid fa-camera service-icon"></i>
+                    <div class="service-number">01</div>
+                    <h5>STUDIO <span class="text-accent">RENTAL</span></h5>
+                    <p class="small text-secondary">Premium studio spaces for shoots, productions and creative projects.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service-card">
+                    <i class="fa-solid fa-clapperboard service-icon"></i>
+                    <div class="service-number" >02</div>
+                    <h5>CHROMA <span class="text-accent">SETUP</span></h5>
+                    <p class="small text-secondary">Professional green screen setups for seamless productions.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service-card">
+                    <i class="fa-solid fa-microphone-lines service-icon"></i>
+                    <div class="service-number">03</div>
+                    <h5>PODCAST <span class="text-accent">PRODUCTION</span></h5>
+                    <p class="small text-secondary">End-to-end podcast production with pro audio & video quality.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service-card">
+                    <i class="fa-solid fa-video service-icon"></i>
+                    <div class="service-number">04</div>
+                    <h5>CONTENT <span class="text-accent">CREATION</span></h5>
+                    <p class="small text-secondary">Engaging content crafted for brands, platforms and audiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-charcoal">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 stat-box">
+                    <div class="stat-number">250+</div>
+                    <div class="text-secondary small">PROJECTS</div>
+                </div>
+                <div class="col-md-3 stat-box">
+                    <div class="stat-number">50+</div>
+                    <div class="text-secondary small">HAPPY CLIENTS</div>
+                </div>
+                <div class="col-md-3 stat-box">
+                    <div class="stat-number">5</div>
+                    <div class="text-secondary small">STUDIOS</div>
+                </div>
+                <div class="col-md-3 stat-box">
+                    <div class="stat-number">10M+</div>
+                    <div class="text-secondary small">VIEWS DELIVERED</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="client-img me-3">
+                        <div>
+                            <h6 class="mb-0">Rohit Sharma</h6>
+                            <small class="text-accent">Founder, Elevate Films</small>
+                        </div>
+                    </div>
+                    <p class="small text-secondary">"The studio, the team and the quality is beyond amazing. Our go-to place for all productions."</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="client-img me-3">
+                        <div>
+                            <h6 class="mb-0">Neha Verma</h6>
+                            <small class="text-accent">Marketing Director, Nexora</small>
+                        </div>
+                    </div>
+                    <p class="small text-secondary">"Professional, creative and super supportive team. They bring your ideas to life!"</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://randomuser.me/api/portraits/men/85.jpg" class="client-img me-3">
+                        <div>
+                            <h6 class="mb-0">Arjan Mehta</h6>
+                            <small class="text-accent">Creator & Filmmaker</small>
+                        </div>
+                    </div>
+                    <p class="small text-secondary">"From podcasts to brand films, they deliver nothing but excellence!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 text-center border-top border-secondary">
+        <h2 class="fw-bold mb-4">READY TO CREATE SOMETHING BIG?</h2>
+        <button class="btn btn-yellow px-5 py-3">BOOK NOW</button>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

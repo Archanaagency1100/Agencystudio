@@ -1,0 +1,38 @@
+:root {
+        --bg-color: #050505;
+        --bg--charcoal: #111111;
+        --text-dark: #050505;
+        --text-light: #fff;
+        --accent-yellow: #e5b400;
+        --font-main: "Inter", sans-serif;
+      }
+
+body{
+    background-color: var(--bg-color);
+    font-family: var(--font-main);
+    color: var(--text-light);
+    overflow-x: hidden;
+    margin: 0;
+    color: #fff;
+}
+/* *{
+    border: 2px solid rgb(235, 17, 17);
+} */
+
+#hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/assets/img/studio/studio1100bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: #fff;
+}
+#studio-services .card-overlay{
+   background:linear-gradient(
+            to right,
+            #050505 0%,
+            transparent 100%
+        );
+}
