@@ -36,3 +36,6 @@ body{
             transparent 100%
         );
 }
+footer{
+    color: var(--text-light);
+}
