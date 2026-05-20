@@ -74,3 +74,40 @@ function setupMobileCollapse() {
         });
     }
 }
+
+// -----------------footer----------
+/**
+ * Global Footer Loader for AgencyEleven100
+ */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+
+    if (footerPlaceholder) {
+
+        // Detect folder depth
+        const path = window.location.pathname;
+        let prefix = "";
+
+        if (path.includes('/agency/') || path.includes('/studio/')) {
+            prefix = "../";
+        }
+
+        // Footer path
+        const footerPath = `${prefix}components/studio/footer.html`;
+
+        // Load Footer
+        fetch(footerPath)
+            .then(response => {
+                if (!response.ok) throw new Error('Footer file not found');
+                return response.text();
+            })
+            .then(data => {
+                footerPlaceholder.innerHTML = data;
+            })
+            .catch(err => console.error('Error loading footer:', err));
+
+    }
+
+});
