@@ -29,6 +29,47 @@ body{
     height: 70vh;
     color: #fff;
 }
+/* -----------------------------trusted by brands---------------- */
+/* Slider Wrapper */
+   .podcast .slider-wrapper {
+      overflow: hidden;
+      margin-top: 9px;
+    }
+
+    /* Track */
+       .podcast .scroll-track {
+      display: flex;
+      width: calc(300px * 16); /* image width * (images × 2) */
+      animation: scroll 30s linear infinite;
+    }
+
+       .podcast .box2 {
+      width: 150px;
+      height: 150px;
+      background-image: url("../img/IMAGE.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      margin: 0;
+    }
+
+       .podcast .box2 img {
+      width: 140px;
+      height: 106px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-300px * 8)); }
+    }
+/* -----------trusted by celebs end---------- */
+
 #studio-services .card-overlay{
    background:linear-gradient(
             to right,

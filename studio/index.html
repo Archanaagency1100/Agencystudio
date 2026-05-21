@@ -15,20 +15,22 @@
 
     <div id="nav-placeholder"></div>
 
-    <section id="hero-section" class="position-relative">
+    <section id="hero-section" class="position-relative mt-5 mt-md-0">
         <div class="position-absolute top-0 start-0 w-100 h-100  opacity-75" style="background-color: #050505;"></div>
         <div class="container top-50 position-absolute start-50 translate-middle">
             <div class="row align-items-center ">
 
                 <div class="text-center position-relative z-1 text-white">
-                    <h1 class="display-1 fw-bold">LIGHTS | CAMERA | <span class="text-accent">STUDIO</span></h1>
-                    <p class="lead mt-4 mx-auto w-50">Experience top-notch recording facilities, expert sound engineering, and a creative environment that brings your vision to life. </p>
+                    <h1 class="display-md-1 fw-bold">LIGHTS | CAMERA | <span class="text-accent">STUDIO</span></h1>
+                    <p class="lead mt-4 mx-auto w-75 w-md-50">A premium production studio in South Delhi offering studio rental, podcast production, chroma setup, video production, audio recording, post-production, VFX, and content creation services for creators, filmmakers, influencers, and brands. </p>
                     <a href="/studio/booking.html" class="btn yellow-btn px-4 py-2 mt-3" style="color: #e5b400; border: 2px solid #e5b400;">BOOK NOW</a>
                 </div>
 
     </section>
 <hr>
-    <section class="text-center">
+
+<!-- ----------------------------trusted by brands---------------- -->
+    <!-- <section class="text-center">
 <h2 class="yellow-mini-title">TRUSTED BY CREATORS AND BRands</h2>
         <div class="container-fluid py-5">
             <div class="row g-4 align-items-center">
@@ -53,7 +55,31 @@
             </div>
         </div>
         <hr>
+    </section> -->
+
+    <!-- -----------------------------TRUSTED BY ARTISTS------------- -->
+         <section id="work" class="podcast">
+      <h2 class="yellow-mini-title text-center">Recent Works</h2>
+<div class="container-fluid">
+
+    <div class="slider-wrapper">
+
+      <div class="scroll-track">
+
+        <!-- ORIGINAL 8 IMAGES -->
+        <div id="gallery" class="box2">
+
+        </div>
+       
+
+      </div>
+
+    </div>
+
+  </div>
     </section>
+
+    <!-- --------------------studio-services--------------------- -->
 
     <section id="studio-services">
         <div class="container-fluid px-5 py-5">
@@ -495,9 +521,162 @@
         <p class="m-0 mt-2">&copy; 2026 agencyeleven100. All rights reserved.</p>
     </div>
 
+
  </footer> -->
 
+
 <!-- -----------scripts---------- -->
+<script>
+
+const gallery = document.getElementById("gallery");
+
+/* ALL IMAGES */
+
+const works = [
+
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+    {
+        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        name: "ADITI PAUL"
+    },
+
+
+  
+
+];
+
+
+/* CREATE SLIDES */
+
+works.forEach(work => {
+
+    gallery.innerHTML += `
+
+        <div class="box2 position-relative overflow-hidden">
+
+            <img src="${work.img}" alt="${work.name}">
+
+            <div class="position-absolute bottom-0 start-0 w-100 p-2 text-white"
+                style="
+                    background:linear-gradient(
+                        to top,
+                        rgba(0,0,0,0.9),
+                        transparent
+                    );
+                    font-size:10px;
+                    text-align: center;
+                    letter-spacing:2px;
+                    margin-bottom:0px;
+                    font-weight:600;
+                "
+            >
+                ${work.name.toUpperCase()}
+            </div>
+
+        </div>
+
+    `;
+
+});
+
+
+/* DUPLICATE FOR INFINITE LOOP */
+
+gallery.innerHTML += gallery.innerHTML;
+
+</script>
+
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <script src="/assets/js/global.js"></script>
