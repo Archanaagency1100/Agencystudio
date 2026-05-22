@@ -155,3 +155,60 @@ body{
 footer{
     color: var(--text-light);
 }
+/* ----------------services section------------------ */
+.custom-service-card {
+    min-height: 290px;
+    border-radius: 4px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    transition: background-color 0.35s ease;
+    z-index: 1;
+}
+
+.arrow-action {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Hover States for Desktop (MD Screens and Above) */
+@media (min-width: 768px) {
+    .custom-service-card:hover {
+        transform: translateY(-6px);
+    }
+    .custom-service-card:hover .card-overlay {
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+    .custom-service-card:hover .arrow-action {
+        transform: translateX(6px);
+    }
+}
+
+/* Mobile Filmstrip Viewport Constraints (Under 768px) */
+@media (max-width: 767.98px) {
+    .cinematic-filmstrip {
+        /* FIXED: Force the row layout container to strictly behave as a horizontal flex-strip on mobile */
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* Ensures high-performance inertial finger flick scrolling on iOS/Android */
+    }
+    
+    /* Hide the scrollbars completely */
+    .cinematic-filmstrip::-webkit-scrollbar {
+        display: none;
+    }
+    .cinematic-filmstrip {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Sets column boxes to cleanly snap into place */
+    .cinematic-filmstrip .col-10 {
+        scroll-snap-align: center;
+    }
+}
