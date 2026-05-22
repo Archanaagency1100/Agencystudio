@@ -71,13 +71,7 @@ body{
     }
 /* -----------trusted by celebs end---------- */
 
-#studio-services .card-overlay{
-   background:linear-gradient(
-            to right,
-            #050505 0%,
-            transparent 100%
-        );
-}
+ 
 footer{
     color: var(--text-light);
 }
