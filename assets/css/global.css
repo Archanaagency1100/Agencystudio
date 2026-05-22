@@ -1,8 +1,8 @@
 /* Styling for the Navigation */
 
-*{
+/* *{
     border: 2px solid rgb(235, 17, 17);
-}
+} */
 :root {
     --bg-color: #050505;
     --bg--charcoal: #111111;
@@ -12,7 +12,10 @@
     --font-main: "Inter", sans-serif;
 }
 
-a{
+.para{
+    font-size: 1rem;
+}
+.linking{
     text-decoration: none;
     color: var(--text-light);
 }
@@ -29,20 +32,17 @@ body {
     color: var(--text-light);
     overflow-x: hidden;
 }
-.nav-logo {
-    width: 120px;
-    height: auto;
-}
 .nav-link {
     color: #ffffff !important;
     font-size: 14px;
     font-weight: 500;
     padding: 10px 15px !important;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
     border-bottom: 2px solid transparent;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--accent-yellow) !important;
 }
 
@@ -74,19 +74,39 @@ body {
         text-align: center;
     }
 
-    .navbar-collapse .navbar-nav {
-        margin-left: auto;
-        margin-right: auto;
+    /* Prevent horizontal overflow/extra width on collapsed menu */
+    .navbar-collapse {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
-    .navbar-collapse .nav-link {
+    .navbar-collapse .container {
         width: 100%;
+    }
+
+    .navbar-collapse .navbar-nav {
+        width: 100%;
+        margin: 0 !important;
+        padding-left: 0;
+        padding-right: 0;
         text-align: center;
     }
+
+    /* Reset potential left offset from other styles */
+    .navbar-collapse .nav-item {
+        margin-left: 0 !important;
+    }
+
+    /* Keep links centered without pushing page content */
+    .navbar-collapse .nav-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-left: 0 !important;
+    }
+
+
 }
 
 
