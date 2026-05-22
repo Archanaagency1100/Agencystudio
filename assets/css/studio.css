@@ -163,7 +163,7 @@ footer{
 }
 
 .card-overlay {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.35);
     transition: background-color 0.35s ease;
     z-index: 1;
 }
@@ -174,7 +174,7 @@ footer{
     margin-top: 10px;
 }
 
-/* Hover States for Desktop (MD Screens and Above) */
+
 @media (min-width: 768px) {
     .custom-service-card:hover {
         transform: translateY(-6px);
@@ -187,18 +187,16 @@ footer{
     }
 }
 
-/* Mobile Filmstrip Viewport Constraints (Under 768px) */
+
 @media (max-width: 767.98px) {
     .cinematic-filmstrip {
-        /* FIXED: Force the row layout container to strictly behave as a horizontal flex-strip on mobile */
         display: flex !important;
         flex-wrap: nowrap !important;
         overflow-x: auto !important;
         scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch; /* Ensures high-performance inertial finger flick scrolling on iOS/Android */
+        -webkit-overflow-scrolling: touch; 
     }
     
-    /* Hide the scrollbars completely */
     .cinematic-filmstrip::-webkit-scrollbar {
         display: none;
     }
