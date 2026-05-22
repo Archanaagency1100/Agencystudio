@@ -1,8 +1,8 @@
 /* Styling for the Navigation */
 
-/* *{
+*{
     border: 2px solid rgb(235, 17, 17);
-} */
+}
 :root {
     --bg-color: #050505;
     --bg--charcoal: #111111;
@@ -27,8 +27,12 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-light);
+    overflow-x: hidden;
 }
-
+.nav-logo {
+    width: 120px;
+    height: auto;
+}
 .nav-link {
     color: #ffffff !important;
     font-size: 14px;
@@ -64,7 +68,27 @@ body {
         padding-top: 70px;
         /* Top bar is hidden on mobile, so less padding */
     }
+
+    /* Mobile navbar alignment fix (collapsed menu) */
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-collapse .navbar-nav {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-collapse .nav-link {
+        width: 100%;
+        text-align: center;
+    }
 }
+
 
 .fixed-top, .navbar {
     border-bottom: grey solid 1px;

@@ -21,7 +21,7 @@
             <div class="row align-items-center ">
 
                 <div class="text-center position-relative z-1 text-white">
-                    <h1 class="display-md-1 fw-bold">LIGHTS | CAMERA | <span class="text-accent">STUDIO</span></h1>
+                    <h1 class="display-5 display-md-1 fw-bold">LIGHTS | CAMERA | <span class="text-accent">STUDIO</span></h1>
                     <p class="lead mt-4 mx-auto w-75 w-md-50">A premium production studio in South Delhi offering studio rental, podcast production, chroma setup, video production, audio recording, post-production, VFX, and content creation services for creators, filmmakers, influencers, and brands. </p>
                     <a href="/studio/booking.html" class="btn yellow-btn px-4 py-2 mt-3" style="color: #e5b400; border: 2px solid #e5b400;">BOOK NOW</a>
                 </div>
@@ -29,34 +29,57 @@
     </section>
 <hr>
 
-<!-- ----------------------------trusted by brands---------------- -->
-    <!-- <section class="text-center">
-<h2 class="yellow-mini-title">TRUSTED BY CREATORS AND BRands</h2>
-        <div class="container-fluid py-5">
-            <div class="row g-4 align-items-center">
-                <div class="col-md-2 col-6">
-                    <img src="/assets/img/brand1.png" class="img-fluid" alt="Brand 1">
-                </div>
-                <div class="col-md-2 col-6">
-                    <img src="/assets/img/brand2.png" class="img-fluid" alt="Brand 2">
-                </div>
-                <div class="col-md-2 col-6">
-                    <img src="/assets/img/brand3.png" class="img-fluid" alt="Brand 3">
-                </div>
-                <div class="col-md-2 col-6">
-                    <img src="/assets/img/brand4.png" class="img-fluid" alt="Brand 4">
-                </div>
-                <div class="col-md-2 col-6">
-                    <img src="/assets/img/brand4.png" class="img-fluid" alt="Brand 4">
-                </div>
-                <div class="col-md-2 col-6">
-                    <img src="/assets/img/brand4.png" class="img-fluid" alt="Brand 4">
-                </div>
-            </div>
-        </div>
-        <hr>
-    </section> -->
+<!-- ----------------------------sticky button---------------- -->
+<!-- CINEMATIC STICKY BUTTON -->
 
+<a 
+    href="#"
+    class="
+        position-fixed
+        top-50
+        end-0
+        translate-middle-y
+        d-flex
+        align-items-center
+        justify-content-center
+        text-decoration-none
+        fw-semibold
+        px-3
+        py-4
+        z-3
+    "
+
+    style="
+        writing-mode:vertical-rl;
+        transform:translateY(-50%) rotate(180deg);
+        background:rgba(5,5,5,0.9);
+        color:#e5b400;
+        border:1px solid rgba(229,180,0,0.5);
+        backdrop-filter:blur(10px);
+        letter-spacing:2px;
+        text-transform:uppercase;
+        font-size:12px;
+        transition:0.3s ease;
+    "
+    
+    onmouseover="
+        this.style.background='#e5b400';
+        this.style.color='#050505';
+        this.style.border='1px solid #e5b400';
+    "
+
+    onmouseout="
+        this.style.background='rgba(5,5,5,0.9)';
+        this.style.color='#e5b400';
+        this.style.border='1px solid rgba(229,180,0,0.5)';
+    "
+>
+
+    <i class="fa-solid fa-circle-play mb-2"></i>
+
+    EXPLORE STUDIO
+
+</a>
     <!-- -----------------------------TRUSTED BY ARTISTS------------- -->
          <section id="work" class="podcast">
       <h2 class="yellow-mini-title text-center">Recent Works</h2>
@@ -535,100 +558,269 @@ const gallery = document.getElementById("gallery");
 const works = [
 
     {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
+        img: "../assets/img/Clients/ADITI_PAUL.jpg",
         name: "ADITI PAUL"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/AHSAAN_QURESHI.avif",
+        name: "AHSAAN QURESHI"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/AISHWARYA_NIGAM.jfif",
+        name: "AISHWARYA NIGAM"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/AKRITI_KAKAR.webp",
+        name: "AKRITI KAKAR"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/Amisha_Chaudhary.jpg",
+        name: "AMISHA CHAUDHARY"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/AMITABH_SRIVASTAV.webp",
+        name: "AMITABH SRIVASTAV"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/ANANTH_VAIDHYANATHAN.jfif",
+        name: "ANANTH VAIDHYANATHAN"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/ARIANE_GRAY_HUBERT.jfif",
+        name: "ARIANE GRAY HUBERT"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/ARIF_LOHAR.webp",
+        name: "ARIF LOHAR"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/ARMAAN_KHERA.webp",
+        name: "ARMAAN KHERA"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/ARNAB_CHAKRABORTY.jfif",
+        name: "ARNAB CHAKRABORTY"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/ASHOK_MASTIE.jfif",
+        name: "ASHOK MASTIE"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/ASMITA_THEATRE.jpg",
+        name: "ASMITA THEATRE"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/BABBU_MANN.jfif",
+        name: "BABBU MANN"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/BHAVITA_SINGH.jpg",
+        name: "BHAVITA SINGH"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/Bhavna_Mordani.jfif",
+        name: "Bhavna_Mordani"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+ {
+        img: "../assets/img/Clients/DEEPAK_RAJA.jfif",
+        name: "DEEPAK RAJA"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/DILBAGH_SINGH.jpg",
+        name: "DILBAGH SINGH"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+
+{
+        img: "../assets/img/Clients/DJ_RINAA_SHAH.jpg",
+        name: "DJ RINAA SHAH"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+
+{
+        img: "../assets/img/Clients/dj_sunny_sarid.jpg",
+        name: "dj sunny sarid"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/DJ_Tarandeep.jfif",
+        name: "DJ Tarandeep"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/DJ_Tripti.jpg",
+        name: "DJ Tripti"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/Dr._Ridwana_Sanam.jfif",
+        name: "Dr.Ridwana Sanam"
     },
-    {
-        img: "../assets/img/Clients/ADITI PAUL.jpg",
-        name: "ADITI PAUL"
+{
+        img: "../assets/img/Clients/GEETIKA_GANJU.jpg",
+        name: "GEETIKA GANJU"
+    },
+
+{
+        img: "../assets/img/Clients/GIRISH_MALIK.webp",
+        name: "GIRISH MALIK"
+    },
+{
+        img: "../assets/img/Clients/GUNJAN_UTREJA.webp",
+        name: "GUNJAN UTREJA"
+    },
+{
+        img: "../assets/img/Clients/GURUSHARAN_SINGH.jfif",
+        name: "GURUSHARAN SINGH"
+    },
+
+{
+        img: "../assets/img/Clients/HANS_RAJ_HANS.webp",
+        name: "HANS RAJ HANS"
+    },
+
+{
+        img: "../assets/img/Clients/HARBHAJAN_MANN.jpg",
+        name: "HARBHAJAN MANN"
+    },
+
+{
+        img: "../assets/img/Clients/HARI-&-SUKHMANI.jfif",
+        name: "HARI & SUKHMANI"
+    },
+
+{
+        img: "../assets/img/Clients/Harry_Sandhu.jpg",
+        name: "Harry Sandhu"
+    },
+
+{
+        img: "../assets/img/Clients/HARSHIT_SAXENA.jpg",
+        name: "HARSHIT SAXENA"
+    },
+
+{
+        img: "../assets/img/Clients/HIMANI_KAPOOR.webp",
+        name: "HIMANI KAPOOR"
+    },
+
+{
+        img: "../assets/img/Clients/ISHWAK_SINGH.webp",
+        name: "ISHWAK SINGH"
+    },
+
+{
+        img: "../assets/img/Clients/JASBIR_JASSI.webp",
+        name: "JASBIR JASSI"
+    },
+{
+        img: "../assets/img/Clients/JASLEEN_ROYAL.webp",
+        name: "JASLEEN ROYAL"
+    },
+{
+        img: "../assets/img/Clients/JASWINDER_SINGH.jpg",
+        name: "JASWINDER SINGH"
+    },
+
+{
+        img: "../assets/img/Clients/Kabul_Rishi.jpg",
+        name: "Kabul Rishi"
+    },
+{
+        img: "../assets/img/Clients/KANIKA_ARORA.jpg",
+        name: "KANIKA ARORA"
+    },
+{
+        img: "../assets/img/Clients/Kapil_Sharma.jpg",
+        name: "Kapil Sharma"
+    },
+{
+        img: "../assets/img/Clients/KAPTAN_LADI.jfif",
+        name: "KAPTAN LADI"
+    },
+
+{
+        img: "../assets/img/Clients/KAVITA_THAKUR.jfif",
+        name: "KAVITA THAKUR"
+    },
+
+{
+        img: "../assets/img/Clients/Kiran_Dubey.webp",
+        name: "Kiran Dubey"
+    },
+{
+        img: "../assets/img/Clients/KITTY_DHUPAR.jfif",
+        name: "KITTY DHUPAR"
+    },
+{
+        img: "../assets/img/Clients/KK.webp",
+        name: "KK"
+    },
+{
+        img: "../assets/img/Clients/KRISHNA_BUEURA.jpg",
+        name: "KRISHNA BUEURA"
+    },
+
+{
+        img: "../assets/img/Clients/kubbra-sait.webp",
+        name: "kubbra sait"
+    },
+
+{
+        img: "../assets/img/Clients/Madhu_Chopra.webp",
+        name: "Madhu Chopra"
+    },
+
+{
+        img: "../assets/img/Clients/MALIKA_MALHOTRA.jfif",
+        name: "MALIKA MALHOTRA"
+    },
+
+{
+        img: "../assets/img/Clients/MANASI_SCOTT.jpg",
+        name: "MANASI SCOTT"
+    },
+{
+        img: "../assets/img/Clients/MANOJ_KUMAR.jpg",
+        name: "MANOJ KUMAR"
+    },
+
+{
+        img: "../assets/img/Clients/MIIKE_PANDAY.webp",
+        name: "MIIKE PANDAY"
+    },
+
+{
+        img: "../assets/img/Clients/MOHINI_SINGH.jfif",
+        name: "MOHINI SINGH"
+    },
+{
+        img: "../assets/img/Clients/MUKESH_BHATT.jpeg",
+        name: "MUKESH BHATT"
+    },
+{
+        img: "../assets/img/Clients/Navin_Prabhakar.jpg",
+        name: "Navin Prabhakar"
+    },
+
+{
+        img: "../assets/img/Clients/Nawazuddin_Siddiqui.webp",
+        name: "Nawazuddin Siddiqui"
+    },
+
+{
+        img: "../assets/img/Clients/Neeraj_Shridhar.webp",
+        name: "Neeraj Shridhar"
+    },
+
+{
+        img: "../assets/img/Clients/NEHA_KAKKAR.webp",
+        name: "NEHA KAKKAR"
+    },
+
+{
+        img: "../assets/img/Clients/Neila_Devi.jfif",
+        name: "Neila Devi"
+    },
+
+{
+        img: "../assets/img/Clients/NIDA_MAHMOOD.jpg",
+        name: "NIDA MAHMOOD"
     },
 
 
