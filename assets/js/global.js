@@ -1,26 +1,21 @@
-/**
- * Global Navigation Loader for AgencyEleven100
- * Handles relative paths and active link highlighting
- */
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const navPlaceholder = document.getElementById('nav-placeholder');
 
     if (navPlaceholder) {
-        // 1. Detect the current directory depth
-        // This helps us find the "components" folder from anywhere
+       
         const path = window.location.pathname;
         let prefix = "";
 
         if (path.includes('/agency/') || path.includes('/studio/')) {
-            prefix = "../"; // Go up one level if we are inside a subfolder
+            prefix = "../"; 
         }
 
-        // 2. Define the path to the shared navbar
-        // You can use logic here to load a different navbar for the studio side if needed
+       
         const navbarPath = `${prefix}components/studio/navbar.html`;
 
-        // 3. Fetch and Inject the HTML
+        
         fetch(navbarPath)
             .then(response => {
                 if (!response.ok) throw new Error('Navbar file not found');
@@ -29,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 navPlaceholder.innerHTML = data;
                 
-                // 4. Initialize Navbar logic after it's loaded
+                
                 highlightActiveLink();
                 setupMobileCollapse();
             })
@@ -37,9 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-/**
- * Highlights the current page in the navigation menu
- */
 function highlightActiveLink() {
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll(".nav-link");
@@ -47,20 +39,17 @@ function highlightActiveLink() {
     navLinks.forEach(link => {
         const linkHref = link.getAttribute("href");
         
-        // Remove default active class first
+
         link.classList.remove("active");
 
-        // Check if the current URL matches the link's destination
+  
         if (currentPath.endsWith(linkHref) || (linkHref !== "/" && currentPath.includes(linkHref))) {
             link.classList.add("active");
         }
     });
 }
 
-/**
- * Ensures Bootstrap mobile menu closes when a link is clicked 
- * (Useful for single-page scrolling or mobile UX)
- */
+
 function setupMobileCollapse() {
     const navLinks = document.querySelectorAll('.nav-link');
     const menuToggle = document.getElementById('navContent');
@@ -76,9 +65,7 @@ function setupMobileCollapse() {
 }
 
 // -----------------footer----------
-/**
- * Global Footer Loader for AgencyEleven100
- */
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -86,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (footerPlaceholder) {
 
-        // Detect folder depth
+     
         const path = window.location.pathname;
         let prefix = "";
 
@@ -94,10 +81,10 @@ document.addEventListener("DOMContentLoaded", function () {
             prefix = "../";
         }
 
-        // Footer path
+
         const footerPath = `${prefix}components/studio/footer.html`;
 
-        // Load Footer
+ 
         fetch(footerPath)
             .then(response => {
                 if (!response.ok) throw new Error('Footer file not found');

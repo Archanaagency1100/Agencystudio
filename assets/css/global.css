@@ -146,10 +146,11 @@ body {
     color: #000;
     font-weight: 700;
     font-size: 14px;
-    /* border-radius: 4px; */
+    border-radius: 4px;
     transition: all 0.3s ease;
     text-decoration: none;
     padding: 10px 52px;
+    width: fit-content;
 }
 
 .yellow-btn:hover {
