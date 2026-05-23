@@ -30,45 +30,58 @@ body{
     color: #fff;
 }
 /* -----------------------------trusted by brands---------------- */
-/* Slider Wrapper */
-   .podcast .slider-wrapper {
-      overflow: hidden;
-      margin-top: 9px;
-    }
+.podcast .slider-wrapper {
+  overflow: hidden;
+  margin-top: 9px;
+  width: 100%;
+}
 
-    /* Track */
-       .podcast .scroll-track {
-      display: flex;
-      width: calc(300px * 16); /* image width * (images × 2) */
-      animation: scroll 30s linear infinite;
-    }
 
-       .podcast .box2 {
-      width: 200px;
-      height: 200px;
-      background-image: url("../img/PNG.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-shrink: 0;
-      margin: 0;
-    }
+#gallery {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important; 
+  animation: scroll 155s linear infinite; /* Adjusted to a comfortable reading speed */
+}
 
-       .podcast .box2 img {
-      width: 190px;
-      height: 150px;
-      border-radius: 15px;
-      object-fit: cover;
-      object-position: top center;
-    }
+.podcast .box2 {
+  width: 200px;
+  height: 200px;
+  background-image: url("../img/PNG.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0 5px; 
+}
 
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-300px * 8)); }
-    }
+.podcast .box2 img {
+  width: 190px;
+  height: 150px;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+
+.podcast .slider-wrapper:hover #gallery {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% { 
+    transform: translateX(0); 
+  }
+  100% { 
+   
+    transform: translateX(-50%); 
+  }
+}
+/* ------------portfolio section------------------ */
 
 .bg-overlay {
     background-color:#050505;
