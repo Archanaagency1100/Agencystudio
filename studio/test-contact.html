@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Test Page | Studio925</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #050505;
+            --bg-charcoal: #111111;
+            --accent-gold: #e5b400;
+            --text-light: #ffffff;
+            --text-secondary: #cccccc;
+            --text-muted: #8a8a8a;
+            --border-color: #222222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-secondary);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            background-image: radial-gradient(circle at center, #151305 0%, #050505 100%);
+        }
+
+        .contact-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: var(--bg-charcoal);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(229, 180, 0, 0.05);
+            position: relative;
+        }
+
+        .contact-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10%;
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .form-control {
+            width: 100%;
+            background-color: #080808;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            color: var(--text-light);
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 8px rgba(229, 180, 0, 0.25);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            background-color: var(--accent-gold);
+            color: #050505;
+        }
+
+        .btn:hover {
+            background-color: #ffffff;
+            color: #050505;
+            box-shadow: 0 0 15px rgba(229, 180, 0, 0.4);
+        }
+
+        .btn:disabled {
+            background-color: #222;
+            color: #666;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        /* Alert styling */
+        .alert {
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+            display: none;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .alert-success {
+            background-color: rgba(40, 167, 69, 0.15);
+            color: #28a745;
+            border: 1px solid rgba(40, 167, 69, 0.2);
+            display: flex;
+        }
+
+        .alert-danger {
+            background-color: rgba(220, 53, 69, 0.15);
+            color: #dc3545;
+            border: 1px solid rgba(220, 53, 69, 0.2);
+            display: flex;
+        }
+
+        /* Console log helper */
+        .console-output {
+            margin-top: 1.5rem;
+            background-color: #000;
+            border: 1px solid #222;
+            border-radius: 6px;
+            padding: 1rem;
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: #2bba2b;
+            overflow-x: auto;
+            max-height: 150px;
+            display: none;
+        }
+        
+        .console-output.active {
+            display: block;
+        }
+
+        .console-title {
+            color: #888;
+            font-size: 0.75rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+        <div class="header">
+            <h1 class="logo">Studio<span>925</span></h1>
+            <p class="subtitle">API Form Test Simulation Page</p>
+        </div>
+
+        <div id="alertSuccess" class="alert alert-success" style="display: none;">
+            <i class="fa-solid fa-circle-check"></i>
+            <span id="successMsg">Message submitted successfully!</span>
+        </div>
+
+        <div id="alertError" class="alert alert-danger" style="display: none;">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span id="errorMsg">Failed to submit form. Please correct error inputs.</span>
+        </div>
+
+        <form id="testContactForm">
+            <div class="form-group">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter test name" required value="John Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" required value="john.doe@test.com">
+            </div>
+
+            <div class="form-group">
+                <label for="contact" class="form-label">Contact / Phone Number</label>
+                <input type="text" id="contact" name="contact" class="form-control" placeholder="+91 99999 88888" required value="+91 99999 88888">
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="form-label">Inquiry Message</label>
+                <textarea id="message" name="message" class="form-control" placeholder="Explain your media recording, shooting floor space, or VFX service requirement...">Testing the public API endpoint. Interested in a full-day recording session for podcast series.</textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn">
+                <span>Send Test Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </form>
+
+        <div id="consoleWrapper" class="console-output">
+            <div class="console-title">API Server Log Response:</div>
+            <pre id="consoleLog">Sending request...</pre>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('testContactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('submitBtn');
+            const alertSuccess = document.getElementById('alertSuccess');
+            const alertError = document.getElementById('alertError');
+            const consoleWrapper = document.getElementById('consoleWrapper');
+            const consoleLog = document.getElementById('consoleLog');
+
+            // Reset alerts
+            alertSuccess.style.display = 'none';
+            alertError.style.display = 'none';
+            
+            // Disable button
+            submitBtn.disabled = true;
+            submitBtn.querySelector('span').textContent = 'Submitting...';
+
+            // Show console log wrapper
+            consoleWrapper.classList.add('active');
+            consoleLog.textContent = 'Preparing payload...';
+
+            const payload = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                contact: document.getElementById('contact').value,
+                message: document.getElementById('message').value
+            };
+
+            consoleLog.textContent = 'Payload: ' + JSON.stringify(payload, null, 2) + '\n\nSending POST request to api/contact.php...';
+
+            try {
+                const response = await fetch('https://1100.in/admin/api/contact.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+                
+                consoleLog.textContent += `\n\nHTTP Status: ${response.status} ${response.statusText}\n`;
+                consoleLog.textContent += `Response Data: ${JSON.stringify(data, null, 2)}`;
+
+                if (response.ok && data.success) {
+                    alertSuccess.style.display = 'flex';
+                    document.getElementById('successMsg').textContent = data.message || 'Message logged successfully!';
+                } else {
+                    alertError.style.display = 'flex';
+                    let errorText = data.error || 'Validation error.';
+                    if (data.errors) {
+                        const errMsgs = Object.values(data.errors).join(' ');
+                        errorText += ' ' + errMsgs;
+                    }
+                    document.getElementById('errorMsg').textContent = errorText;
+                }
+            } catch (err) {
+                consoleLog.textContent += `\n\nNetwork/CORS Error: ${err.message}`;
+                alertError.style.display = 'flex';
+                document.getElementById('errorMsg').textContent = 'Network or connection error. Check server status or CORS configurations.';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.querySelector('span').textContent = 'Send Test Message';
+            }
+        });
+    </script>
+</body>
+</html>

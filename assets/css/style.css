@@ -1,0 +1,243 @@
+ 
+        :root {
+            --bg-color: #050505;
+--bg--charcoal: #111111;
+            --text-dark: #050505;
+            --text-light: #fff;
+            --accent-yellow: #e5b400;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: var(--font-main);
+            color: var(--text-light);
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            /* padding: 80px 0 0 0; */
+            position: relative;
+            border-bottom: #e5b400 1.5px solid;
+        }
+
+        .label-text {
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 800;
+            line-height: 0.9;
+            margin-bottom: 30px;
+            
+        }
+
+        .hero-title span {
+            color: #e5b400;
+        }
+
+        .hero-description {
+            max-width: 450px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: var(--text-light);
+        }
+
+        .signature-box {
+            margin-top: 20px;
+        }
+
+        .signature {
+            /* font-family: 'Parisienne', cursive;
+            font-size: 3rem;
+            margin-bottom: 0;
+            line-height: 1;
+            color:var(--accent-yellow) ; */
+            width: 35% ;
+        }
+
+        .founder-name {
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            /* margin-left: 21px; */
+        }
+.founder-name span{
+    display: block;
+    font-size: 0.5rem;
+    color: var(--accent-yellow);
+}
+
+        .hero-img-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-man-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Floating Logo Bar */
+        .logo-bar-wrapper {
+            position: relative;
+            z-index: 10;
+            margin-top: -40px;
+            text-align: center;
+        }
+
+        .logo-pill {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            color: var(--text-dark);
+            background: #e5b400;
+            border: 1.5px solid var(--accent-yellow);
+            display: inline-block;
+            padding: 0px 50px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+       
+        }
+        .logo-pill img {
+            height: 80px;
+        }
+
+        /* .logo-pill h2 {
+            font-weight: 800;
+            margin: 0;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-pill p {
+            margin: 0;
+            font-size: 0.75rem;
+            text-transform: lowercase;
+            font-style: italic;
+        } */
+
+        /* Content Grid */
+        .services-grid {
+            /* padding: 100px 0; */
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .vertical-divider {
+            border-right: 1px solid var(--accent-yellow);
+            position: relative;
+        }
+
+        .or-circle {
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--accent-yellow);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.8rem;
+            z-index: 10;
+        }
+
+        .service-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+        .service-title span {
+            color: var(--accent-yellow);
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        .service-list li {
+            margin-bottom: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-list li::before {
+            content: '→';
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+         .agency_section {
+            position: relative;
+             z-index: 22;
+           background: url('./assets/img/agency_bg.png') right center / cover no-repeat;
+         }
+         .studio_section {
+            position: relative;
+            z-index: 1;
+           background: url('./assets/img/studio_bg.png') right center / cover no-repeat;
+         }
+        
+        .btn-outline {
+            border: 1.5px solid var(--accent-yellow);
+            padding: 12px 30px;
+            text-decoration: none;
+             color: var(--text-light);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--text-dark);
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--bg--charcoal);
+            margin-top: 20px ;
+        }
+
+        .social-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-right: 30px;
+            text-transform: uppercase;
+        }
+
+        .social-links i {
+            margin-right: 8px;
+            font-size: 1.1rem;
+            color: var(--accent-yellow);
+
+        }
+
+        @media (max-width: 991px) {
+            .vertical-divider { border-right: none; border-bottom: 1px solid var(--accent-yellow); padding-bottom: 50px; margin-bottom: 50px; }
+            .or-circle { right: 50%; transform: translate(50%, 50%); top: auto; bottom: -20px; }
+            .hero-section { text-align: center; }
+            .hero-description { margin: 0 auto 40px; }
+        }

@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgencyEleven100 - We Create. You Elevate.</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts: Inter and a Signature-style font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for Social Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <style>
+      /* *{
+            border: 2px red solid;
+        } */
+      :root {
+        --bg-color: #050505;
+        --bg--charcoal: #111111;
+        --text-dark: #050505;
+        --text-light: #fff;
+        --accent-yellow: #e5b400;
+        --font-main: "Inter", sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        font-family: var(--font-main);
+        color: var(--text-light);
+        overflow-x: hidden;
+        margin: 0;
+      }
+
+      /* Hero Section */
+      .hero-section {
+         padding: 20px 0 0 0; 
+        position: relative;
+        border-bottom: #e5b400 1.5px solid;
+      }
+
+      .label-text {
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 20px;
+        display: block;
+      }
+
+      .hero-title {
+        font-size: clamp(3rem, 8vw, 4.5rem);
+        font-weight: 800;
+        line-height: 0.9;
+        margin-bottom: 30px;
+      }
+
+      .hero-title span {
+        color: #e5b400;
+      }
+
+      .hero-description {
+        max-width: 450px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        color: var(--text-light);
+      }
+
+      .signature-box {
+        margin-top: 20px;
+      }
+
+      .signature {
+        /* font-family: 'Parisienne', cursive;
+            font-size: 3rem;
+            margin-bottom: 0;
+            line-height: 1;
+            color:var(--accent-yellow) ; */
+        width: 35%;
+      }
+
+      .founder-name {
+        font-weight: 300;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        /* margin-left: 21px; */
+      }
+      .founder-name span {
+        display: block;
+        font-size: 0.5rem;
+        color: var(--accent-yellow);
+      }
+
+      .hero-img-container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .main-man-img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Floating Logo Bar */
+      .logo-bar-wrapper {
+        position: relative;
+        z-index: 10;
+        margin-top: -40px;
+        text-align: center;
+      }
+
+      .logo-pill {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        color: var(--text-dark);
+        background: #e5b400;
+        border: 1.5px solid var(--accent-yellow);
+        display: inline-block;
+        padding: 0px 50px;
+        border-radius: 50px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+      .logo-pill img {
+        height: 80px;
+      }
+
+      /* .logo-pill h2 {
+            font-weight: 800;
+            margin: 0;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-pill p {
+            margin: 0;
+            font-size: 0.75rem;
+            text-transform: lowercase;
+            font-style: italic;
+        } */
+
+      /* Content Grid */
+      .services-grid {
+        /* padding: 100px 0; */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .vertical-divider {
+        border-right: 1px solid var(--accent-yellow);
+        position: relative;
+      }
+
+      .or-circle {
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--accent-yellow);
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.8rem;
+        z-index: 10;
+      }
+
+      .service-title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 25px;
+      }
+      .service-title span {
+        color: var(--accent-yellow);
+      }
+
+      .service-list {
+        list-style: none;
+        padding: 0;
+        margin: 30px 0;
+      }
+
+      .service-list li {
+        margin-bottom: 12px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+      }
+
+      .service-list li::before {
+        content: "→";
+        margin-right: 15px;
+        font-weight: bold;
+      }
+
+      .agency_section {
+        position: relative;
+        z-index: 22;
+        background: url("./assets/img/agency_bg.png") right center / cover
+          no-repeat;
+      }
+      .studio_section {
+        position: relative;
+        z-index: 1;
+        background: url("./assets/img/studio_bg.png") right center / cover
+          no-repeat;
+      }
+
+      .btn-outline {
+        border: 1.5px solid var(--accent-yellow);
+        padding: 12px 30px;
+        text-decoration: none;
+        color: var(--text-light);
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.3s;
+      }
+
+      .btn-outline:hover {
+        background: var(--text-dark);
+        color: var(--text-light);
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--bg--charcoal);
+        margin-top: 20px;
+      }
+
+      .social-links a {
+          display: inline-block;
+        color: var(--text-light);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.85rem;
+        margin-right: 30px;
+        text-transform: uppercase;
+      }
+
+      .social-links i {
+        margin-right: 8px;
+        font-size: 1.1rem;
+        color: var(--accent-yellow);
+      }
+
+      @media (max-width: 991px) {
+        .vertical-divider {
+          border-right: none;
+          border-bottom: 1px solid var(--accent-yellow);
+          padding-bottom: 50px;
+          margin-bottom: 50px;
+        }
+        .or-circle {
+          right: 50%;
+          transform: translate(50%, 50%);
+          top: auto;
+          bottom: -3px;
+        }
+        .hero-section {
+        /*margin-top: 65px;*/
+          text-align: center;
+        }
+        .hero-description {
+          margin: 0 auto 40px;
+        }
+        .logo-pill img {
+          height: 60px;
+        }
+        .agency_section{
+            padding-left: 40px;
+        }
+        .studio_section{
+            padding-left: 40px;
+        }
+        .founder-name {
+            margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center flex-column-reverse flex-lg-row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <!-- <span class="label-text">ABOUT US</span> -->
+            <h1 class="hero-title d-none d-md-block">
+              WE CREATE.<br /><span>YOU ELEVATE.</span>
+            </h1>
+            <p class="hero-description mb-0">
+              Founded in 1996 by Charanjeet Dhiman, agencyeleven100 has spent
+              the last 30 young years building a legacy in creative production and
+              creative direction. Taking this journey forward, the brand now
+              introduces a modern studio space built for creators, productions,
+              and cinematic experiences.
+            </p>
+            <div class="signature-box mt-0">
+              <img
+                class="img-fluid signature"
+                src="./assets/img/cd_sign.png"
+                alt=""
+              />
+              <!-- <p class="signature">Charanjeet Dhiman</p> -->
+              <p class="founder-name">
+                CHARANJEET DHIMAN<br /><small class="opacity-50">Director/ Producer, Social Activist & Connoisseur</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 p-0 hero-img-container" data-aos="fade-left">
+            <img
+              src="./assets/img/founder_agency.png"
+              alt="Founder Portrait"
+              class="main-man-img"
+            />
+             <!-- Logo Pill Bar -->
+    <div class="logo-bar-wrapper mb-2  d-block d-md-none" data-aos="zoom-in">
+      <div class="logo-pill">
+        <img
+          class="img-fluid"
+          src="./assets/img/agency eleven100 black.png"
+          alt="agencyeleven100 Logo"
+        />
+       
+      </div>
+    </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo Pill Bar -->
+    <div class="logo-bar-wrapper d-none d-md-block" data-aos="zoom-in">
+      <div class="logo-pill">
+        <img
+          class="img-fluid"
+          src="./assets/img/agency eleven100 black.png"
+          alt="agencyeleven100 Logo"
+        />
+        <!-- <h2>agencyeleven100<sup>&reg;</sup></h2>
+            <p>Even in the odds</p> -->
+      </div>
+    </div>
+
+    <!-- Services Grid -->
+    <section class="services-grid">
+      <div class="container">
+        <div class="row">
+          <!-- Agency Section -->
+          <div
+            class="col-lg-6 pt-5 agency_section vertical-divider"
+            data-aos="fade-up"
+          >
+            <h2 class="service-title">THE AGENCY</h2>
+            <p class="w-75">
+            A creative production house focused on brand storytelling, visual direction, and impactful experiences built to leave a lasting impression.
+            </p>
+            <ul class="service-list">
+              <li>Brand Management</li>
+              <li>Image Consulting</li>
+              <li>Art Direction</li>
+              <li>Web Development</li>
+              <li>Graphic Design</li>
+              <li>Film Production</li>
+              <li>Photography</li>
+              <li>Marketing</li>
+            </ul>
+            <a href="./agency" class="btn-outline"
+              >EXPLORE AGENCY
+              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+            <div class="or-circle">OR</div>
+          </div>
+
+          <!-- Studio Section -->
+          <div
+            class="col-lg-6 studio_section pt-0 pt-md-5 ps-5"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <!-- <span class="label-text">THE</span> -->
+            <h2 class="service-title"><span>THE STUDIO</span></h2>
+            <p class="w-75">
+              A modern production space designed for creators, cinematic
+              productions, and high-quality content experiences.
+            </p>
+            <ul class="service-list">
+              <li>Studio Rental</li>
+              <li>Chroma Setup</li>
+              <li>Podcast Production</li>
+              <li>Content Creation</li>
+              <li>Creative Development</li>
+              <li>Audio & Video Recording</li>
+              <li>Pre/Post Production & VFX</li>
+              <li>Foley & Special Effects</li>
+            </ul>
+            <a href="./studio" class="btn-outline"
+              >BOOK THE STUDIO
+              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----by the num------------------ -->
+ <section>
+    <div class="container-fluid py-5 px-5">
+           <h2 class="yellow-mini-title mb-4">A LEGACY IN NUMBERS</h2>
+        <div class="row py-4 thin-border row-cols-2 row-cols-md-4 row-cols-lg-6 g-2">
+            
+<div class="col">
+    <div class="card-dark text-center  border-end border-secondary-subtle">
+        <h3 class="text-accent display-5 fw-bold">30+</h3>
+        <p class="m-0 points text-accent"> YEARS OF PRODUCTION  </p>
+    </div>
+</div>
+<div class="col">
+    <div class="card-dark text-center border-end  border-secondary-subtle">
+        <h3 class="text-accent display-5 fw-bold">28+</h3>
+        <p class="m-0 points text-accent">ONGOING PROJECTS</p>
+    </div>
+</div>
+
+<div class="col">
+    <div class="card-dark text-center  border-end border-secondary-subtle">
+        <h3 class="text-accent display-5 fw-bold">2500+</h3>
+        <p class="m-0 points text-accent"> HAPPY CLIENTS</p>
+    </div>
+</div>
+
+<div class="col">
+    <div class="card-dark text-center  border-end border-secondary-subtle">
+        <h3 class="text-accent display-5 fw-bold">99+</h3>
+        <p class="m-0 points text-accent">ARTISTS WE WORKED WITH</p>
+    </div>
+</div>
+
+<div class="col">
+    <div class="card-dark text-center  border-end border-secondary-subtle">
+        <h3 class="text-accent display-5 fw-bold">256+</h3>
+        <p class="m-0 points text-accent">BRANDS WE WORKED WITH </p>
+    </div>
+</div>
+
+
+<div class="col">
+    <div class="card-dark text-center  ">
+        <h3 class="text-accent display-5 fw-bold">7+</h3>
+        <p class="m-0 points text-accent">COUNTRIES COVERED</p>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+ </section>
+
+    <!-- <section style="height: 500px;">
+
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="footer pb-3 pt-2">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 mb-3 mb-md-auto text-center">
+            <span class="founder-name"
+              >FOLLOW US <span> @agencyeleven100 </span></span
+            >
+          </div>
+          <div class="col-md-8 ps-4 text-center">
+            <div class="social-links">
+              <a href="https://www.instagram.com/agencyeleven100/"><i class="fa-brands fa-instagram"></i> Instagram</a>
+              <a href="https://facebook.com/agencyeleven100"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+              <a href=" https://share.google/GvcoSYe4VxmXxlljD"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a>
+              <a href="https://vimeo.com/charanjeet?fl=pp&fe=sh"><i class="fa-brands fa-vimeo-v"></i> Vimeo</a>
+              <a href="https://www.youtube.com/@agencyeleven100"><i class="fa-brands fa-youtube"></i> YouTube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+    </script>
+  </body>
+</html>
