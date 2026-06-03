@@ -20,10 +20,10 @@
     color: var(--text-light);
 }
 
-html, body {
+/* html, body {
     background-color: #050505 !important;
     color: var(--text-light);
-}
+} */
 
 body {
     background-color: #050505 !important;
@@ -40,16 +40,31 @@ body {
     transition: 0.3s ease;
     border-bottom: 2px solid transparent;
 }
+nav-link::after{
+     content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: #e5b400;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+}
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
     color: var(--accent-yellow) !important;
 }
 
 .nav-link.active {
-    border-bottom: 2px solid var(--accent-yellow);
+    /* border-bottom: 2px solid var(--accent-yellow); */
+    color: var(--accent-yellow) !important;
 }
-
+.nav-link:hover::after {
+    transform: scaleX(1);
+        transform-origin: bottom left;
+}
 .text-accent {
     color: var(--accent-yellow);
 }
@@ -58,16 +73,10 @@ body {
 
 
 
-body {
-    padding-top: 110px;
-  
-}
+
 
 @media (max-width: 991px) {
-    body {
-        padding-top: 70px;
-       
-    }
+    
 
     .navbar-collapse {
         text-align: center;
@@ -157,7 +166,7 @@ body {
     border-color: var(--accent-yellow);
     color: var(--accent-yellow);
     transform: translateY(-2px);
-    padding: 12px 54px;
+    /* padding: 12px 54px; */
 
 }
 
@@ -206,3 +215,28 @@ body {
    
 }
 }
+.minimal-link {
+        display: inline-block;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+       .minimal-link::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: #e5b400;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+      }
+      .minimal-link:hover {
+        color: #e5b400!important;
+      }
+      .minimal-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }

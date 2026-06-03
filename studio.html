@@ -3,268 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgencyEleven100 | Create Without Limits</title>
+    <title>AgencyEleven100 Studio | Production Excellence</title>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
             --bg-color: #050505;
-            --bg-charcoal: #111111;
-            --text-dark: #050505;
-            --text-light: #fff;
             --accent-yellow: #e5b400;
-            --font-main: "Inter", sans-serif;
         }
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-light);
-            font-family: var(--font-main);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
             overflow-x: hidden;
+            margin: 0;
         }
 
-        /* Utility Classes */
-        .text-accent { color: var(--accent-yellow); }
-        .btn-yellow {
-            background-color: var(--accent-yellow);
-            color: var(--text-dark);
-            font-weight: 700;
-            border-radius: 4px;
-            padding: 10px 25px;
-            text-transform: uppercase;
-            border: none;
-        }
-        .btn-outline-light-custom {
-            border: 1px solid var(--text-light);
-            color: var(--text-light);
-            padding: 10px 25px;
-            text-transform: uppercase;
-        }
-
-        /* Navbar */
-        .navbar {
-            background: rgba(5, 5, 5, 0.95);
-            border-bottom: 1px solid #222;
-        }
-        .nav-link { color: var(--text-light) !important; font-size: 0.9rem; }
-
-        /* Hero Section */
-        .hero-section {
-            padding: 100px 0;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=2071') no-repeat center center/cover;
-            min-height: 80vh;
+        /* --- 1. CINEMATIC SHUTTER PRELOADER --- */
+        .cinematic-loader {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            z-index: 99999;
             display: flex;
             align-items: center;
+            justify-content: center;
+            transition: transform 1.2s cubic-bezier(0.85, 0, 0.15, 1), opacity 1s ease;
         }
-        .hero-title {
-            font-size: clamp(3rem, 8vw, 5.5rem);
-            font-weight: 900;
-            line-height: 1;
+
+        .studio-setup { text-align: center; position: relative; }
+
+        .camera-icon {
+            font-size: 6rem;
+            color: #fff;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 30px rgba(229, 180, 0, 0.4));
+            animation: cameraEntrance 1s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+        }
+
+        .loader-text {
+            font-family: 'Impact', sans-serif;
+            font-size: clamp(2rem, 5vw, 4rem);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin: 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        .sub-text {
+            font-size: 0.8rem;
+            letter-spacing: 6px;
+            color: var(--accent-yellow);
+            font-weight: bold;
             text-transform: uppercase;
         }
 
-        /* Brands */
-        .brand-bar img {
-            height: 30px;
-            filter: grayscale(1) brightness(2);
-            opacity: 0.7;
-            margin: 20px;
+        .shutter-flash {
+            position: fixed;
+            inset: 0;
+            background: #fff;
+            z-index: 100000;
+            opacity: 0;
+            pointer-events: none;
         }
 
-        /* Services Grid */
-        .service-card {
-            background: var(--bg-charcoal);
-            border: 1px solid #222;
-            padding: 30px;
-            height: 100%;
+        /* --- 2. MAIN CONTENT REVEAL EFFECT --- */
+        #main-wrapper {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        #main-wrapper.reveal {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* --- 3. HERO & MARQUEE STYLES --- */
+        .hero-section {
+            height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=2071') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-title { font-family: 'Impact', sans-serif; font-size: clamp(3rem, 10vw, 6rem); line-height: 0.9; }
+
+        /* MARQUEE HARDWARE ACCELERATION */
+        .slider-wrapper { overflow: hidden; width: 100%; position: relative; contain: paint; margin-bottom: 50px; }
+        .scroll-track { display: flex !important; width: max-content !important; transform: translate3d(0, 0, 0); }
+        
+        #gallery, #brand_logo {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            animation: scroll 100s linear infinite;
+        }
+
+        .box2 {
+            width: 240px; height: 180px;
+            background: #111;
+            margin: 0 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .box2 img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(20%); transition: 0.5s; }
+        .box2:hover img { filter: grayscale(0%); transform: scale(1.1); }
+
+        /* --- ANIMATIONS --- */
+        @keyframes cameraEntrance { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        @keyframes cameraFlash { 0% { opacity: 0; } 40% { opacity: 1; } 100% { opacity: 0; } }
+        @keyframes scroll { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
+
+        .flash-active { animation: cameraFlash 0.6s ease-out forwards; }
+        .loader-exit { transform: scale(2); opacity: 0; pointer-events: none; }
+
+        .yellow-btn {
+            background: var(--accent-yellow);
+            color: #000;
+            padding: 15px 40px;
+            font-weight: 900;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 5px;
+            display: inline-block;
             transition: 0.3s;
-            position: relative;
         }
-        .service-card:hover { border-color: var(--accent-yellow); }
-        .service-number { color: var(--accent-yellow); font-weight: bold; margin-bottom: 10px; }
-        .service-icon { float: right; color: var(--accent-yellow); font-size: 1.5rem; }
-
-        /* Stats */
-        .stat-box { border-left: 1px solid #222; padding: 20px; }
-        .stat-number { font-size: 3rem; font-weight: 900; color: var(--accent-yellow); }
-
-        /* Work Gallery */
-        .work-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border: 1px solid #222;
-            filter: brightness(0.7);
-            transition: 0.3s;
-        }
-        .work-img:hover { filter: brightness(1); }
-
-        /* Testimonials */
-        .testimonial-card {
-            background: var(--bg-charcoal);
-            padding: 25px;
-            border-radius: 8px;
-        }
-        .client-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+        .yellow-btn:hover { background: #fff; transform: translateY(-3px); }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#"><strong class="text-light">AGENCYELEVEN100</strong></a>
-            <button class="navbar-toggler btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Work</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
-                <button class="btn btn-yellow">Book Now</button>
+    <!-- 1. CINEMATIC PRELOADER -->
+    <div id="page-loader" class="cinematic-loader">
+        <div class="studio-setup">
+            <div class="camera-icon">
+                <i class="fa-solid fa-camera-viewfinder"></i>
+            </div>
+            
+            <div id="text-container">
+                <h2 class="loader-text" id="main-msg">SMILE PLEASE</h2>
+                <p class="sub-text">You are on AgencyEleven100 Studio</p>
             </div>
         </div>
-    </nav>
+        <div class="shutter-flash" id="flash"></div>
+    </div>
 
-    <section class="hero-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <p class="text-accent mb-0">PREMIUM STUDIO. POWERFUL PRODUCTIONS.</p>
-                    <h1 class="hero-title">CREATE<br>WITHOUT<br><span class="text-accent">LIMITS</span></h1>
-                    <p class="lead mb-4 text-secondary">A modern production space designed for creators, cinematic productions, and high-quality content experiences.</p>
-                    <div class="d-flex gap-3">
-                        <button class="btn btn-yellow">Book Studio</button>
-                        <button class="btn btn-outline-light-custom">View Our Work</button>
-                    </div>
-                </div>
+    <!-- 2. MAIN WEBSITE -->
+    <div id="main-wrapper">
+        <!-- Hero -->
+        <section class="hero-section">
+            <div class="container">
+                <p class="text-accent fw-bold mb-3" style="letter-spacing: 10px;">ACTION | PASSION | STUDIO</p>
+                <h1 class="hero-title">DIRECTING<br>YOUR <span class="text-accent">VISION</span></h1>
+                <p class="lead text-white-50 mb-5">High-end production services for modern brands.</p>
+                <a href="#" class="yellow-btn">Book Session</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="container py-5 text-center border-bottom border-secondary brand-bar">
-        <p class="small text-secondary mb-4">TRUSTED BY CREATORS & BRANDS</p>
-        <div class="d-flex flex-wrap justify-content-center align-items-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Sony_logo.svg" alt="Sony">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Canon_logo.svg" alt="Canon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Adobe_Corporate_Logo.svg" alt="Adobe">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Sennheiser_Logo.svg" alt="Sennheiser">
+        <!-- Sliders -->
+        <div class="py-5">
+            <h5 class="text-center text-accent mb-4" style="letter-spacing: 5px;">TRUSTED BY ARTISTS</h5>
+            <div class="slider-wrapper"><div class="scroll-track" id="gallery"></div></div>
+
+            <h5 class="text-center text-accent mb-4" style="letter-spacing: 5px;">TRUSTED BY BRANDS</h5>
+            <div class="slider-wrapper"><div class="scroll-track" id="brand_logo"></div></div>
         </div>
     </div>
 
-    <section class="py-5 container">
-        <div class="text-center mb-5">
-            <p class="text-accent mb-0">OUR SERVICES</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-3">
-                <div class="service-card">
-                    <i class="fa-solid fa-camera service-icon"></i>
-                    <div class="service-number">01</div>
-                    <h5>STUDIO <span class="text-accent">RENTAL</span></h5>
-                    <p class="small text-secondary">Premium studio spaces for shoots, productions and creative projects.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="service-card">
-                    <i class="fa-solid fa-clapperboard service-icon"></i>
-                    <div class="service-number" >02</div>
-                    <h5>CHROMA <span class="text-accent">SETUP</span></h5>
-                    <p class="small text-secondary">Professional green screen setups for seamless productions.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="service-card">
-                    <i class="fa-solid fa-microphone-lines service-icon"></i>
-                    <div class="service-number">03</div>
-                    <h5>PODCAST <span class="text-accent">PRODUCTION</span></h5>
-                    <p class="small text-secondary">End-to-end podcast production with pro audio & video quality.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="service-card">
-                    <i class="fa-solid fa-video service-icon"></i>
-                    <div class="service-number">04</div>
-                    <h5>CONTENT <span class="text-accent">CREATION</span></h5>
-                    <p class="small text-secondary">Engaging content crafted for brands, platforms and audiences.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Shutter Sound -->
+    <audio id="shutter-sound" preload="auto">
+        <source src="https://www.soundjay.com/mechanical/camera-shutter-click-01.mp3" type="audio/mpeg">
+    </audio>
 
-    <section class="py-5 bg-charcoal">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-3 stat-box">
-                    <div class="stat-number">250+</div>
-                    <div class="text-secondary small">PROJECTS</div>
-                </div>
-                <div class="col-md-3 stat-box">
-                    <div class="stat-number">50+</div>
-                    <div class="text-secondary small">HAPPY CLIENTS</div>
-                </div>
-                <div class="col-md-3 stat-box">
-                    <div class="stat-number">5</div>
-                    <div class="text-secondary small">STUDIOS</div>
-                </div>
-                <div class="col-md-3 stat-box">
-                    <div class="stat-number">10M+</div>
-                    <div class="text-secondary small">VIEWS DELIVERED</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script>
+        // --- 1. SLIDER DATA ---
+        const artists = [
+            { img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400" },
+            { img: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=400" },
+            { img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400" },
+            { img: "https://images.unsplash.com/photo-1514525253361-bee871871771?q=80&w=400" },
+            { img: "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=400" }
+        ];
 
-    <section class="py-5 container">
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="testimonial-card">
-                    <div class="d-flex align-items-center mb-3">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="client-img me-3">
-                        <div>
-                            <h6 class="mb-0">Rohit Sharma</h6>
-                            <small class="text-accent">Founder, Elevate Films</small>
-                        </div>
-                    </div>
-                    <p class="small text-secondary">"The studio, the team and the quality is beyond amazing. Our go-to place for all productions."</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="testimonial-card">
-                    <div class="d-flex align-items-center mb-3">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="client-img me-3">
-                        <div>
-                            <h6 class="mb-0">Neha Verma</h6>
-                            <small class="text-accent">Marketing Director, Nexora</small>
-                        </div>
-                    </div>
-                    <p class="small text-secondary">"Professional, creative and super supportive team. They bring your ideas to life!"</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="testimonial-card">
-                    <div class="d-flex align-items-center mb-3">
-                        <img src="https://randomuser.me/api/portraits/men/85.jpg" class="client-img me-3">
-                        <div>
-                            <h6 class="mb-0">Arjan Mehta</h6>
-                            <small class="text-accent">Creator & Filmmaker</small>
-                        </div>
-                    </div>
-                    <p class="small text-secondary">"From podcasts to brand films, they deliver nothing but excellence!"</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        function populateSlider(id, data) {
+            const container = document.getElementById(id);
+            const html = data.map(item => `<div class="box2"><img src="${item.img}"></div>`).join('');
+            container.innerHTML = html + html; // Double for seamless loop
+        }
 
-    <section class="py-5 text-center border-top border-secondary">
-        <h2 class="fw-bold mb-4">READY TO CREATE SOMETHING BIG?</h2>
-        <button class="btn btn-yellow px-5 py-3">BOOK NOW</button>
-    </section>
+        populateSlider('gallery', artists);
+        populateSlider('brand_logo', artists); // Re-using data for demo
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        // --- 2. CINEMATIC LOGIC ---
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('page-loader');
+            const flash = document.getElementById('flash');
+            const mainMsg = document.getElementById('main-msg');
+            const subMsg = document.querySelector('.sub-text');
+            const sound = document.getElementById('shutter-sound');
+            const wrapper = document.getElementById('main-wrapper');
+
+            // Wait 2.5 seconds to ensure user sees the "Smile Please"
+            setTimeout(() => {
+                // Play Shutter Sound
+                sound.play().catch(() => console.log("Sound muted by browser policy"));
+                
+                // Trigger Shutter Flash
+                flash.classList.add('flash-active');
+
+                // Swap Text during the white-out (0.2s into flash)
+                setTimeout(() => {
+                    mainMsg.innerText = "THANK YOU";
+                    mainMsg.style.color = "#e5b400";
+                    subMsg.innerText = "EXPLORE THE STUDIO EXPERIENCE";
+                }, 200);
+
+                // Exit Loader & Reveal Content
+                setTimeout(() => {
+                    loader.classList.add('loader-exit');
+                    wrapper.classList.add('reveal');
+                }, 1500);
+
+            }, 2500);
+        });
+    </script>
 </body>
 </html>

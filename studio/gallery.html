@@ -37,11 +37,12 @@
         </div>
     </div>
 </section>
-<!-- -------------agllery section-------------- -->
-<section id="studio-gallery" class="py-5 bg-black text-white position-relative overflow-hidden">
+
+<!-- -------------gallery section-------------- -->
+<section id="studio-gallery" class="py-5  text-white position-relative overflow-hidden">
     <div class="container-fluid px-4 px-md-5">
         
-        <div class="d-flex flex-wrap align-items-center justify-content-between border border-dark rounded-pill px-4 py-2 mb-5 mx-auto layout-filter-nav" style="background: #0c0c0e; max-width: 900px;">
+        <!-- <div class="d-flex flex-wrap align-items-center justify-content-between border border-dark rounded-pill px-4 py-2 mb-5 mx-auto layout-filter-nav" style="background: #0c0c0e; max-width: 900px;">
             <div class="d-flex flex-wrap gap-2 gap-md-3">
                 <button class="btn filter-btn active text-uppercase small fw-bold px-3 py-1 rounded-pill" onclick="filterGallery('all')">All</button>
                 <button class="btn filter-btn text-uppercase small fw-medium px-3 py-1 rounded-pill" onclick="filterGallery('bts')">BTS</button>
@@ -52,7 +53,7 @@
                 <button class="btn filter-btn text-uppercase small fw-medium px-3 py-1 rounded-pill" onclick="filterGallery('events')">Events</button>
             </div>
        
-        </div>
+        </div> -->
 
         <div class="gallery-masonry-grid" id="masonry-gallery-track">
             </div>
@@ -92,17 +93,128 @@
 const galleryTrack = document.getElementById("masonry-gallery-track");
 
 // 1. Paste your works collection data structure array here (Example entries)
-const works = [
-    { img: "../assets/img/Agency Gallery/BTS/1.jpg",  category: "bts" },
-    { img: "../assets/img/Agency Gallery/BTS/2.jpg",  category: "bts" },
-    { img: "../assets/img/Agency Gallery/BTS/3.jpg",  category: "bts" },
-    { img: "../assets/img/Agency Gallery/BTS/444.jpg",  category: "bts" },
-    { img: "../assets/img/Agency Gallery/BTS/55555.jpg",  category: "bts" },
+const gallery = [
+    { img: "../assets/img/Agency Gallery/BTS/1.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/2.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240406_140435.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/3.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/444.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/55555.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/67514ab92567c0b4f240b613.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240421_144439.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20181003_171449.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20181003_172602.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20211124_113644.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20211124_164247.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20211124_165950.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240112_120701.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240113_123106.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240421_152016.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240113_145917.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240113_171152.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_100748.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240518_152205.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_123915.webp",  category: "bts" },
+        { img: "../assets/img/Agency Gallery/BTS/20241126_175346.webp",  category: "bts" },
 
-
+    { img: "../assets/img/Agency Gallery/BTS/20240114_125659.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_131802.webp",  category: "bts" }, 
+    { img: "../assets/img/Agency Gallery/BTS/20240114_132331.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_134505.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_134509.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_134857.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240406_140439.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_134944.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_141646.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_141815.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_141824.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240421_152022.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_142001.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240406_141324.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240406_161119.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240502_124935.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240518_173044.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240704_150643.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240704_150738.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240704_150802.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240704_151208.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240704_152126.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240502_124943.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241024_130907.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241025_135610.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241119_191626.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241126_174615.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241208_122354.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241221_164037.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241229_182421.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250217_115435.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250410_152539.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250217_114414.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250522_125742.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250202_122919.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250522_131434.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250522_153215.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250522_153518.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250525_132233.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/66666666.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/78291190_10156830185083527_3671454979400400896_n.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/999999999.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/8888888888.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/10000000000.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250522_153612.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/77777777777.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/111111111111.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/A36I8806.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/cd.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/CIWJ4441.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/DSC09931.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/DSCN2940.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/DSCN3047.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/HIPB6412.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_0905.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_1036.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_1785.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250217_114404.webp",  category: "bts" },
+        { img: "../assets/img/Agency Gallery/BTS/20240502_124938.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_2709.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_2801.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_4124.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_4134.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_4198.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250522_184508.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_4856.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_5454.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_5574.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_5777.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_6739.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_7738.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_7746.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_8609.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_8610.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_8960.webp",  category: "bts" },
+    // { img: "../assets/img/Agency Gallery/BTS/IMG_9447.CR2",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_9970.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_20260216_215917.webp.jpeg",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG-20250222-WA0139.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG-20250712-WA0339.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG-20251028-WA0220.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/JYCH5049.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/MVIMG_20250528_121953.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/MVIMG_20250528_130315.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/Picture 046.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/Picture 109.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/president 2.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/PXL_20251127_071717531.MP.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/PXL_20251127_072137584.webp",  category: "bts" },
+   { img: "../assets/img/Agency Gallery/BTS/PXL_20251127_072218688.LONG_EXPOSURE-01.COVER.webp",  category: "bts" },
+   { img: "../assets/img/Agency Gallery/BTS/PXL_20251127_072259836.webp",  category: "bts" },
+   { img: "../assets/img/Agency Gallery/BTS/Sir_with_Batman.webp",  category: "bts" },
+   { img: "../assets/img/Agency Gallery/BTS/with_shyam_prasad.webp",  category: "bts" },
+  
 ];
 
-let filteredWorks = [...works];
+
+let filteredWorks = [...gallery];
 let currentLightboxIndex = 0;
 
 function renderGallery(itemsToRender) {
@@ -120,7 +232,7 @@ function renderGallery(itemsToRender) {
 }
 
 // Initial render call track pipeline
-renderGallery(works);
+renderGallery(gallery);
 
 // 3. Standard Failsafe Filtering Processing Core Logic Action
 function filterGallery(category) {
@@ -141,7 +253,7 @@ function filterGallery(category) {
     });
 
     // Update the local tracker variable for lightbox navigation logic track execution
-    filteredWorks = category === 'all' ? [...works] : works.filter(item => item.category === category);
+    filteredWorks = category === 'all' ? [...gallery] : gallery.filter(item => item.category === category);
 }
 
 // 4. Cinematic Lightbox Controller Lifecycle Pipeline

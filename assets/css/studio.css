@@ -7,17 +7,20 @@
         --font-main: "Inter", sans-serif;
       }
 
-body{
+/* body{
     background-color: var(--bg-color);
     font-family: var(--font-main);
     color: var(--text-light);
     overflow-x: hidden;
     margin: 0;
     color: #fff;
-}
+} */
 /* *{
     border: 2px solid rgb(235, 17, 17);
 } */
+ body{
+    padding-top: 70px
+ }
 
 #hero-section{
     display: flex;
@@ -41,10 +44,16 @@ body{
   display: flex !important;
   flex-wrap: nowrap !important;
   width: max-content !important; 
-  animation: scroll 155s linear infinite; /* Adjusted to a comfortable reading speed */
+  animation: scroll 155s linear infinite;
+}
+#brand_logo {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important; 
+  animation: scroll 250s linear infinite; 
 }
 
-.podcast .box2 {
+.podcast .box2, .podcast .box {
   width: 200px;
   height: 200px;
   background-image: url("../img/PNG.png");
@@ -66,9 +75,15 @@ body{
   object-fit: cover;
   object-position: top center;
 }
+.podcast .box img {
+  width: 190px;
+  height: 150px;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center center;
+}
 
-
-.podcast .slider-wrapper:hover #gallery {
+.podcast .slider-wrapper:hover #gallery, .podcast .slider-wrapper:hover #brand_logo {
   animation-play-state: paused;
 }
 
@@ -298,6 +313,7 @@ footer{
 
 
 .dark-map-embed {
+   /* filter: grayscale(100%) invert(92%) contrast(83%); */
    
     filter: invert(90%) hue-rotate(180deg) contrast(125%) saturate(50%) brightness(90%);
     -webkit-filter: invert(90%) hue-rotate(180deg) contrast(125%) saturate(50%) brightness(90%);
@@ -389,11 +405,11 @@ footer{
 .layout-filter-nav .filter-btn.active, 
 .layout-filter-nav .filter-btn:hover {
     background-color: transparent;
-    color: #ffcc00; /* Luxury accent brand yellow */
+    color: #e5b400; /* Luxury accent brand yellow */
 }
 
 .layout-filter-nav div .filter-btn:first-child.active {
-    border: 1px solid #ffcc00;
+    border: 1px solid #e5b400;
     color: #ffffff;
 }
 
@@ -482,8 +498,9 @@ footer{
 }
 
 .lightbox-btn:hover {
-    color: #ffcc00;
-    transform: scale(1.1);
+    color: #e5b400;
+        font-size: 2.5rem;
+    /* transform: scale(1.1); */
 }
 
 .lightbox-close {

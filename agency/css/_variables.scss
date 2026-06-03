@@ -1,0 +1,126 @@
+// font
+@font-face {
+    font-family:'Monument';
+    src: url('/font/MonumentExtended-Bold.woff2') format('woff2');
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+
+// variables
+$customFont: 'Monument', sans-serif;
+$fontPara: 'Raleway', sans-serif;
+$YearColor: #BB2649;
+$black:#111215;
+$white:#fff;
+
+.para{
+  font-size:24px;
+  margin:30px 10px;
+}
+@mixin bg{
+    position:absolute;
+    z-index:1;
+}
+@mixin gradientText{
+    background: linear-gradient(45deg,$YearColor,purple,$YearColor,yellow) left no-repeat;
+    background-size: 100% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s ease-in-out;
+}
+@mixin outlinetext{
+    color: black;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+}
+@mixin animContainer{
+    overflow:hidden;
+    position: relative;
+}
+@mixin heroTextanim{
+    h1{
+        font-size: 90px;
+        text-transform: uppercase;
+        font-family: $customFont;
+        font-weight: 800;
+        line-height: 90px;
+        text-align: left;
+    
+        &:first-child{
+          translate:-20px 0;
+        }
+        &:nth-child(2){
+          translate:20% 0;
+        }
+        &:nth-child(5){
+          translate: 25%;
+        }
+        &:nth-child(7){
+          translate: 55%;
+        }
+        @media only screen and (max-width: 1600px) and (min-width: 1500px){
+          font-size: 60px;
+          line-height:60px;
+        }
+        @media only screen and (max-width: 991px){
+          font-size: 36px;
+          line-height:50px;
+        }
+        @media only screen and (max-width: 767px)  {
+          font-size:30px;
+          line-height:45px;
+          &:first-child{
+            translate:0px 0;
+          }
+          &:nth-child(2){
+            translate:10% 0;
+          }
+          &:nth-child(5){
+            translate: 10%;
+          }
+          &:nth-child(7){
+            translate: 30%;
+          }
+      }
+    }
+}
+
+@mixin bigPara{
+    font-family:'Raleway', sans-serif;
+    font-size: 2.5rem;
+    line-height:3rem
+}
+
+// custom scrollbar
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  // height:50px
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent !important;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg,$YearColor,purple,$YearColor,yellow) left no-repeat !important;
+  height:100px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg,$YearColor,purple,$YearColor,yellow) left no-repeat !important;
+}
+.modal-backdrop.show {
+   opacity: 0; 
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
