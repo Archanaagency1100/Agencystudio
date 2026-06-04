@@ -158,6 +158,12 @@
 }
 
 @media (max-width: 767.98px) {
+
+     #hero-section{
+
+    margin-top:0px;
+ 
+}
     .bg-overlay {
         background-color: transparent;
     }
@@ -281,12 +287,22 @@ footer{
     color: var(--accent-yellow) !important;
 }
 
-
 #contact-section .form-control:focus {
     border-color: var(--accent-yellow) !important;
     background-color:#ffe586 !important;
 }
 
+.custom-radio {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #e5b400 !important;
+}
+
+.custom-radio:checked {
+    background-color: #e5b400 !important;
+    border-color: #e5b400 !important;
+    shadow: 0 0 0 2px rgba(229, 180, 0, 0.5) !important;
+}
 
 
 .custom-border-card {
