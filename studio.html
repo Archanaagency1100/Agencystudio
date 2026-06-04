@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgencyEleven100 Studio | Production Excellence</title>
+    <title>AgencyEleven100 | Create Without Limits</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome -->
@@ -14,229 +14,276 @@
     <style>
         :root {
             --bg-color: #050505;
+            --bg-charcoal: #111111;
+            --text-dark: #050505;
+            --text-light: #fff;
             --accent-yellow: #e5b400;
+            --font-main: "Inter", sans-serif;
         }
 
         body {
             background-color: var(--bg-color);
-            color: #fff;
-            font-family: 'Inter', sans-serif;
+            color: var(--text-light);
+            font-family: var(--font-main);
             overflow-x: hidden;
-            margin: 0;
         }
 
-        /* --- 1. CINEMATIC SHUTTER PRELOADER --- */
+        /* --- CINEMATIC STUDIO PRELOADER --- */
         .cinematic-loader {
             position: fixed;
             inset: 0;
-            background: #000;
+            background: #050505;
             z-index: 99999;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 1.2s cubic-bezier(0.85, 0, 0.15, 1), opacity 1s ease;
+            overflow: hidden;
+            transition: opacity 0.8s ease-in-out, visibility 0.8s;
         }
 
-        .studio-setup { text-align: center; position: relative; }
+        .studio-setup {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
-        .camera-icon {
-            font-size: 6rem;
+        .camera-wrap {
+            position: relative;
+            font-size: 5rem;
             color: #fff;
             margin-bottom: 20px;
-            filter: drop-shadow(0 0 30px rgba(229, 180, 0, 0.4));
-            animation: cameraEntrance 1s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+            animation: cameraFloat 3s infinite ease-in-out;
         }
 
-        .loader-text {
-            font-family: 'Impact', sans-serif;
-            font-size: clamp(2rem, 5vw, 4rem);
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            margin: 10px 0;
-            transition: color 0.3s ease;
-        }
-
-        .sub-text {
-            font-size: 0.8rem;
-            letter-spacing: 6px;
+        .desktop-screen {
+            position: absolute;
+            font-size: 1.5rem;
+            bottom: -10px;
+            right: -10px;
             color: var(--accent-yellow);
-            font-weight: bold;
-            text-transform: uppercase;
+            background: #050505;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .light {
+            position: absolute;
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.1);
+            top: 20px;
+        }
+
+        .light-left { left: -50px; transform: rotate(-15deg); }
+        .light-right { right: -50px; transform: rotate(15deg); }
+
+        .light i { animation: lightFlicker 2s forwards; animation-delay: 0.5s; }
+
+        .lens-flare {
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 2px; height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 40px 10px #fff, 0 0 100px 30px var(--accent-yellow);
+            opacity: 0;
+            animation: flash 1s ease-out forwards;
+            animation-delay: 1.2s;
+        }
+
+        .loader-branding { text-align: center; }
+        .loader-logo { font-weight: 900; letter-spacing: 10px; color: #fff; text-transform: uppercase; }
+        .loader-logo span { color: var(--accent-yellow); }
+
+        .shutter-line {
+            width: 0; height: 1px; background: var(--accent-yellow);
+            margin: 10px auto;
+            animation: lineExtend 1s forwards; animation-delay: 0.8s;
         }
 
         .shutter-flash {
-            position: fixed;
-            inset: 0;
-            background: #fff;
-            z-index: 100000;
-            opacity: 0;
-            pointer-events: none;
+            position: fixed; inset: 0; background: #fff; opacity: 0;
+            pointer-events: none; z-index: 100000;
         }
 
-        /* --- 2. MAIN CONTENT REVEAL EFFECT --- */
-        #main-wrapper {
-            opacity: 0;
-            transform: scale(0.9);
-            transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        #main-wrapper.reveal {
-            opacity: 1;
-            transform: scale(1);
-        }
+        .loader-fade-out { opacity: 0; visibility: hidden; }
+        .flash-active { animation: whiteFlash 0.6s ease-out; }
 
-        /* --- 3. HERO & MARQUEE STYLES --- */
-        .hero-section {
-            height: 90vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=2071') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+        @keyframes cameraFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes lightFlicker { 
+            0%, 10% { color: rgba(255, 255, 255, 0.1); } 
+            11%, 15% { color: #fff; text-shadow: 0 0 20px var(--accent-yellow); }
+            25%, 100% { color: #fff; text-shadow: 0 0 30px var(--accent-yellow); }
         }
+        @keyframes flash { 0% { opacity: 0; } 50% { opacity: 1; transform: scale(1.5); } 100% { opacity: 0; } }
+        @keyframes lineExtend { to { width: 100%; } }
+        @keyframes whiteFlash { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; } }
 
-        .hero-title { font-family: 'Impact', sans-serif; font-size: clamp(3rem, 10vw, 6rem); line-height: 0.9; }
-
-        /* MARQUEE HARDWARE ACCELERATION */
-        .slider-wrapper { overflow: hidden; width: 100%; position: relative; contain: paint; margin-bottom: 50px; }
-        .scroll-track { display: flex !important; width: max-content !important; transform: translate3d(0, 0, 0); }
+        /* --- MARQUEE SLIDER CSS --- */
+        .podcast .slider-wrapper { overflow: hidden; width: 100%; position: relative; contain: paint; }
+        .scroll-track { display: flex !important; width: max-content !important; transform: translate3d(0, 0, 0); will-change: transform; }
         
         #gallery, #brand_logo {
             display: flex !important;
             flex-wrap: nowrap !important;
-            animation: scroll 100s linear infinite;
+            width: max-content !important;
+            animation: scroll 120s linear infinite;
         }
 
-        .box2 {
-            width: 240px; height: 180px;
-            background: #111;
-            margin: 0 10px;
-            border-radius: 10px;
-            overflow: hidden;
-            flex-shrink: 0;
-            border: 1px solid rgba(255,255,255,0.1);
+        .podcast .box2 {
+            width: 200px; height: 200px;
+            background-image: url("../assets/img/PNG.png"); /* Ensure this path is correct */
+            background-position: center; background-repeat: no-repeat; background-size: cover;
+            display: flex; justify-content: center; align-items: center;
+            flex-shrink: 0; padding: 0 5px; transform: translateZ(0);
         }
 
-        .box2 img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(20%); transition: 0.5s; }
-        .box2:hover img { filter: grayscale(0%); transform: scale(1.1); }
+        .podcast .box2 img { width: 190px; height: 150px; border-radius: 15px; object-fit: cover; }
 
-        /* --- ANIMATIONS --- */
-        @keyframes cameraEntrance { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-        @keyframes cameraFlash { 0% { opacity: 0; } 40% { opacity: 1; } 100% { opacity: 0; } }
-        @keyframes scroll { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
-
-        .flash-active { animation: cameraFlash 0.6s ease-out forwards; }
-        .loader-exit { transform: scale(2); opacity: 0; pointer-events: none; }
-
-        .yellow-btn {
-            background: var(--accent-yellow);
-            color: #000;
-            padding: 15px 40px;
-            font-weight: 900;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-radius: 5px;
-            display: inline-block;
-            transition: 0.3s;
+        @keyframes scroll {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
         }
-        .yellow-btn:hover { background: #fff; transform: translateY(-3px); }
+
+        /* --- OTHER UTILITIES --- */
+        .text-accent { color: var(--accent-yellow); }
+        .btn-yellow { background-color: var(--accent-yellow); color: #000; font-weight: 700; border-radius: 4px; padding: 10px 25px; text-transform: uppercase; border: none; }
+        .hero-section { padding: 100px 0; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071') no-repeat center/cover; min-height: 80vh; display: flex; align-items: center; }
+        .hero-title { font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 900; line-height: 1; text-transform: uppercase; }
+        .service-card { background: var(--bg-charcoal); border: 1px solid #222; padding: 30px; transition: 0.3s; height: 100%; }
+        .service-card:hover { border-color: var(--accent-yellow); }
     </style>
 </head>
 <body>
 
-    <!-- 1. CINEMATIC PRELOADER -->
+    <!-- 1. PRELOADER -->
     <div id="page-loader" class="cinematic-loader">
         <div class="studio-setup">
-            <div class="camera-icon">
-                <i class="fa-solid fa-camera-viewfinder"></i>
+            <div class="light light-left"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="light light-right"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="camera-wrap">
+                <div class="lens-flare"></div>
+                <i class="fa-solid fa-camera-reels main-camera"></i>
+                <div class="desktop-screen"><i class="fa-solid fa-desktop"></i></div>
             </div>
-            
-            <div id="text-container">
-                <h2 class="loader-text" id="main-msg">SMILE PLEASE</h2>
-                <p class="sub-text">You are on AgencyEleven100 Studio</p>
+            <div class="loader-branding">
+                <h2 class="loader-logo">STUDIO<span>925</span></h2>
+                <div class="shutter-line"></div>
+                <p class="small text-secondary tracking-widest">SETTING THE STAGE...</p>
             </div>
         </div>
-        <div class="shutter-flash" id="flash"></div>
+        <div class="shutter-flash"></div>
     </div>
 
-    <!-- 2. MAIN WEBSITE -->
-    <div id="main-wrapper">
-        <!-- Hero -->
-        <section class="hero-section">
-            <div class="container">
-                <p class="text-accent fw-bold mb-3" style="letter-spacing: 10px;">ACTION | PASSION | STUDIO</p>
-                <h1 class="hero-title">DIRECTING<br>YOUR <span class="text-accent">VISION</span></h1>
-                <p class="lead text-white-50 mb-5">High-end production services for modern brands.</p>
-                <a href="#" class="yellow-btn">Book Session</a>
+    <!-- 2. NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-black border-bottom border-dark">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="#">AGENCYELEVEN100</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link text-white-50" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="#">Work</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="#">Contact</a></li>
+                </ul>
+                <button class="btn btn-yellow">Book Now</button>
             </div>
-        </section>
-
-        <!-- Sliders -->
-        <div class="py-5">
-            <h5 class="text-center text-accent mb-4" style="letter-spacing: 5px;">TRUSTED BY ARTISTS</h5>
-            <div class="slider-wrapper"><div class="scroll-track" id="gallery"></div></div>
-
-            <h5 class="text-center text-accent mb-4" style="letter-spacing: 5px;">TRUSTED BY BRANDS</h5>
-            <div class="slider-wrapper"><div class="scroll-track" id="brand_logo"></div></div>
         </div>
-    </div>
+    </nav>
 
-    <!-- Shutter Sound -->
-    <audio id="shutter-sound" preload="auto">
-        <source src="https://www.soundjay.com/mechanical/camera-shutter-click-01.mp3" type="audio/mpeg">
-    </audio>
+    <!-- 3. HERO -->
+    <section class="hero-section">
+        <div class="container">
+            <p class="text-accent tracking-widest">PREMIUM STUDIO. POWERFUL PRODUCTIONS.</p>
+            <h1 class="hero-title text-white">CREATE<br>WITHOUT<br><span class="text-accent">LIMITS</span></h1>
+            <p class="lead text-secondary col-md-6">A modern production space designed for creators, cinematic productions, and high-quality content experiences.</p>
+        </div>
+    </section>
 
+    <!-- 4. ARTISTS SLIDER -->
+    <section id="work" class="podcast py-5">
+        <h2 class="yellow-mini-title text-center text-accent mb-4">TRUSTED BY ARTISTS</h2>
+        <div class="slider-wrapper">
+            <div class="scroll-track">
+                <div id="gallery"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. BRANDS SLIDER -->
+    <section id="logo" class="brands py-5">
+        <h2 class="yellow-mini-title text-center text-accent mb-4">TRUSTED BY BRANDS</h2>
+        <div class="slider-wrapper">
+            <div class="scroll-track">
+                <div id="brand_logo"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FOOTER -->
+    <footer class="py-5">
+        <div class="container-fluid px-md-5">
+            <div class="row thin-border g-0 position-relative p-5 rounded-2 justify-content-center align-items-center" 
+                 style="background:url('../assets/img/studio/studio1100bg.jpeg') center/cover no-repeat; border: 1px solid rgba(255,255,255,0.1);">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50" style="z-index: 1;"></div>
+                <div class="col-md-9 position-relative text-center text-md-start" style="z-index: 2;">
+                    <h4 class="fw-bold text-white">READY TO CREATE YOUR NEXT PRODUCTION?</h4>
+                    <p class="text-white-50 m-0">Professional studio rental, podcast production, and cinematic content creation.</p>
+                </div>
+                <div class="col-md-3 position-relative text-center text-md-end mt-4 mt-md-0" style="z-index: 2;">
+                    <a class="btn btn-yellow" href="">Book Studio</a>
+                </div>
+            </div>
+            <p class="mt-4 text-center text-md-end small text-secondary">&copy; 2026 agencyeleven100. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
     <script>
-        // --- 1. SLIDER DATA ---
-        const artists = [
-            { img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400" },
-            { img: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=400" },
-            { img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400" },
-            { img: "https://images.unsplash.com/photo-1514525253361-bee871871771?q=80&w=400" },
-            { img: "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=400" }
+        // ARTISTS DATA
+        const artistWorks = [
+            { img: "../assets/img/Clients/ISHWAK_SINGH.webp", name: "ISHWAK SINGH" },
+            { img: "../assets/img/Clients/Kapil_Sharma.jpg", name: "Kapil Sharma" },
+            { img: "../assets/img/Clients/SUNIDHI_CHAUHAN.webp", name: "SUNIDHI CHAUHAN" }
+            // ... Add your other artist images here
         ];
 
-        function populateSlider(id, data) {
-            const container = document.getElementById(id);
-            const html = data.map(item => `<div class="box2"><img src="${item.img}"></div>`).join('');
-            container.innerHTML = html + html; // Double for seamless loop
+        // BRANDS DATA
+        const brandLogos = [
+            { img: "../assets/img/Trusted By Brands/a4a.png" },
+            { img: "../assets/img/Trusted By Brands/nike.png" },
+            { img: "../assets/img/Trusted By Brands/apple.png" }
+            // ... Add your other brand images here
+        ];
+
+        function generateHTML(items, isArtist = true) {
+            return items.map(item => {
+                let name = isArtist ? item.name : item.img.split('/').pop().split('.')[0].replace(/[-_]/g, ' ');
+                return `
+                <div class="box2">
+                    <img src="${item.img}" alt="${name}">
+                </div>`;
+            }).join('');
         }
 
-        populateSlider('gallery', artists);
-        populateSlider('brand_logo', artists); // Re-using data for demo
+        // Initialize Sliders
+        document.getElementById("gallery").innerHTML = generateHTML(artistWorks) + generateHTML(artistWorks);
+        document.getElementById("brand_logo").innerHTML = generateHTML(brandLogos, false) + generateHTML(brandLogos, false);
 
-        // --- 2. CINEMATIC LOGIC ---
+        // PRELOADER LOGIC
         window.addEventListener('load', function() {
             const loader = document.getElementById('page-loader');
-            const flash = document.getElementById('flash');
-            const mainMsg = document.getElementById('main-msg');
-            const subMsg = document.querySelector('.sub-text');
-            const sound = document.getElementById('shutter-sound');
-            const wrapper = document.getElementById('main-wrapper');
-
-            // Wait 2.5 seconds to ensure user sees the "Smile Please"
+            const flash = document.querySelector('.shutter-flash');
+            
             setTimeout(() => {
-                // Play Shutter Sound
-                sound.play().catch(() => console.log("Sound muted by browser policy"));
-                
-                // Trigger Shutter Flash
                 flash.classList.add('flash-active');
-
-                // Swap Text during the white-out (0.2s into flash)
                 setTimeout(() => {
-                    mainMsg.innerText = "THANK YOU";
-                    mainMsg.style.color = "#e5b400";
-                    subMsg.innerText = "EXPLORE THE STUDIO EXPERIENCE";
-                }, 200);
-
-                // Exit Loader & Reveal Content
-                setTimeout(() => {
-                    loader.classList.add('loader-exit');
-                    wrapper.classList.add('reveal');
-                }, 1500);
-
-            }, 2500);
+                    loader.classList.add('loader-fade-out');
+                }, 1000);
+            }, 2500); 
         });
     </script>
 </body>
