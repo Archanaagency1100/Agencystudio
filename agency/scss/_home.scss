@@ -1,6 +1,6 @@
 .a11-hero {
   background-color: $color-white-pure;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   align-items: start;
@@ -8,6 +8,7 @@
   overflow: hidden;
   padding-top: 85px; 
   @media (max-width: 991px) {
+    height: 70vh;
     padding-top: 55px !important; 
   }
 
@@ -114,6 +115,7 @@
 // -----------services-----------------
 
 .a11-services {
+  height: 100vh;
   background-color: $color-white-pure;
   width: 100%;
   overflow: hidden;
@@ -123,7 +125,7 @@
 
   &__bg-watermark {
     position: absolute;
-    top: 52%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, 20%);
     font-family: $font-primary;
@@ -318,49 +320,49 @@
       display: none !important;
     }
 
-    // Swiper viewport boundary logic setup
+    
     .a11-services-swiper {
       width: 100%;
-      padding: 30px 10px 60px !important; // Room for shadow depth below items
+      padding: 30px 10px 60px !important; 
     }
 
     &__deck {
-      display: flex !important; // Forces swiper row structure natively
+      display: flex !important; 
       flex-direction: row !important;
       height: auto !important; 
       width: max-content !important;
     }
 
     &__card {
-      position: relative !important; // Unlocks nodes from absolute overlapping coordinates
+      position: relative !important;
       top: 0 !important;
       left: 0 !important;
-      width: 290px !important; // Perfect circular size
+      width: 290px !important; 
       height: 290px !important;
       flex-shrink: 0 !important;
-      margin-right: -45px !important; // Premium artistic overlap chain effect
+      margin-right: -45px !important; 
       transform: none;
       box-shadow: -10px 15px 35px rgba(0, 0, 0, 0.16);
-      opacity: 0.5; // Staggered fade look for side elements
+      opacity: 0.5; 
       transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 
-      // Swiper active slide focus logic (The center circle lights up automatically)
+      
       &.swiper-slide-active {
         opacity: 1 !important;
         z-index: 100 !important;
-        transform: scale(1.05) translateY(-10px) !important; // Smooth scaling emphasis
+        transform: scale(1.05) translateY(-10px) !important; 
         border-color: $color-gold-brand !important;
         box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
       }
 
-      // Next sibling slide overlap compensation layer rules
+   
       &.swiper-slide-next {
         opacity: 0.8 !important;
         z-index: 50 !important;
       }
 
       &-img {
-        opacity: 1 !important; // Mobile auto reveals beautiful background images natively
+        opacity: 1 !important; 
         transform: scale(1);
       }
 
@@ -376,4 +378,95 @@
     }
   }
   .fluid-ripple-overlay-canvas { display: none !important; }
+}
+
+
+// ------slidding reels----------------
+// ==========================================================================
+// PODCAST INFINITE MARQUEE SLIDER COMPONENT
+// ==========================================================================
+.podcast {
+  .slider-wrapper {
+    overflow: hidden;
+    margin-top: 9px;
+    width: 100%;
+
+
+    &:hover {
+      #gallery, 
+      #brand_logo {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+
+  .box2, 
+  .box {
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/PNG.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0 5px;
+
+    img {
+      width: 190px;
+      height: 150px;
+      border-radius: 15px;
+      object-fit: cover;
+      background-color: $color-black-brand; // Centralized black brand token mapping
+    }
+  }
+
+  .box2 img {
+    object-position: top center;
+  }
+
+  .box img {
+    object-position: center center;
+  }
+}
+
+// --- INFINITE MARQUEE RUNTIME CORE SYSTEMS ---
+#gallery {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
+  // Binds standard linear loop durations with structural cinematic cubic rules if needed, 
+  // or sticks to native linear physics tracking vectors
+  animation: leftscroll 155s linear infinite;
+}
+
+#brand_logo {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
+  animation: rightscroll 250s linear infinite;
+}
+
+// --- CORE MATHEMATICAL ACCELERATION KEYFRAMES ---
+@keyframes leftscroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    // Exact half translation ensures infinite loop illusion without popping jumps
+    transform: translateX(-50%); 
+  }
+}
+
+@keyframes rightscroll {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
