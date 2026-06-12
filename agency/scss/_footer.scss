@@ -1,0 +1,130 @@
+// ==========================================================================
+// FIXED VIDEO BACKGROUND FOOTER COMPONENT
+// ==========================================================================
+footer.footer {
+  position: relative;
+  padding: 6em 0 5em;
+  border-top: 1px solid rgba($color-white-pure, 0.15);
+  background-color: $color-black-brand; // Fallback background color
+  overflow: hidden;
+
+  // --- Fixed Background Video Engine ---
+  .footer__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover; 
+    object-position: top center; // Forces the top position of the video to stay visible
+    pointer-events: none; // Ensures clicks pass through to links
+    
+    // Smooth parity fallback for desktop device parallax simulation
+    @media (min-width: 992px) {
+      position: absolute;
+      height: 130%; // Extra height allows room for parallax window movement if needed
+      top: 0;
+    }
+  }
+
+  // --- Dark Ambient Overlay Canvas ---
+  .footer__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba($color-black-brand, 0.7); // Dark tint to make text readable over video
+    z-index: 1;
+  }
+
+  // --- Core Content Wrapper Stage ---
+  .footer-inner {
+    position: relative;
+    text-align: center;
+    
+    img {
+      width: 35%;
+      margin-bottom: 30px;
+      height: auto;
+      
+      @media (max-width: 768px) {
+        width: 60%; 
+      }
+    }
+    
+    h2 {
+      font-size: 45px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-family: $font-serif;
+      letter-spacing: 2px;
+      @include gradientText; // Retains your custom gradient configuration mixing
+
+      @media (max-width: 768px) {
+        font-size: 26px;
+        letter-spacing: 1px;
+      }
+    }
+    
+    // Nav Navigation Link Layout Matrix
+    .links {
+      margin-bottom: 25px;
+      gap: 10px 20px; // Dynamic gap constraints for flex wrapping lines
+      
+      a {
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        font-weight: $weight-bold;
+        color: $color-white-pure; 
+        transition: color $transition-smooth;
+
+        &:hover {
+          color: $color-gold-brand; // Hover feedback loop
+        }
+
+        @media (max-width: 768px) {
+          font-size: 13px;
+        }
+      }
+    }
+
+    // Social Icon Triggers Inline Row Layout
+    .socials {
+      gap: 20px;
+
+      a {
+        display: inline-block;
+        transition: transform $transition-smooth;
+
+        &:hover {
+          transform: scale(1.15);
+        }
+      }
+
+      img {
+        width: 22px;
+        height: auto;
+        display: block;
+        margin: 0; // Handled cleanly via parent flex gap setup
+      }
+    }
+  }
+
+  // --- Clean Isolated Copyright Row Baseline ---
+  .copyright {
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+    padding-top: 24px;
+    border-top: 1px solid rgba($color-white-pure, 0.1);
+    text-align: center;
+
+    p {
+      font-family: $font-primary;
+      font-size: 12px;
+      color: $color-text-light;
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+  }
+}

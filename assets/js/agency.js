@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const footerPlaceholder = document.getElementById('footer-placeholder');
 
     if (footerPlaceholder) {
-        // Universal absolute path starting with /
+       
         const footerPath = "/components/agency/footer.html";
 
         fetch(footerPath)
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // ------------------services circle effect----------------
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Fail-safe checker ensures swiper loads only if library script is available on active viewports
+    
     if (typeof Swiper !== 'undefined' && document.querySelector('.a11-services-swiper')) {
         let servicesSwiper;
 
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const isMobileWidth = window.innerWidth <= 767;
 
             if (isMobileWidth && !servicesSwiper) {
-                // Initialize premium swipe actions engine
+                
                 servicesSwiper = new Swiper('.a11-services-swiper', {
                     slidesPerView: 'auto',
                     centeredSlides: true,
@@ -87,16 +87,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     speed: 600,
                     resistanceRatio: 0.85,
                     grabCursor: true,
-                    slideToClickedSlide: true, // Smooth glide transit if user clicks neighboring item
+                    slideToClickedSlide: true, 
                 });
             } else if (!isMobileWidth && servicesSwiper) {
-                // Destroy swiper slider safely if expanded back to standard desktop views
                 servicesSwiper.destroy(true, true);
                 servicesSwiper = undefined;
             }
         }
 
-        // Run checking arrays initial trigger loops
         initServicesSlider();
         window.addEventListener('resize', initServicesSlider);
     }

@@ -567,3 +567,129 @@
     }
   }
 }
+// -----testimonials----------------
+.review-marquee {
+  background-color: #f7f7f7; // Light premium background like your screenshot
+  padding: 80px 0;
+  overflow: hidden;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; // Gap between the two rows
+    width: 100%;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+      .review-marquee__track {
+        animation-play-state: paused; // Freezes movement on hover safely
+      }
+    }
+  }
+
+  &__track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+  }
+
+  &__card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    width: 380px; // Consistent card width
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    flex-shrink: 0;
+  }
+
+  &__stars {
+    color: #ff9900; // Orange-gold stars color
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333333;
+    font-weight: 400;
+    margin-bottom: 24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #eaeaea;
+    }
+
+    h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111111;
+      margin: 0 0 2px 0;
+    }
+
+    span {
+      font-size: 11px;
+      color: #777777;
+      display: block;
+    }
+  }
+
+  // --- ROW DIRECTION TRIGGERS ---
+  .row-left-to-right &__track {
+    animation: marqueeLeftToRight 35s linear infinite;
+  }
+
+  .row-right-to-left &__track {
+    animation: marqueeRightToLeft 35s linear infinite;
+  }
+}
+
+
+@keyframes marqueeLeftToRight {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes marqueeRightToLeft {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+// Mobile View Optimizations
+@media (max-width: 767px) {
+  .review-marquee {
+    padding: 40px 0;
+    &__container { gap: 16px; }
+    &__track { gap: 16px; }
+    &__card {
+      width: 300px; 
+      padding: 24px;
+    }
+  }
+}
