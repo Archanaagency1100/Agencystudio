@@ -297,6 +297,7 @@
 
 @media (min-width: 768px) and (max-width: 1399px) {
   .a11-services {
+     height: 70vh;
     padding: 10px 0;
     &__deck {
       transform: scale(0.68);
@@ -382,9 +383,7 @@
 
 
 // ------slidding reels----------------
-// ==========================================================================
-// PODCAST INFINITE MARQUEE SLIDER COMPONENT
-// ==========================================================================
+
 .podcast {
   .slider-wrapper {
     overflow: hidden;
@@ -421,7 +420,7 @@
       height: 150px;
       border-radius: 15px;
       object-fit: cover;
-      background-color: $color-black-brand; // Centralized black brand token mapping
+      background-color: $color-black-brand; 
     }
   }
 
@@ -439,8 +438,6 @@
   display: flex !important;
   flex-wrap: nowrap !important;
   width: max-content !important;
-  // Binds standard linear loop durations with structural cinematic cubic rules if needed, 
-  // or sticks to native linear physics tracking vectors
   animation: leftscroll 155s linear infinite;
 }
 
@@ -451,13 +448,11 @@
   animation: rightscroll 250s linear infinite;
 }
 
-// --- CORE MATHEMATICAL ACCELERATION KEYFRAMES ---
 @keyframes leftscroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    // Exact half translation ensures infinite loop illusion without popping jumps
     transform: translateX(-50%); 
   }
 }
@@ -468,5 +463,107 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+.web-showcase {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  position: relative;
+
+  &__grid {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    padding: 0 20px;
+    align-items: flex-start;
+  }
+
+  &__lane {
+    position: relative;
+    width: 20%; 
+    height: 85vh; 
+    overflow: hidden;
+  }
+
+  &__track {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  &__card {
+    width: 100%;
+    display: block;
+    flex-shrink: 0; 
+
+    img {
+      width: 100%;
+      height: auto; 
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  .lane-down &__track {
+    animation: scrollDown 128s linear infinite;
+    &:hover { animation-play-state: paused; }
+  }
+
+  .lane-up &__track {
+    animation: scrollUp 128s linear infinite;
+    &:hover { animation-play-state: paused; }
+  }
+}
+
+@keyframes scrollDown {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+/* ==========================================================================
+   Responsive Viewports (Tablet: 3 Columns | Phone: 2 Columns)
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .web-showcase {
+    &__lane {
+      width: 33.33% !important; 
+      
+      &:nth-child(4),
+      &:nth-child(5) {
+        display: none !important; 
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .web-showcase {
+    padding: 10px 0;
+
+    &__grid {
+      gap: 12px;
+      padding: 0 12px;
+    }
+
+    &__lane {
+      width: 50% !important; // 2 Columns on Phone
+      height: 70vh;
+
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        display: none !important; // Safely hides last 3 columns
+      }
+    }
   }
 }

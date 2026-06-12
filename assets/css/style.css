@@ -432,6 +432,7 @@
 
 @media (min-width: 768px) and (max-width: 1399px) {
   .a11-services {
+    height: 70vh;
     padding: 10px 0;
   }
   .a11-services__deck {
@@ -575,6 +576,100 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+.web-showcase {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  position: relative;
+}
+.web-showcase__grid {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  padding: 0 20px;
+  align-items: flex-start;
+}
+.web-showcase__lane {
+  position: relative;
+  width: 20%;
+  height: 85vh;
+  overflow: hidden;
+}
+.web-showcase__track {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.web-showcase__card {
+  width: 100%;
+  display: block;
+  flex-shrink: 0;
+}
+.web-showcase__card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.lane-down .web-showcase__track {
+  animation: scrollDown 128s linear infinite;
+}
+.lane-down .web-showcase__track:hover {
+  animation-play-state: paused;
+}
+.lane-up .web-showcase__track {
+  animation: scrollUp 128s linear infinite;
+}
+.lane-up .web-showcase__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes scrollUp {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* ==========================================================================
+   Responsive Viewports (Tablet: 3 Columns | Phone: 2 Columns)
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .web-showcase__lane {
+    width: 33.33% !important;
+  }
+  .web-showcase__lane:nth-child(4), .web-showcase__lane:nth-child(5) {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .web-showcase {
+    padding: 10px 0;
+  }
+  .web-showcase__grid {
+    gap: 12px;
+    padding: 0 12px;
+  }
+  .web-showcase__lane {
+    width: 50% !important;
+    height: 70vh;
+  }
+  .web-showcase__lane:nth-child(3), .web-showcase__lane:nth-child(4), .web-showcase__lane:nth-child(5) {
+    display: none !important;
   }
 }
 * {
