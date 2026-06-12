@@ -1,0 +1,98 @@
+// Import variables configuration first
+@import 'variables';
+@import 'navbar';
+@import 'home';
+
+
+* {
+  // border:2px solid blue;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+  }
+
+  ::selection{
+    color:$color-gold-brand;
+  }
+  html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body {
+     color:$color-black-brand;
+    background: $color-white-bg ;
+    line-height: 1.5;
+    font-weight: 400;
+    overflow-x: hidden !important;
+  }
+
+.section_heading {
+  font-family: $font-serif; 
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
+  font-weight: $weight-regular; 
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: $color-black-brand; 
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+
+  &__sub, 
+  span {
+    color: $color-text-muted;
+    font-style: italic; 
+  }
+}
+
+.mini_heading {
+  font-family: $font-serif; 
+  font-size: clamp(0.5rem, 2vw, 1.25rem);
+  font-weight: $weight-regular; 
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, $color-black-brand 0%, $color-gold-brand 50%, $color-black-brand 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradientLoop 4s linear infinite;
+
+  &__sub, 
+  span {
+    font-style: italic; 
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+@keyframes textGradientLoop {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.stylish-bg-text{
+  position: absolute;
+    top: 43%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    font-size: 200px;
+    black-space: nowrap;
+    font-weight: 900;
+    // font-family: $customFont;
+    pointer-events: none;
+    background: -webkit-linear-gradient(#000000,#adadad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 10em;
+    font-weight: 800;
+}
+

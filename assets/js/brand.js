@@ -256,5 +256,5 @@
     }
 
     const brandHTMLString = generateBrandHTML(logos);
-    // Injects the markup twice to ensure no gap during the infinite scroll animation
+
     brandContainer.innerHTML = brandHTMLString + brandHTMLString;

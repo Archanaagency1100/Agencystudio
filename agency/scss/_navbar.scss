@@ -1,0 +1,161 @@
+.a11-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 90px;
+  background: rgba($color-white-pure, 0.96);
+  backdrop-filter: $glass-blur;
+  -webkit-backdrop-filter: $glass-blur;
+  border-bottom: 1px solid $color-border-light;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__logo-side {
+    max-width: 200px;
+    
+    .logo-main-img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) saturate(100%);
+    }
+
+    .logo-tagline-text {
+      font-family: $font-primary;
+      font-size: 10px;
+      font-weight: $weight-medium;
+      color: $color-text-gray;
+      text-transform: lowercase;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+  }
+
+  &__links-list {
+    list-style: none;
+    gap: 40px;
+
+    .nav-link {
+      font-family: $font-primary;
+      font-size: 15px;
+      font-weight: $weight-medium;
+      color: $color-black-brand !important;
+      padding: 0 !important;
+      transition: color $transition-fast;
+
+      &:hover, &.active {
+        color: $color-gold-brand !important;
+      }
+    }
+  }
+
+  // --- Utility Actions Interface Buttons ---
+  .btn-nav-phone-outline {
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 26px;
+    border: 1px solid $color-gold-brand;
+    border-radius: 50px;
+    font-family: $font-primary;
+    font-size: 14px;
+    font-weight: $weight-semibold;
+    color: $color-black-brand;
+    text-decoration: none;
+    transition: background-color $transition-fast, color $transition-fast, border-color $transition-fast;
+
+    .phone-icon-svg {
+      color: $color-black-brand;
+      transition: color $transition-fast;
+    }
+
+    &:hover {
+      background-color: $color-black-brand;
+      border-color: $color-black-brand;
+      color: $color-white-pure;
+      .phone-icon-svg { color: $color-white-pure; }
+    }
+  }
+
+  .btn-nav-studio-solid {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 30px;
+    background-color: $color-gold-brand;
+    border-radius: 12px;
+    font-family: $font-primary;
+    font-size: 13px;
+    font-weight: $weight-bold;
+    color: $color-black-brand;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    border: 1px solid $color-gold-brand;
+    transition: background-color $transition-fast, border-color $transition-fast;
+
+    &:hover {
+      background-color: $color-gold-hover;
+      border-color: $color-gold-hover;
+    }
+  }
+
+  // --- Responsive Mobile Drawer Canvas Transitions ---
+  #mobileNavDrawer {
+    top: 90px;
+    left: 0;
+    z-index: 998;
+
+    .mobile-drawer-inner {
+      height: calc(100vh - 90px);
+      overflow-y: auto;
+
+      .nav-link {
+        font-family: $font-primary;
+        font-size: 22px;
+        font-weight: $weight-bold;
+        color: $color-black-brand !important;
+        padding: 0;
+
+        &.active, &:hover {
+          color: $color-gold-brand !important;
+        }
+      }
+    }
+  }
+
+  // Mobile Custom Hamburger Visual Elements
+  .menu-icon-burger {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $color-black-brand;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  }
+}
+
+// Fixed-height offset corrections for tablet and small screen sizes
+@media (max-width: 1200px) {
+  .a11-navbar {
+    height: 80px;
+    
+    #mobileNavDrawer {
+      top: 80px;
+      .mobile-drawer-inner {
+        height: calc(100vh - 80px);
+      }
+    }
+  }
+}

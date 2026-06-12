@@ -1,0 +1,51 @@
+// ==========================================================================
+// BRAND COLOR PALETTE
+// ==========================================================================
+$color-black-pure:    #000000;
+$color-black-brand:   #050505;
+$color-black-dark:    #111111;
+$color-gold-brand:    #e5b400;
+$color-gold-hover:    #d1a400;
+$color-white-pure:    #ffffff;
+$color-white-bg:      #f9f9f9;
+$color-white-mute:    #fafafa;
+
+// Muted borders and text treatments
+$color-text-dark:     #333333;
+$color-text-muted:    #555555;
+$color-text-gray:     #777777a8;
+$color-text-light:    #aaaaaa;
+$color-border-dark:   rgba(255, 255, 255, 0.08);
+$color-border-light:  rgba(5, 5, 5, 0.05);
+
+// ==========================================================================
+// TYPOGRAPHY CONFIGURATION
+// ==========================================================================
+$font-primary:        sans-serif; // Maps to your Monument / Raleway configuration
+$font-serif:          'Georgia', serif;
+
+// Font weights
+$weight-light:        300;
+$weight-regular:      400;
+$weight-medium:       500;
+$weight-semibold:     600;
+$weight-bold:         700;
+$weight-extrabold:    800;
+$weight-black:        900;
+
+// ==========================================================================
+// ANIMATIONS & TIMING TOKENS
+// ==========================================================================
+$transition-smooth:   0.3s ease;
+$transition-fast:     0.2s ease;
+$transition-cinematic: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+$transition-bounce:    0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+// ==========================================================================
+// SHADOWS & BLURS (BENTO / GLASS EFFECTS)
+// ==========================================================================
+$shadow-subtle:       0 10px 40px rgba(0, 0, 0, 0.01);
+$shadow-hover:        0 30px 70px rgba(5, 5, 5, 0.05);
+$shadow-dark:         0 30px 60px rgba(0, 0, 0, 0.8);
+
+$glass-blur:          blur(12px);

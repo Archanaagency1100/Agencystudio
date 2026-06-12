@@ -1,5 +1,5 @@
 
-
+// Studio page header footer js-------
 document.addEventListener("DOMContentLoaded", function () {
     const navPlaceholder = document.getElementById('nav-placeholder');
 
