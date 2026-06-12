@@ -84,7 +84,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 550px;
+  height: 550px; // Desktop fixed height standard
   z-index: 1;
   pointer-events: none;
   background-image: url(/assets/img/agency/bg.webp);
@@ -93,28 +93,34 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+ 
   @media (max-width: 768px) {
-    height: 356px; 
-    background-size: contain;
+    
+    height: 28vh; 
+   
+    background-size: cover; 
+    
+    
+    background-position: center top; 
+    
     background-attachment: scroll; 
+  }
+
+  @media (max-width: 480px) {
+    height: 16vh; 
   }
 }
 
 // -----------services-----------------
-// ==========================================================================
-// MAX FLUID EXPANDED & MOBILE-OPTIMIZED SERVICES STAGE
-// ==========================================================================
-// ==========================================================================
-// MAX FLUID EXPANDED & MOBILE-OPTIMIZED SERVICES STAGE
-// ==========================================================================
+
 .a11-services {
   background-color: $color-white-pure;
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding: 10px 0; // Cinematic desktop vertical spacing
+  padding: 10px 0; 
 
-  // --- GIGANTIC ACCENT WATERMARK TEXT (Peeche layer bankar chalega) ---
+
   &__bg-watermark {
     position: absolute;
     top: 52%;
@@ -161,7 +167,7 @@
     }
   }
 
-  // --- MASSIVE STRETCHED DECK AREA ---
+ 
   &__deck {
     position: relative;
     width: 100%;
@@ -242,7 +248,7 @@
       letter-spacing: 0.5px;
     }
 
-    // --- DESKTOP INTERACTIVE DRAG SLIDING HOVER ---
+   
     &:hover {
       z-index: 99 !important;
       transform: scale(1.06) translateY(-12px) !important;
@@ -269,7 +275,6 @@
   }
 }
 
-// Subtle light theme liquid shadow processing channel
 .fluid-ripple-overlay-canvas {
   position: absolute;
   top: 0;
@@ -286,14 +291,11 @@
     rgba(0, 0, 0, 0) 100%
   );
 }
-
-/* ==========================================================================
-   CINEMATIC PHONE SLIDER & OVERLAP OVERRIDES (No more ugly vertical lists)
-   ========================================================================== */
+// -----phone view------------------
 
 @media (min-width: 768px) and (max-width: 1399px) {
   .a11-services {
-    padding: 100px 0;
+    padding: 10px 0;
     &__deck {
       transform: scale(0.68);
       transform-origin: left center;
@@ -310,7 +312,7 @@
 
 @media (max-width: 767px) {
   .a11-services {
-    padding: 60px 0;
+    padding: 10px 0;
 
     &__bg-watermark {
       display: none !important;

@@ -231,9 +231,15 @@
 }
 @media (max-width: 768px) {
   .hero-pic {
-    height: 356px;
-    background-size: contain;
+    height: 28vh;
+    background-size: cover;
+    background-position: center top;
     background-attachment: scroll;
+  }
+}
+@media (max-width: 480px) {
+  .hero-pic {
+    height: 16vh;
   }
 }
 
@@ -422,12 +428,9 @@
   background: radial-gradient(circle 280px at var(--ripple-x, 0px) var(--ripple-y, 0px), rgba(5, 5, 5, 0.018) 0%, rgba(229, 180, 0, 0.01) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
-/* ==========================================================================
-   CINEMATIC PHONE SLIDER & OVERLAP OVERRIDES (No more ugly vertical lists)
-   ========================================================================== */
 @media (min-width: 768px) and (max-width: 1399px) {
   .a11-services {
-    padding: 100px 0;
+    padding: 10px 0;
   }
   .a11-services__deck {
     transform: scale(0.68);
@@ -442,7 +445,7 @@
 }
 @media (max-width: 767px) {
   .a11-services {
-    padding: 60px 0;
+    padding: 10px 0;
   }
   .a11-services__bg-watermark {
     display: none !important;
@@ -499,6 +502,7 @@
   }
 }
 * {
+  border: 2px solid blue;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
