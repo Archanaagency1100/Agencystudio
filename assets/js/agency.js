@@ -70,18 +70,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ------------------services circle effect----------------
 
-document.addEventListener("DOMContentLoaded", function() {
-    var waterySection = document.getElementById("watery-surface");
-    if (!waterySection) return;
+document.addEventListener("DOMContentLoaded", function () {
+    // Fail-safe checker ensures swiper loads only if library script is available on active viewports
+    if (typeof Swiper !== 'undefined' && document.querySelector('.a11-services-swiper')) {
+        let servicesSwiper;
 
-    var surfaceCanvas = waterySection.querySelector(".fluid-ripple-overlay-canvas");
-    
-    waterySection.addEventListener("mousemove", function(event) {
-        var boundingBox = waterySection.getBoundingClientRect();
-        var localX = event.clientX - boundingBox.left;
-        var localY = event.clientY - boundingBox.top;
+        function initServicesSlider() {
+            const isMobileWidth = window.innerWidth <= 767;
 
-        surfaceCanvas.style.setProperty("--ripple-x", localX + "px");
-        surfaceCanvas.style.setProperty("--ripple-y", localY + "px");
-    });
+            if (isMobileWidth && !servicesSwiper) {
+                // Initialize premium swipe actions engine
+                servicesSwiper = new Swiper('.a11-services-swiper', {
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
+                    loop: true,
+                    speed: 600,
+                    resistanceRatio: 0.85,
+                    grabCursor: true,
+                    slideToClickedSlide: true, // Smooth glide transit if user clicks neighboring item
+                });
+            } else if (!isMobileWidth && servicesSwiper) {
+                // Destroy swiper slider safely if expanded back to standard desktop views
+                servicesSwiper.destroy(true, true);
+                servicesSwiper = undefined;
+            }
+        }
+
+        // Run checking arrays initial trigger loops
+        initServicesSlider();
+        window.addEventListener('resize', initServicesSlider);
+    }
 });
