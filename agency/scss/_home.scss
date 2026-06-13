@@ -9,7 +9,7 @@
   padding-top: 115px; 
  
       @media (min-width: 992px) and (max-width: 1200px) {
-   padding-top: 65px;
+   padding-top: 60px;
 
 }
   @media (max-width: 991px) {
@@ -42,7 +42,7 @@
 
   &__headline {
     font-family: $font-primary; 
-    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-size: clamp(1.2rem, 3vw, 3rem);
     font-weight: $weight-bold;
     line-height: 1.3;
     letter-spacing: 0.1em;
@@ -69,6 +69,11 @@
     font-weight: $weight-regular;
     color: $color-text-muted;
     max-width: 720px;
+        @media (min-width: 992px) and (max-width: 1200px) {
+      
+        max-width: 520px;
+
+}
   }
 
   &__btn {
