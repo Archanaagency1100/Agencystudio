@@ -312,23 +312,13 @@
 }
 // -----phone view------------------
 
-// @media (min-width: 768px) and (max-width: 800px) {
-//   .a11-services {
-//      height: 70vh;
-//     padding: 10px 0;
-//     &__deck {
-//       transform: scale(0.68);
-//       transform-origin: left center;
-//       height: 480px;
-//       margin-left: -5%; 
-//     }
-//     &__card {
-//       $circle-tablet: clamp(250px, 20vw, 290px);
-//       width: $circle-tablet !important;
-//       height: $circle-tablet !important;
-//     }
-//   }
-// }
+@media (min-width: 768px) and (max-width: 1300px) {
+  .a11-services {
+     height: 140vh;
+    padding: 10px 0;
+    
+  }
+}
 
 @media (max-width: 767px) {
   .a11-services {
