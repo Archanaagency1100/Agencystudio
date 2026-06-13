@@ -152,7 +152,7 @@
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   .a11-hero {
-    padding-top: 60px;
+    padding-top: 5px;
   }
 }
 @media (max-width: 991px) {
@@ -195,7 +195,7 @@
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   .a11-hero__headline {
-    width: 80%;
+    width: 75%;
   }
 }
 @media (max-width: 991px) {
