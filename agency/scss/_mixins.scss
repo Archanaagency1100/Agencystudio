@@ -1,0 +1,8 @@
+ /* _mixins.scss */
+@mixin gradientText {
+  background: linear-gradient(135deg, #ffffff 0%, #a1a1a1 100%); // Aap is gradient colors ko change kar sakte hain
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}

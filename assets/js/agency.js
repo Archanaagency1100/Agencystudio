@@ -50,24 +50,40 @@ function setupMobileCollapse() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+
     const footerPlaceholder = document.getElementById('footer-placeholder');
 
+
+
     if (footerPlaceholder) {
+
        
+
         const footerPath = "/components/agency/footer.html";
 
-        fetch(footerPath)
-            .then(response => {
-                if (!response.ok) throw new Error('Footer file not found');
-                return response.text();
-            })
-            .then(data => {
-                footerPlaceholder.innerHTML = data;
-            })
-            .catch(err => console.error('Error loading footer:', err));
-    }
-});
 
+
+        fetch(footerPath)
+
+            .then(response => {
+
+                if (!response.ok) throw new Error('Footer file not found');
+
+                return response.text();
+
+            })
+
+            .then(data => {
+
+                footerPlaceholder.innerHTML = data;
+
+            })
+
+            .catch(err => console.error('Error loading footer:', err));
+
+    }
+
+});
 // ------------------services circle effect----------------
 
 document.addEventListener("DOMContentLoaded", function () {

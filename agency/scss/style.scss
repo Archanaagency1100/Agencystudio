@@ -1,8 +1,11 @@
 
-@import 'footer';
+// 1. Core Config Tokens always come first!
 @import 'variables';
+@import 'mixins';
+// 2. Global Components and Pages layouts come next
 @import 'navbar';
 @import 'home';
+@import 'footer'; // Now it will find all variables perfectly
 
 
 * {
@@ -97,3 +100,26 @@
     font-weight: 800;
 }
 
+// ==========================================================================
+// CORE LINK BUTTON STYLES
+// ==========================================================================
+a {
+  color: $color-white-pure;              
+  text-decoration: none;                  
+  display: inline-block;
+  transition: color $transition-smooth, transform $transition-smooth;
+
+  // Interactivity Focus & Hover States
+  &:hover,
+  &:focus-visible {
+    color: $color-gold-brand;             
+    transform: translateY(-1px);          
+    outline: none;
+  }
+
+  // Active Click State
+  &:active {
+    transform: translateY(0);             
+    opacity: 0.85;
+  }
+}
