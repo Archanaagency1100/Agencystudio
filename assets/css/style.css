@@ -152,7 +152,7 @@
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   .a11-hero {
-    padding-top: 5px;
+    padding-top: 55px;
   }
 }
 @media (max-width: 991px) {
@@ -193,7 +193,7 @@
   color: #e5b400;
   font-style: normal;
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1300px) {
   .a11-hero__headline {
     width: 75%;
   }
@@ -213,7 +213,7 @@
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   .a11-hero__subtext {
-    max-width: 520px;
+    max-width: 500px;
   }
 }
 .a11-hero__btn {
