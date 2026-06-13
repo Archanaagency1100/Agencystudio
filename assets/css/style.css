@@ -148,7 +148,12 @@
   align-items: start;
   position: relative;
   overflow: hidden;
-  padding-top: 85px;
+  padding-top: 115px;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .a11-hero {
+    padding-top: 65px;
+  }
 }
 @media (max-width: 991px) {
   .a11-hero {
@@ -187,6 +192,11 @@
 .a11-hero__headline--accent {
   color: #e5b400;
   font-style: normal;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .a11-hero__headline {
+    width: 80%;
+  }
 }
 @media (max-width: 991px) {
   .a11-hero__headline {
