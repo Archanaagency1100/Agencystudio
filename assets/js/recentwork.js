@@ -4,22 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
         'lane-graphics': [
             { src: "/assets/img/recentwork/manasiscott.png", alt: "Graphics 1" },
             { src: "/assets/img/recentwork/scalingup.png",   alt: "Graphics 2" },
-            { src: "/assets/img/recentwork/manasiscott.png", alt: "Graphics 3" }
+            { src: "/assets/img/recentwork/aanchalkhetarpaal.png", alt: "Graphics 3" }
         ],
         'lane-websites': [
-            { src: "/assets/img/recentwork/scalingup.png",   alt: "Web 1" },
+            { src: "/assets/img/recentwork/aartiranadive.png",   alt: "Web 1" },
             { src: "/assets/img/recentwork/manasiscott.png", alt: "Web 2" },
-            { src: "/assets/img/recentwork/scalingup.png",   alt: "Web 3" }
+            { src: "/assets/img/recentwork/aartiranadive.png",   alt: "Web 3" }
         ],
         'lane-films': [
-            { src: "/assets/img/recentwork/manasiscott.png", alt: "Film 1" },
+            { src: "/assets/img/recentwork/scalingup.png", alt: "Film 1" },
             { src: "/assets/img/recentwork/scalingup.png",   alt: "Film 2" },
             { src: "/assets/img/recentwork/manasiscott.png", alt: "Film 3" }
         ],
         'lane-videos': [
-            { src: "/assets/img/recentwork/scalingup.png",   alt: "Video 1" },
+            { src: "",   alt: "Video 1" },
             { src: "/assets/img/recentwork/manasiscott.png", alt: "Video 2" },
-            { src: "/assets/img/recentwork/scalingup.png",   alt: "Video 3" }
+            { src: "/assets/img/recentwork/aanchalkhetarpaal.png",   alt: "Video 3" }
         ],
         'lane-branding': [
             { src: "/assets/img/recentwork/manasiscott.png", alt: "Branding 1" },
