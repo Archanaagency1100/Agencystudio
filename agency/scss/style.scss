@@ -5,7 +5,8 @@
 // 2. Global Components and Pages layouts come next
 @import 'navbar';
 @import 'home';
-@import 'footer'; // Now it will find all variables perfectly
+@import 'footer'; 
+@import 'services';
 
 
 * {

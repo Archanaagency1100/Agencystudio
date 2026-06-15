@@ -6,271 +6,271 @@ const gallery = document.getElementById("gallery");
 const works = [
 
     {
-            img: "../assets/img/Clients/ISHWAK_SINGH.webp",
-            name: "ISHWAK SINGH"
-        },
-        {
-                img: "../assets/img/Clients/Kapil_Sharma.jpg",
-                name: "Kapil Sharma"
-            },
-            {
-                    img: "../assets/img/Clients/Nawazuddin_Siddiqui.webp",
-                    name: "Nawazuddin Siddiqui"
-                },
-                {
-                        img: "../assets/img/Clients/SUNIDHI_CHAUHAN.webp",
-                        name: "SUNIDHI CHAUHAN"
-                    },
-                    {
-                            img: "../assets/img/Clients/NEHA_KAKKAR.webp",
-                            name: "NEHA KAKKAR"
-                        },
-                        {
-                                img: "../assets/img/Clients/TONY_KAKKAR.webp",
-                                name: "TONY KAKKAR"
-                            },
-                            {
-                                    img: "../assets/img/Clients/JASLEEN_ROYAL.webp",
-                                    name: "JASLEEN ROYAL"
-                                },
-                                {
-                                        img: "../assets/img/Clients/HARBHAJAN_MANN.jpg",
-                                        name: "HARBHAJAN MANN"
-                                    },
-                                    {
-                                            img: "../assets/img/Clients/HANS_RAJ_HANS.webp",
-                                            name: "HANS RAJ HANS"
-                                        },
-                                        {
-                                                img: "../assets/img/Clients/KRISHNA_BUEURA.jpg",
-                                                name: "KRISHNA BUEURA"
-                                            },
-                                            {
-                                                    img: "../assets/img/Clients/JASBIR_JASSI.webp",
-                                                    name: "JASBIR JASSI"
-                                                },
-                                                {
-                                                        img: "../assets/img/Clients/Madhu_Chopra.webp",
-                                                        name: "Madhu Chopra"
-                                                    },
-                                                    {
-                                                            img: "../assets/img/Clients/kubbra-sait.webp",
-                                                            name: "kubbra sait"
-                                                        },
-                                                        {
-                                                                img: "../assets/img/Clients/RAHUL_VAIDYA.jpg",
-                                                                name: "RAHUL VAIDYA"
-                                                            },
-                                                            {
-                                                                    img: "../assets/img/Clients/ROHANPREET_SINGH.jfif",
-                                                                    name: "ROHANPREET SINGH"
-                                                                },
-                                                                {
-                                                                        img: "../assets/img/Clients/KK.webp",
-                                                                        name: "KK"
-                                                                    },
-                                                                    {
-                                                                            img: "../assets/img/Clients/Neeraj_Shridhar.webp",
-                                                                            name: "Neeraj Shridhar"
-                                                                        },
-                                                                        {
-                                                                                img: "../assets/img/Clients/REKHA_BHARDWAJ.jfif",
-                                                                                name: "REKHA BHARDWAJ"
-                                                                            },
-                                                                            {
-                                                                                    img: "../assets/img/Clients/MUKESH_BHATT.jpeg",
-                                                                                    name: "MUKESH BHATT"
-  },
+        img: "../assets/img/Clients/ISHWAK_SINGH.webp",
+        name: "ISHWAK SINGH"
+    },
+    {
+        img: "../assets/img/Clients/Kapil_Sharma.jpg",
+        name: "Kapil Sharma"
+    },
+    {
+        img: "../assets/img/Clients/Nawazuddin_Siddiqui.webp",
+        name: "Nawazuddin Siddiqui"
+    },
+    {
+        img: "../assets/img/Clients/SUNIDHI_CHAUHAN.webp",
+        name: "SUNIDHI CHAUHAN"
+    },
+    {
+        img: "../assets/img/Clients/NEHA_KAKKAR.webp",
+        name: "NEHA KAKKAR"
+    },
+    {
+        img: "../assets/img/Clients/TONY_KAKKAR.webp",
+        name: "TONY KAKKAR"
+    },
+    {
+        img: "../assets/img/Clients/JASLEEN_ROYAL.webp",
+        name: "JASLEEN ROYAL"
+    },
+    {
+        img: "../assets/img/Clients/HARBHAJAN_MANN.jpg",
+        name: "HARBHAJAN MANN"
+    },
+    {
+        img: "../assets/img/Clients/HANS_RAJ_HANS.webp",
+        name: "HANS RAJ HANS"
+    },
+    {
+        img: "../assets/img/Clients/KRISHNA_BUEURA.jpg",
+        name: "KRISHNA BUEURA"
+    },
+    {
+        img: "../assets/img/Clients/JASBIR_JASSI.webp",
+        name: "JASBIR JASSI"
+    },
+    {
+        img: "../assets/img/Clients/Madhu_Chopra.webp",
+        name: "Madhu Chopra"
+    },
+    {
+        img: "../assets/img/Clients/kubbra-sait.webp",
+        name: "kubbra sait"
+    },
+    {
+        img: "../assets/img/Clients/RAHUL_VAIDYA.jpg",
+        name: "RAHUL VAIDYA"
+    },
+    {
+        img: "../assets/img/Clients/ROHANPREET_SINGH.jfif",
+        name: "ROHANPREET SINGH"
+    },
+    {
+        img: "../assets/img/Clients/KK.webp",
+        name: "KK"
+    },
+    {
+        img: "../assets/img/Clients/Neeraj_Shridhar.webp",
+        name: "Neeraj Shridhar"
+    },
+    {
+        img: "../assets/img/Clients/REKHA_BHARDWAJ.jfif",
+        name: "REKHA BHARDWAJ"
+    },
+    {
+        img: "../assets/img/Clients/MUKESH_BHATT.jpeg",
+        name: "MUKESH BHATT"
+    },
     {
         img: "../assets/img/Clients/aditi-paul.jpg",
         name: "ADITI PAUL"
     },
-{
+    {
         img: "../assets/img/Clients/AHSAAN_QURESHI.avif",
         name: "AHSAAN QURESHI"
     },
-{
+    {
         img: "../assets/img/Clients/AISHWARYA_NIGAM.jfif",
         name: "AISHWARYA NIGAM"
     },
-{
+    {
         img: "../assets/img/Clients/akriti_kakkar.jpg",
         name: "AKRITI KAKKAR"
     },
-{
+    {
         img: "../assets/img/Clients/Amisha_Chaudhary.jpg",
         name: "AMISHA CHAUDHARY"
     },
-{
+    {
         img: "../assets/img/Clients/AMITABH_SRIVASTAV.webp",
         name: "AMITABH SRIVASTAV"
     },
-{
+    {
         img: "../assets/img/Clients/ANANTH_VAIDHYANATHAN.jfif",
         name: "ANANTH VAIDHYANATHAN"
     },
-{
+    {
         img: "../assets/img/Clients/ARIANE_GRAY_HUBERT.jfif",
         name: "ARIANE GRAY HUBERT"
     },
-{
+    {
         img: "../assets/img/Clients/ARIF_LOHAR.webp",
         name: "ARIF LOHAR"
     },
-{
+    {
         img: "../assets/img/Clients/ARMAAN_KHERA.webp",
         name: "ARMAAN KHERA"
     },
-{
+    {
         img: "../assets/img/Clients/ARNAB_CHAKRABORTY.jfif",
         name: "ARNAB CHAKRABORTY"
     },
-{
+    {
         img: "../assets/img/Clients/ASHOK_MASTIE.jfif",
         name: "ASHOK MASTIE"
     },
-{
+    {
         img: "../assets/img/Clients/ASMITA_THEATRE.jpg",
         name: "ASMITA THEATRE"
     },
 
-{
+    {
         img: "../assets/img/Clients/BHAVITA_SINGH.jpg",
         name: "BHAVITA SINGH"
     },
-{
+    {
         img: "../assets/img/Clients/Bhavna_Mordani.jfif",
         name: "Bhavna_Mordani"
     },
- {
+    {
         img: "../assets/img/Clients/DEEPAK_RAJA.jfif",
         name: "DEEPAK RAJA"
     },
-{
+    {
         img: "../assets/img/Clients/DILBAGH_SINGH.jpg",
         name: "DILBAGH SINGH"
     },
 
-{
+    {
         img: "../assets/img/Clients/DJ_RINAA_SHAH.jpg",
         name: "DJ RINAA SHAH"
     },
 
-{
+    {
         img: "../assets/img/Clients/dj_sunny_sarid.jpg",
         name: "dj sunny sarid"
     },
-{
+    {
         img: "../assets/img/Clients/DJ_Tarandeep.jfif",
         name: "DJ Tarandeep"
     },
-{
+    {
         img: "../assets/img/Clients/DJ_Tripti.jpg",
         name: "DJ Tripti"
     },
-{
+    {
         img: "../assets/img/Clients/Dr._Ridwana_Sanam.jfif",
         name: "Dr.Ridwana Sanam"
     },
-{
+    {
         img: "../assets/img/Clients/GEETIKA_GANJU.jpg",
         name: "GEETIKA GANJU"
     },
 
-{
+    {
         img: "../assets/img/Clients/GIRISH_MALIK.webp",
         name: "GIRISH MALIK"
     },
-{
+    {
         img: "../assets/img/Clients/GUNJAN_UTREJA.webp",
         name: "GUNJAN UTREJA"
     },
-{
+    {
         img: "../assets/img/Clients/GURUSHARAN_SINGH.jfif",
         name: "GURUSHARAN SINGH"
     },
 
 
 
-{
+    {
         img: "../assets/img/Clients/HARI-&-SUKHMANI.jfif",
         name: "HARI & SUKHMANI"
     },
 
-{
+    {
         img: "../assets/img/Clients/Harry_Sandhu.jpg",
         name: "Harry Sandhu"
     },
 
-{
+    {
         img: "../assets/img/Clients/HARSHIT_SAXENA.jpg",
         name: "HARSHIT SAXENA"
     },
 
-{
+    {
         img: "../assets/img/Clients/HIMANI_KAPOOR.webp",
         name: "HIMANI KAPOOR"
     },
 
 
-{
+    {
         img: "../assets/img/Clients/JASWINDER_SINGH.jpg",
         name: "JASWINDER SINGH"
     },
 
-{
+    {
         img: "../assets/img/Clients/Kabul_Rishi.jpg",
         name: "Kabul Rishi"
     },
-{
+    {
         img: "../assets/img/Clients/KANIKA_ARORA.jpg",
         name: "KANIKA ARORA"
     },
-{
+    {
         img: "../assets/img/Clients/KAPTAN_LADI.jfif",
         name: "KAPTAN LADI"
     },
 
-{
+    {
         img: "../assets/img/Clients/KAVITA_THAKUR.jfif",
         name: "KAVITA THAKUR"
     },
 
-{
+    {
         img: "../assets/img/Clients/Kiran_Dubey.webp",
         name: "Kiran Dubey"
     },
-{
+    {
         img: "../assets/img/Clients/KITTY_DHUPAR.jfif",
         name: "KITTY DHUPAR"
     },
 
 
 
-{
+    {
         img: "../assets/img/Clients/MALIKA_MALHOTRA.jfif",
         name: "MALIKA MALHOTRA"
     },
 
-{
+    {
         img: "../assets/img/Clients/MANASI_SCOTT.jpg",
         name: "MANASI SCOTT"
     },
-{
+    {
         img: "../assets/img/Clients/MANOJ_KUMAR.jpg",
         name: "MANOJ KUMAR"
     },
 
-{
+    {
         img: "../assets/img/Clients/MIIKE_PANDAY.webp",
         name: "MIIKE PANDAY"
     },
 
-{
+    {
         img: "../assets/img/Clients/MOHINI_SINGH.jfif",
         name: "MOHINI SINGH"
     },
-{
+    {
         img: "../assets/img/Clients/Navin_Prabhakar.jpg",
         name: "Navin Prabhakar"
     },
@@ -278,74 +278,74 @@ const works = [
 
 
 
-{
+    {
         img: "../assets/img/Clients/Neila_Devi.jfif",
         name: "Neila Devi"
     },
 
-{
+    {
         img: "../assets/img/Clients/NIDA_MAHMOOD.jpg",
         name: "NIDA MAHMOOD"
     },
-{
+    {
         img: "../assets/img/Clients/Niki_Lauda.jfif",
         name: "Niki Lauda"
     },
 
-{
+    {
         img: "../assets/img/Clients/Nikki_Sharma.jpg",
         name: "Nikki Sharma"
     },
 
-{
+    {
         img: "../assets/img/Clients/PENAZ_MASANI.webp",
         name: "PENAZ MASANI"
     },
 
-{
+    {
         img: "../assets/img/Clients/PRATAP_FAUZDAR.jfif",
         name: "PRATAP_FAUZDAR"
     },
 
-{
+    {
         img: "../assets/img/Clients/Preeti_Verma.jpg",
         name: "Preeti Verma"
     },
 
-{
+    {
         img: "../assets/img/Clients/PRIYAL_BHARDWAJ.png",
         name: "PRIYAL BHARDWAJ"
     },
 
-{
+    {
         img: "../assets/img/Clients/PRIYANKA_PUROHIT.jfif",
         name: "PRIYANKA PUROHIT"
     },
 
 
 
-{
+    {
         img: "../assets/img/Clients/Punita_Nagpal.webp",
         name: "Punita Nagpal"
     },
 
-{
+    {
         img: "../assets/img/Clients/RADHIKA_CHOPRA.jfif",
         name: "RADHIKA CHOPRA"
     },
 
 
-{
+    {
         img: "../assets/img/Clients/RAJA_RANCHO.jpg",
         name: "RAJA RANCHO"
     },
 
-{
+    {
         img: "../assets/img/Clients/RASHMI_AGARWAL.jfif",
         name: "RASHMI_AGARWAL"
     },
 
-{
+    {
         img: "../assets/img/Clients/RAVINDER_UPADHYAY.webp",
         name: "RAVINDER UPADHYAY"
     },
@@ -353,73 +353,73 @@ const works = [
 
 
 
-{
+    {
         img: "../assets/img/Clients/RICHA_SHARMA.jfif",
         name: "RICHA SHARMA"
     },
 
-{
+    {
         img: "../assets/img/Clients/RINKU_SOBTI.webp",
         name: "RINKU_SOBTI"
     },
 
-{
+    {
         img: "../assets/img/Clients/RITU_BERI.jpg",
         name: "RITU BERI"
     },
 
 
-{
+    {
         img: "../assets/img/Clients/SAJID_WAJID.webp",
         name: "SAJID WAJID"
     },
 
-{
+    {
         img: "../assets/img/Clients/SANJAY_SETHI.jfif",
         name: "SANJAY SETHI"
     },
 
-{
+    {
         img: "../assets/img/Clients/SATINDER_SATTI.jfif",
         name: "SATINDER SATTI"
     },
 
-{
+    {
         img: "../assets/img/Clients/SHANKAR_SAHNEY.jfif",
         name: "SHANKAR SAHNEY"
     },
 
 
-{
+    {
         img: "../assets/img/Clients/SHEFALI_SAXENA.webp",
         name: "SHEFALI SAXENA"
     },
 
 
-{
+    {
         img: "../assets/img/Clients/SHIBANI_KASHYAP.webp",
         name: "SHIBANI KASHYAP"
     },
 
 
-{
+    {
         img: "../assets/img/Clients/Sindhu_Vee.jpg",
         name: "Sindhu Vee"
     },
 
-{
+    {
         img: "../assets/img/Clients/SMRITI_MINOCHA.webp",
         name: "SMRITI_MINOCHA"
     },
 
 
-{
+    {
         img: "../assets/img/Clients/Sondra_Ray.jfif",
         name: "Sondra_Ray"
     },
 
 
-{
+    {
         img: "../assets/img/Clients/SONU_KAKKAR.webp",
         name: "SONU_KAKKAR"
     },
@@ -427,49 +427,49 @@ const works = [
 
 
 
-{
+    {
         img: "../assets/img/Clients/SWATI_SHARMA.jpg",
         name: "SWATI SHARMA"
     },
 
 
 
-{
+    {
         img: "../assets/img/Clients/TUNVEY_GOGIA.avif",
         name: "TUNVEY GOGIA"
     },
 
-{
+    {
         img: "../assets/img/Clients/USTAB_IQBDL_AHMED_KHAN.jfif",
         name: "USTAB IQBDL AHMED KHAN"
     },
 
 
-{
+    {
         img: "../assets/img/Clients/VANDANA_VADEHRA.jpg",
         name: "VANDANA VADEHRA"
     },
 
 
-{
+    {
         img: "../assets/img/Clients/VANITAA_PANDE.jfif",
         name: "VANITAA PANDE"
     },
 
 
-{
+    {
         img: "../assets/img/Clients/VARIJA_BAJAJ.jfif",
         name: "VARIJA BAJAJ"
     },
 
 
-{
+    {
         img: "../assets/img/Clients/VINNIL_MARKAN.webp",
         name: "VINNIL MARKAN"
     },
 
 
-{
+    {
         img: "../assets/img/Clients/VIPIN_ANEJA.webp",
         name: "VIPIN ANEJA"
     },
@@ -480,7 +480,7 @@ const works = [
 
 function generateGalleryHTML(items) {
 
-     return items.map(work => `
+    return items.map(work => `
             
             
             
@@ -493,7 +493,7 @@ function generateGalleryHTML(items) {
                 </div>
             
         `).join('');
-    
+
 }
 
 
