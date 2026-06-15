@@ -1,0 +1,149 @@
+.agency-portfolio {
+  background-color: #fcfcfc;
+  
+  .portfolio-main-title {
+    font-family: $font-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #111111;
+  }
+
+  .portfolio-lead {
+    font-family: $font-primary;
+    font-size: 14px;
+    max-width: 500px;
+    line-height: 1.6;
+  }
+
+  .filter-nav {
+    .filter-btn {
+      background: none;
+      border: none;
+      padding: 6px 16px;
+      font-size: 11px;
+      font-weight: $weight-bold;
+      letter-spacing: 1.5px;
+      color: #666666;
+      text-transform: uppercase;
+      transition: all $transition-smooth;
+      border-radius: 4px;
+
+      &:hover { color: #000000; }
+      &.active {
+        background-color: $color-gold-brand;
+        color: #000000;
+      }
+    }
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    width: 100%;
+
+    @media (max-width: 991px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    height: 380px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+
+    &.hide {
+      opacity: 0 !important;
+      transform: scale(0.92) !important;
+      position: absolute !important;
+      visibility: hidden !important;
+      width: 0 !important;
+      height: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    &.item-wide { grid-column: span 4; }
+    &.item-normal { grid-column: span 4; }
+    &.item-double-wide { grid-column: span 8; }
+    
+    @media (min-width: 1400px) {
+      &.item-wide { grid-column: span 5; }
+      &.item-normal { grid-column: span 3; }
+      &.item-double-wide { grid-column: span 9; }
+    }
+  }
+
+  .project-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    background-color: #000000;
+
+    img {
+      opacity: 0.75; 
+      filter: grayscale(100%);
+      transition: transform $transition-cinematic, opacity $transition-smooth, filter $transition-smooth;
+    }
+
+    .project-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px;
+      z-index: 2;
+      text-align: left;
+    }
+
+    .project-title {
+      font-family: $font-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: $color-white-pure;
+      margin-bottom: 4px;
+    }
+
+    .project-meta {
+      font-family: $font-primary;
+      font-size: 11px;
+      color: rgba($color-white-pure, 0.6);
+      margin: 0;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.03);
+        opacity: 0.9;
+        filter: grayscale(0%);
+      }
+    }
+  }
+
+  .load-more-btn {
+    background: transparent;
+    border: 1px solid #111111;
+    color: #111111;
+    border-radius: 30px;
+    padding: 12px 32px;
+    font-size: 11px;
+    font-weight: $weight-bold;
+    letter-spacing: 1px;
+    transition: all $transition-smooth;
+
+    .arrow {
+      display: inline-block;
+      transition: transform $transition-smooth;
+    }
+
+    &:hover {
+      background-color: #111111;
+      color: $color-white-pure;
+      .arrow { transform: translateX(4px); }
+    }
+  }
+}
