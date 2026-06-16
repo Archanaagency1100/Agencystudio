@@ -32,6 +32,8 @@ body {
     color: var(--text-light);
     overflow-x: hidden;
 }
+
+
 .nav-link {
     color: #ffffff !important;
     font-size: 14px;

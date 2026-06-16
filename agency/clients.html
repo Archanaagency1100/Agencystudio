@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Elite Clients & Artists | AgencyEleven100</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="canonical" href="https://1100.in/agency/clients">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #050505;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+        }
+        .client-header {
+            padding: 100px 0 60px;
+        }
+        .client-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #111111 30%, #000000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        .client-header p {
+            font-size: 15px;
+            color: #888888;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+        }
+        .gallery-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 40px 100px;
+        }
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+        .artist-box {
+            position: relative;
+            background-color: #111111;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 320px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.4s ease;
+        }
+        .artist-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            filter: grayscale(100%) contrast(1.1);
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
+            opacity: 0.85;
+        }
+        .artist-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 24px;
+            z-index: 2;
+        }
+        .artist-name {
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            text-align: center;
+            margin: 0;
+        }
+        .artist-box:hover {
+            transform: translateY(-6px);
+            border-color: rgba(229, 180, 0, 0.3);
+        }
+        .artist-box:hover img {
+            transform: scale(1.04);
+            filter: grayscale(0%) contrast(1);
+            opacity: 1;
+        }
+        .artist-box:hover .artist-name {
+            color: #e5b400;
+        }
+        @media (max-width: 991px) {
+            .gallery-container { padding: 0 24px 80px; }
+            .artist-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+            .client-header h1 { font-size: 2.8rem; }
+        }
+        @media (max-width: 575px) {
+            .gallery-container { padding: 0 16px 60px; }
+            .artist-grid { grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); gap: 12px; }
+            .client-header { padding: 60px 0 40px; }
+            .client-header h1 { font-size: 2rem; }
+            .artist-box { height: 220px; border-radius: 8px; }
+            .artist-overlay { padding: 12px; }
+            .artist-name { font-size: 10px; letter-spacing: 1.5px; }
+        }
+    </style>
+</head>
+<body>
+   <div id="nav-placeholder"></div>
+    <header class="client-header text-center mt-5">
+        <div class="container">
+            <h1>OUR CLIENTS</h1>
+            <p>Collaborating with India's finest artists, public figures, and creators to shape the future of visual storytelling.</p>
+        </div>
+    </header>
+
+    <main class="gallery-container">
+        <div class="artist-grid" id="gallery"></div>
+    </main>
+<div id="footer-placeholder"></div>
+    <script src="/assets/js/artist.js"></script>
+ <script src="/assets/js/agency.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const galleryElement = document.getElementById("gallery");
+            
+            if (typeof works !== 'undefined' && galleryElement) {
+                galleryElement.innerHTML = works.map(work => `
+                    <div class="artist-box">
+                        <img src="${work.img}" alt="${work.name}" loading="lazy">
+                        <div class="artist-overlay">
+                            <h3 class="artist-name">${work.name.toUpperCase()}</h3>
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                console.error("The 'works' array from artist.js could not be loaded.");
+            }
+        });
+    </script>
+</body>
+</html>

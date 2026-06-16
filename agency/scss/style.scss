@@ -2,12 +2,18 @@
 // 1. Core Config Tokens always come first!
 @import 'variables';
 @import 'mixins';
+
 // 2. Global Components and Pages layouts come next
 @import 'navbar';
+@import 'loader';
 @import 'home';
-@import 'footer'; 
+@import 'footer';
+
+
 @import 'services';
 @import 'projects';
+
+
 
 
 * {
