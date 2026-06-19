@@ -54,7 +54,7 @@ const works = [
         name: "Madhu Chopra"
     },
     {
-        img: "../assets/img/Clients/kubbra-sait.webp",
+        img: "../assets/img/Clients/kubbra-sait.png",
         name: "kubbra sait"
     },
     {
@@ -110,7 +110,7 @@ const works = [
         name: "ANANTH VAIDHYANATHAN"
     },
     {
-        img: "../assets/img/Clients/ARIANE_GRAY_HUBERT.jfif",
+        img: "../assets/img/Clients/ARIANE_GRAY_HUBERT.png",
         name: "ARIANE GRAY HUBERT"
     },
     {
@@ -391,7 +391,7 @@ const works = [
 
 
     {
-        img: "../assets/img/Clients/SHEFALI_SAXENA.webp",
+        img: "../assets/img/Clients/SHEFALI_SAXENA.png",
         name: "SHEFALI SAXENA"
     },
 

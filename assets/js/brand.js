@@ -8,7 +8,7 @@
         
         { img: "../assets/img/Trusted By Brands/a4a.png" },
         { img: "../assets/img/Trusted By Brands/aabhushan.png" },
-        { img: "../assets/img/Trusted By Brands/aahar-ways.png" },
+        // { img: "../assets/img/Trusted By Brands/aahar-ways.png" },
         { img: "../assets/img/Trusted By Brands/aajtak.png" },
         { img: "../assets/img/Trusted By Brands/aambey-valley.png" },
         { img: "../assets/img/Trusted By Brands/aanchal-khetarpal.png" },
@@ -226,7 +226,7 @@
         { img: "../assets/img/Trusted By Brands/voice.png" },
         { img: "../assets/img/Trusted By Brands/vowels.png" },
         { img: "../assets/img/Trusted By Brands/vvakalma.png" },
-        // { img: "../assets/img/Trusted By Brands/weddings-chant.png" },
+        { img: "../assets/img/Trusted By Brands/weddings-chant.png" },
         { img: "../assets/img/Trusted By Brands/weddography.png" },
         { img: "../assets/img/Trusted By Brands/wholistic-fitness.png" },
         { img: "../assets/img/Trusted By Brands/wood-burns.png" },
@@ -234,7 +234,7 @@
         { img: "../assets/img/Trusted By Brands/wwf.png" },
         { img: "../assets/img/Trusted By Brands/ybi.png" },
         { img: "../assets/img/Trusted By Brands/yoga.png" },
-        // { img: "../assets/img/Trusted By Brands/zcevents.png" },
+        { img: "../assets/img/Trusted By Brands/zcevents.png" },
         { img: "../assets/img/Trusted By Brands/zesty.png" }
     ];
 
