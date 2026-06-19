@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   { title: "AAJ TAK", categories: "branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/aajtak2.jpg", meta: "Branding / Graphic Assets" },
   { title: "CENLUB", categories: "films", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/films/cenclub.jpeg", meta: "Films / Video Production" },
 
-  { title: "AARTI RANA DIVE", categories: "websites campaigns ui-ux", gridClass: "item-double-wide", imgUrl: "/assets/img/recentwork/web/aarti.png", meta: "Website / Event Design" },
+  { title: "AARTI RANA DIVE", categories: "websites campaigns ui-ux", gridClass: "item-double-wide", imgUrl: "/assets/img/recentwork/web/aartiranadive.png", meta: "Website / Event Design" },
   { title: "ACD LOGISTICS", categories: "branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/acd.jpg", meta: "Logo Design / Branding" },
   { title: "DR SK LAL", categories: "films", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/films/dr_sk_lal.jpeg", meta: "Films / Video Production" },
 
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   { title: "BULL STRENGTH", categories: "branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/bull-strength.jpg", meta: "Branding" },
   { title: "CAT PHARMA", categories: "branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/catpharma.jpg", meta: "Branding" },
   { title: "CEDAR COTTAGE", categories: "branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/cedar-cottage.jpg", meta: "Branding" },
-  { title: "CLEAR LIFE SCIENCE", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/CLEARLIFESCIENCE.png", meta: "Website / Creative Direction" },
+  { title: "CLEAR LIFE SCIENCE", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/clearlifescience.png", meta: "Website / Creative Direction" },
   { title: "CLINIC KARE DERMA", categories: "branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/clinic-kare-derma.jpg", meta: "Branding" },
   { title: "COD", categories: "branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/cod.jpg", meta: "Branding" },
   { title: "TGF PRODUCTION", categories: "films", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/films/TGF.jpeg", meta: "Films / Video Production" },
