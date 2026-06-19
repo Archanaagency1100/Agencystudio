@@ -488,7 +488,7 @@ body.loaded #agency-loader {
 @media (max-width: 991px) {
   .a11-hero {
     height: 70vh;
-    padding-top: 20vh !important;
+    padding-top: 15vh !important;
   }
 }
 .a11-hero__badge {
