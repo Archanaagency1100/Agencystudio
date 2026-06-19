@@ -478,17 +478,17 @@ body.loaded #agency-loader {
   align-items: start;
   position: relative;
   overflow: hidden;
-  padding-top: 115px;
+  padding-top: 18vh;
 }
 @media (min-width: 992px) and (max-width: 1400px) {
   .a11-hero {
-    padding-top: 55px;
+    padding-top: 20vh;
   }
 }
 @media (max-width: 991px) {
   .a11-hero {
     height: 70vh;
-    padding-top: 55px !important;
+    padding-top: 20vh !important;
   }
 }
 .a11-hero__badge {
@@ -594,6 +594,72 @@ body.loaded #agency-loader {
   .hero-pic {
     height: 16vh;
   }
+}
+
+.a11-services__badge-dot {
+  animation: a11DotPulse 2s ease-in-out infinite;
+}
+
+@keyframes a11DotPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(229, 180, 0, 0);
+  }
+  50% {
+    transform: scale(1.35);
+    box-shadow: 0 0 18px rgba(229, 180, 0, 0.45);
+  }
+}
+.a11-services__card.aos-animate {
+  animation: serviceFloat 6s ease-in-out infinite;
+}
+
+.a11-services__card.c-one.aos-animate {
+  animation-delay: 0s;
+}
+
+.a11-services__card.c-two.aos-animate {
+  animation-delay: 0.4s;
+}
+
+.a11-services__card.c-three.aos-animate {
+  animation-delay: 0.8s;
+}
+
+.a11-services__card.c-four.aos-animate {
+  animation-delay: 1.2s;
+}
+
+.a11-services__card.c-five.aos-animate {
+  animation-delay: 1.6s;
+}
+
+.a11-services__card.c-six.aos-animate {
+  animation-delay: 2s;
+}
+
+.a11-services__card.c-seven.aos-animate {
+  animation-delay: 2.4s;
+}
+
+.a11-services__card.c-eight.aos-animate {
+  animation-delay: 2.8s;
+}
+
+@keyframes serviceFloat {
+  0%, 100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -10px;
+  }
+}
+.a11-services__card.aos-animate:hover {
+  animation-play-state: paused;
+}
+.a11-services__card.aos-animate:hover .a11-services__card-img {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .a11-services {
