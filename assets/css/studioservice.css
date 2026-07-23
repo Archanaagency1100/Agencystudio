@@ -1,10 +1,4 @@
-  <style>
-        /* ================================================================
-           PODCAST PRODUCTION — CLEAN FINAL SERVICE PAGE
-           Every custom class uses podcast-production-
-           ================================================================ */
-
-        html {
+  html {
             scroll-behavior: smooth;
         }
 
@@ -332,31 +326,30 @@
         .podcast-production-carousel-viewport {
             width: 100%;
             overflow: hidden;
+            touch-action: pan-y;
         }
 
         .podcast-production-carousel-track {
-            display: grid;
-            grid-auto-columns: calc((100% - 44px) / 3);
-            grid-auto-flow: column;
+            display: flex;
+            width: max-content;
             gap: 22px;
-            overflow-x: auto;
-            padding: 3px 2px 12px;
-            scroll-behavior: auto;
-            scrollbar-width: none;
-            overscroll-behavior-inline: contain;
+            padding: 3px 0 12px;
+            transform: translate3d(0, 0, 0);
+            will-change: transform;
+            backface-visibility: hidden;
             cursor: grab;
+            user-select: none;
         }
 
         .podcast-production-carousel-track:active {
             cursor: grabbing;
         }
 
-        .podcast-production-carousel-track::-webkit-scrollbar {
-            display: none;
-        }
-
         .podcast-production-type-slide {
+            flex: 0 0 var(--podcast-production-slide-width, 420px);
+            width: var(--podcast-production-slide-width, 420px);
             min-width: 0;
+            transform: translateZ(0);
         }
 
         .podcast-production-type-card {
@@ -577,6 +570,7 @@
             line-height: 1.65;
         }
 
+
         /* FAQ */
 
         .podcast-production-faq-section {
@@ -736,8 +730,11 @@
             }
 
             .podcast-production-carousel-track {
-                grid-auto-columns: calc((100% - 18px) / 2);
                 gap: 18px;
+            }
+
+            .podcast-production-type-slide {
+                flex-basis: calc((100vw - 6rem - 18px) / 2);
             }
 
             .podcast-production-split-layout,
@@ -827,8 +824,11 @@
             }
 
             .podcast-production-carousel-track {
-                grid-auto-columns: 86%;
                 gap: 15px;
+            }
+
+            .podcast-production-type-slide {
+                flex-basis: 86vw;
             }
 
             .podcast-production-type-card {
@@ -854,8 +854,8 @@
                 font-size: clamp(2.1rem, 10vw, 3.45rem);
             }
 
-            .podcast-production-carousel-track {
-                grid-auto-columns: 92%;
+            .podcast-production-type-slide {
+                flex-basis: calc(100vw - 2rem);
             }
 
             .podcast-production-includes-card {
@@ -894,4 +894,3 @@
                 animation-iteration-count: 1 !important;
             }
         }
-    </style>

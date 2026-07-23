@@ -21,7 +21,9 @@
  body{
     padding-top: 70px
  }
-
+a{
+    text-decoration: none;
+}
 #hero-section{
     display: flex;
     align-items: center;
