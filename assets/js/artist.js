@@ -193,7 +193,7 @@ const works = [
 
 
     {
-        img: "../assets/img/Clients/HARI-&-SUKHMANI.jfif",
+        img: "../assets/img/Clients/HARI-&-SUKHMANI.jpg",
         name: "HARI & SUKHMANI"
     },
 

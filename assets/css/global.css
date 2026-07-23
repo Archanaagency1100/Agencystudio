@@ -32,7 +32,9 @@ body {
     color: var(--text-light);
     overflow-x: hidden;
 }
-
+a{
+    text-decoration: none;
+}
 
 .nav-link {
     color: #ffffff !important;
@@ -242,3 +244,27 @@ nav-link::after{
         transform: scaleX(1);
         transform-origin: bottom left;
       }
+      .footer-inner{
+         background:
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(229, 180, 0, 0.10),
+                    transparent 28%
+                ),
+                #050505;
+            color: #ffffff;
+        }
+     
+         .footer-inner::after {
+            position: absolute;
+            top: -190px;
+            right: -120px;
+            width: 440px;
+            height: 440px;
+            content: "";
+            border: 1px solid rgba(229, 180, 0, 0.24);
+            border-radius: 50%;
+            box-shadow:
+                0 0 0 70px rgba(229, 180, 0, 0.025),
+                0 0 0 140px rgba(229, 180, 0, 0.018);
+        }
