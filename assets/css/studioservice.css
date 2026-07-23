@@ -92,7 +92,7 @@
         .podcast-production-hero {
             position: relative;
             display: flex;
-            min-height: 70vh;
+            min-height: 75vh;
             align-items: center;
             isolation: isolate;
             overflow: hidden;
