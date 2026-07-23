@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Article Detail | Agency Eleven100</title>
+     <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+
+    <meta
+        name="description"
+        content="Read studio, production and branding insights from Agency Eleven100."
+        id="articleMetaDescription"
+    >
+
+    <link
+        rel="canonical"
+        href="https://1100.in/studio/articles/"
+        id="articleCanonical"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/studio.css">
+         <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K5EB5EZBQ5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-K5EB5EZBQ5');
+    </script>
+</head>
+
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div id="loadingState" class="loading-state">
+    Loading article...
+</div>
+
+<section class="artical-detail-hero d-none" id="articleHero">
+
+    <div class="artical-detail-hero-bg" id="heroBg"></div>
+
+    <div class="container position-relative z-2">
+
+        <span class="kicker" data-aos="fade-up">
+            Studio Article
+        </span>
+
+        <h1
+            id="articleTitle"
+            data-aos="fade-up"
+            data-aos-delay="120"
+        ></h1>
+
+        <p
+            id="articleExcerpt"
+            data-aos="fade-up"
+            data-aos-delay="220"
+        ></p>
+
+        <div
+            class="artical-detail-meta"
+            data-aos="fade-up"
+            data-aos-delay="320"
+        >
+            <span id="articleDate"></span>
+            <span>Agency Eleven100</span>
+            <span>Article</span>
+        </div>
+
+    </div>
+</section>
+
+<section
+    class="artical-detail-wrapper d-none"
+    id="articleWrapper"
+>
+    <div class="container">
+
+        <div class="newspaper-frame">
+
+            <div class="row g-5">
+
+                <div class="col-lg-8">
+
+                    <main class="artical-detail-main">
+
+                        <div
+                            class="artical-detail-label-row"
+                            data-aos="fade-up"
+                        >
+                            <span>
+                                Published by Agency Eleven100
+                            </span>
+
+                            <span id="articleStatus"></span>
+                        </div>
+
+                        <article
+                            class="artical-detail-content"
+                            id="articleContent"
+                            data-aos="fade-up"
+                        ></article>
+
+                    </main>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <aside class="artical-detail-sidebar">
+
+                        <div
+                            class="sidebar-title"
+                            data-aos="fade-up"
+                        >
+                            Studio Notes
+                        </div>
+
+                        <div
+                            class="sidebar-box"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        >
+                            <span>01 / Production</span>
+
+                            <h4>Studio First Approach</h4>
+
+                            <p>
+                                Better lighting, better sound and a more
+                                controlled content experience.
+                            </p>
+                        </div>
+
+                        <div
+                            class="sidebar-box"
+                            data-aos="fade-up"
+                            data-aos-delay="180"
+                        >
+                            <span>02 / Branding</span>
+
+                            <h4>Visual Consistency</h4>
+
+                            <p>
+                                Studio-led content helps brands maintain
+                                a premium visual language.
+                            </p>
+                        </div>
+
+                        <div
+                            class="sidebar-box"
+                            data-aos="fade-up"
+                            data-aos-delay="260"
+                        >
+                            <span>03 / Booking</span>
+
+                            <h4>Create With Us</h4>
+
+                            <p>
+                                Book our studio for podcasts, interviews,
+                                campaigns and production shoots.
+                            </p>
+                        </div>
+
+                        <a
+                            href="/contact.html"
+                            class="artical-detail-btn"
+                            data-aos="fade-up"
+                            data-aos-delay="340"
+                        >
+                            Book Studio →
+                        </a>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="/assets/js/studio.js"></script>
+
+<script>
+AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: false,
+    mirror: true,
+    offset: 90
+});
+
+const API_URL = "https://1100.in/admin/api/article.php";
+const ARTICLE_BASE_PATH = "/studio/articles/";
+
+/**
+ * Get a query-string parameter.
+ * This remains available for old URLs such as:
+ * articles.html?slug=example
+ */
+function getParam(name) {
+    return new URLSearchParams(window.location.search).get(name);
+}
+
+/**
+ * Get the article slug from a clean URL:
+ * /studio/articles/professional-production-studio-guide
+ */
+function getSlugFromPath() {
+    const pathname = window.location.pathname;
+
+    const cleanPath = pathname
+        .replace(/^\/+|\/+$/g, "");
+
+    const parts = cleanPath.split("/");
+
+    const articlesIndex = parts.indexOf("articles");
+
+    if (
+        articlesIndex !== -1 &&
+        parts.length > articlesIndex + 1
+    ) {
+        return decodeURIComponent(
+            parts[articlesIndex + 1]
+        );
+    }
+
+    return "";
+}
+
+function cleanText(value) {
+    return value ? String(value) : "";
+}
+
+function formatDate(dateString) {
+    if (!dateString) {
+        return "";
+    }
+
+    const date = new Date(dateString);
+
+    if (Number.isNaN(date.getTime())) {
+        return dateString;
+    }
+
+    return date.toLocaleDateString("en-IN", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric"
+    });
+}
+
+function getArticleObject(response) {
+    if (response?.article) {
+        return response.article;
+    }
+
+    if (response?.data?.article) {
+        return response.data.article;
+    }
+
+    if (response?.data) {
+        return response.data;
+    }
+
+    return response;
+}
+
+function updateMetaTag(name, content) {
+    if (!content) {
+        return;
+    }
+
+    let meta = document.querySelector(
+        `meta[name="${name}"]`
+    );
+
+    if (!meta) {
+        meta = document.createElement("meta");
+        meta.setAttribute("name", name);
+        document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+}
+
+function updateOpenGraphMeta(property, content) {
+    if (!content) {
+        return;
+    }
+
+    let meta = document.querySelector(
+        `meta[property="${property}"]`
+    );
+
+    if (!meta) {
+        meta = document.createElement("meta");
+        meta.setAttribute("property", property);
+        document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", content);
+}
+
+function updateCanonicalUrl(slug) {
+    const canonicalUrl =
+        `https://1100.in${ARTICLE_BASE_PATH}${encodeURIComponent(slug)}`;
+
+    let canonical = document.querySelector(
+        'link[rel="canonical"]'
+    );
+
+    if (!canonical) {
+        canonical = document.createElement("link");
+        canonical.setAttribute("rel", "canonical");
+        document.head.appendChild(canonical);
+    }
+
+    canonical.setAttribute("href", canonicalUrl);
+
+    return canonicalUrl;
+}
+
+function showError(message) {
+    const loadingState = document.getElementById(
+        "loadingState"
+    );
+
+    loadingState.textContent = message;
+    loadingState.classList.remove("d-none");
+}
+
+async function loadArticle() {
+    /*
+     * First try the clean URL:
+     * /studio/articles/article-slug
+     */
+    let slug = getSlugFromPath();
+
+    /*
+     * Fallback support for old URLs:
+     * articles.html?slug=article-slug
+     */
+    if (!slug) {
+        slug = getParam("slug");
+    }
+
+    const id = getParam("id");
+
+    const loadingState = document.getElementById(
+        "loadingState"
+    );
+
+    const articleHero = document.getElementById(
+        "articleHero"
+    );
+
+    const articleWrapper = document.getElementById(
+        "articleWrapper"
+    );
+
+    if (!slug && !id) {
+        showError("Article slug or ID missing.");
+        return;
+    }
+
+    const params = new URLSearchParams();
+
+    if (slug) {
+        params.set("slug", slug);
+    } else {
+        params.set("id", id);
+    }
+
+    try {
+        const response = await fetch(
+            `${API_URL}?${params.toString()}`,
+            {
+                headers: {
+                    Accept: "application/json"
+                }
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error(
+                `Article API returned ${response.status}`
+            );
+        }
+
+        const data = await response.json();
+        const article = getArticleObject(data);
+
+        if (!article || !article.id) {
+            showError("Article not found.");
+            return;
+        }
+
+        const articleSlug = cleanText(
+            article.slug || slug
+        );
+
+        const title = cleanText(article.title);
+
+        const plainText = cleanText(
+            article.plain_text
+        );
+
+        const excerpt = cleanText(
+            article.excerpt || plainText
+        ).substring(0, 180);
+
+        const coverImage =
+            cleanText(article.cover_image) ||
+            "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1800";
+
+        const metaTitle =
+            cleanText(article.seo?.meta_title) ||
+            `${title} | Agency Eleven100`;
+
+        const metaDescription =
+            cleanText(article.seo?.meta_description) ||
+            excerpt;
+
+        const canonicalUrl = updateCanonicalUrl(
+            articleSlug
+        );
+
+        document.title = metaTitle;
+
+        updateMetaTag(
+            "description",
+            metaDescription
+        );
+
+        if (article.seo?.meta_keywords) {
+            updateMetaTag(
+                "keywords",
+                cleanText(article.seo.meta_keywords)
+            );
+        }
+
+        updateOpenGraphMeta(
+            "og:type",
+            "article"
+        );
+
+        updateOpenGraphMeta(
+            "og:title",
+            metaTitle
+        );
+
+        updateOpenGraphMeta(
+            "og:description",
+            metaDescription
+        );
+
+        updateOpenGraphMeta(
+            "og:image",
+            coverImage
+        );
+
+        updateOpenGraphMeta(
+            "og:url",
+            canonicalUrl
+        );
+
+        document.getElementById(
+            "heroBg"
+        ).style.backgroundImage = `url("${coverImage}")`;
+
+        document.getElementById(
+            "articleTitle"
+        ).textContent = title;
+
+        document.getElementById(
+            "articleExcerpt"
+        ).textContent = excerpt;
+
+        document.getElementById(
+            "articleDate"
+        ).textContent = formatDate(
+            article.created_at
+        );
+
+        document.getElementById(
+            "articleStatus"
+        ).textContent = cleanText(
+            article.status
+        );
+
+        /*
+         * Article content comes from the Quill editor
+         * and contains HTML.
+         */
+        document.getElementById(
+            "articleContent"
+        ).innerHTML = article.content || "";
+
+        loadingState.classList.add("d-none");
+        articleHero.classList.remove("d-none");
+        articleWrapper.classList.remove("d-none");
+
+        /*
+         * Redirect old query-string URLs to the clean URL.
+         *
+         * Example:
+         * /studio/articles.html?slug=example
+         *
+         * becomes:
+         * /studio/articles/example
+         */
+        const isOldQueryUrl =
+            getParam("slug") &&
+            !getSlugFromPath();
+
+        if (isOldQueryUrl && articleSlug) {
+            window.history.replaceState(
+                {},
+                "",
+                `${ARTICLE_BASE_PATH}${encodeURIComponent(articleSlug)}`
+            );
+        }
+
+        setTimeout(() => {
+            AOS.refresh();
+        }, 150);
+
+    } catch (error) {
+        console.error("Article loading error:", error);
+
+        showError(
+            "Unable to load this article. Please try again later."
+        );
+    }
+}
+
+loadArticle();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Studio Gallery | Production Studio, Podcast & Content Creation | AgencyEleven100</title>
+     <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <meta name="description" content="Explore behind-the-scenes moments from film productions, podcast recordings, photography sessions, content creation projects, and studio shoots at AgencyEleven100 Studio.">
+    <meta name="keywords" content="Studio Gallery, Production Studio Delhi, Studio Photography, Video Production Studio, Podcast Production, Content Creation Studio, Behind The Scenes, Studio Projects">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://1100.in/studio/gallery">
+    <meta property="og:title" content="Studio Gallery | Production Studio, Podcast & Content Creation | AgencyEleven100">
+    <meta property="og:description" content="Explore behind-the-scenes moments from film productions, podcast recordings, photography sessions, content creation projects, and studio shoots at AgencyEleven100 Studio.">
+    <meta property="og:image" content="https://1100.in/assets/img/gallery-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://1100.in/studio/gallery">
+    <meta property="twitter:title" content="Studio Gallery | Production Studio, Podcast & Content Creation | AgencyEleven100">
+    <meta property="twitter:description" content="Explore behind-the-scenes moments from film productions, podcast recordings, photography sessions, content creation projects, and studio shoots at AgencyEleven100 Studio.">
+    <meta property="twitter:image" content="https://1100.in/assets/img/gallery-og.jpg">
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://1100.in/studio/gallery">
+    <!-- -----------stylesheet------------ -->
+ <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/studio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K5EB5EZBQ5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-K5EB5EZBQ5');
+    </script>
+</head>
+<body>
+   <div id="nav-placeholder"></div>
+  <section id="get-in-touch" class="pt-5 mt-lg-4 text-white bg-dark get-in-touch-bg">
+    <div class="container py-5 my-md-3">
+        <div class="row">
+            
+            <div class="col-12 col-md-8 col-lg-6 ps-4 ps-md-5">
+                
+                <p class="text-uppercase text-accent fw-bold mb-2 tracking-wider" 
+                   >
+                   BEHIND THE SCENES <br>
+                   BEYOND IMAGINATION
+                </p>
+                
+                <h2 class="display-1 fw-bold text-uppercase lh-1 mb-3 get-in-touch-title">
+                  OUR WORK IN ACTION
+                </h2>
+                
+                <p class="text-secondary fs-5 col-11 col-md-12">
+                   A glimpse into our studio's creative process, showcasing the magic that happens behind the scenes. From concept to creation, witness the artistry and innovation that bring our projects to life.
+                </p>
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- -------------gallery section-------------- -->
+<section id="studio-gallery" class="py-5  text-white position-relative overflow-hidden">
+    <div class="container-fluid px-4 px-md-5">
+        
+        <!-- <div class="d-flex flex-wrap align-items-center justify-content-between border border-dark rounded-pill px-4 py-2 mb-5 mx-auto layout-filter-nav" style="background: #0c0c0e; max-width: 900px;">
+            <div class="d-flex flex-wrap gap-2 gap-md-3">
+                <button class="btn filter-btn active text-uppercase small fw-bold px-3 py-1 rounded-pill" onclick="filterGallery('all')">All</button>
+                <button class="btn filter-btn text-uppercase small fw-medium px-3 py-1 rounded-pill" onclick="filterGallery('bts')">BTS</button>
+                <button class="btn filter-btn text-uppercase small fw-medium px-3 py-1 rounded-pill" onclick="filterGallery('photoshoots')">Photoshoots</button>
+                <button class="btn filter-btn text-uppercase small fw-medium px-3 py-1 rounded-pill" onclick="filterGallery('podcast')">Podcast</button>
+                <button class="btn filter-btn text-uppercase small fw-medium px-3 py-1 rounded-pill" onclick="filterGallery('music-videos')">Music Videos</button>
+                <button class="btn filter-btn text-uppercase small fw-medium px-3 py-1 rounded-pill" onclick="filterGallery('commercials')">Commercials</button>
+                <button class="btn filter-btn text-uppercase small fw-medium px-3 py-1 rounded-pill" onclick="filterGallery('events')">Events</button>
+            </div>
+       
+        </div> -->
+
+        <div class="gallery-masonry-grid" id="masonry-gallery-track">
+            </div>
+
+    </div>
+</section>
+
+<div class="lightbox-modal d-none" id="lightbox">
+    
+    <button class="lightbox-btn lightbox-close" id="lightbox-close">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <button class="lightbox-btn lightbox-prev" id="lightbox-prev">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="lightbox-btn lightbox-next" id="lightbox-next">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="lightbox-content-wrapper h-100 d-flex align-items-center justify-content-center">
+        <div class="position-relative text-center">
+            <img src="" alt="" class="img-fluid lightbox-image shadow-lg" id="lightbox-img">
+            <p class="lightbox-caption m-0 mt-3 small text-uppercase text-white tracking-widest" id="lightbox-caption"></p>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="footer-placeholder"></div>
+
+
+</body>
+<script>
+
+// Target tracking nodes
+const galleryTrack = document.getElementById("masonry-gallery-track");
+
+// 1. Paste your works collection data structure array here (Example entries)
+const gallery = [
+    { img: "../assets/img/Agency Gallery/BTS/1.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/2.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240406_140435.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/3.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/444.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/55555.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/67514ab92567c0b4f240b613.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240421_144439.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20181003_171449.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20181003_172602.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20211124_113644.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20211124_164247.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20211124_165950.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240112_120701.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240113_123106.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240421_152016.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240113_145917.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240113_171152.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_100748.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240518_152205.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_123915.webp",  category: "bts" },
+        { img: "../assets/img/Agency Gallery/BTS/20241126_175346.webp",  category: "bts" },
+
+    { img: "../assets/img/Agency Gallery/BTS/20240114_125659.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_131802.webp",  category: "bts" }, 
+    { img: "../assets/img/Agency Gallery/BTS/20240114_132331.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_134505.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_134509.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_134857.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240406_140439.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_134944.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_141646.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_141815.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_141824.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240421_152022.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240114_142001.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240406_141324.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240406_161119.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240502_124935.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240518_173044.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240704_150643.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240704_150738.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240704_150802.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240704_151208.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240704_152126.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20240502_124943.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241024_130907.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241025_135610.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241119_191626.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241126_174615.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241208_122354.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241221_164037.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20241229_182421.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250217_115435.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250410_152539.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250217_114414.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250522_125742.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250202_122919.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250522_131434.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250522_153215.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250522_153518.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250525_132233.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/66666666.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/78291190_10156830185083527_3671454979400400896_n.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/999999999.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/8888888888.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/10000000000.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250522_153612.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/77777777777.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/111111111111.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/A36I8806.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/cd.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/CIWJ4441.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/DSC09931.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/DSCN2940.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/DSCN3047.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/HIPB6412.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_0905.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_1036.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_1785.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250217_114404.webp",  category: "bts" },
+        { img: "../assets/img/Agency Gallery/BTS/20240502_124938.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_2709.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_2801.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_4124.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_4134.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_4198.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/20250522_184508.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_4856.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_5454.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_5574.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_5777.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_6739.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_7738.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_7746.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_8609.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_8610.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_8960.webp",  category: "bts" },
+    // { img: "../assets/img/Agency Gallery/BTS/IMG_9447.CR2",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_9970.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG_20260216_215917.webp.jpeg",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG-20250222-WA0139.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG-20250712-WA0339.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/IMG-20251028-WA0220.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/JYCH5049.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/MVIMG_20250528_121953.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/MVIMG_20250528_130315.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/Picture 046.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/Picture 109.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/president 2.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/PXL_20251127_071717531.MP.webp",  category: "bts" },
+    { img: "../assets/img/Agency Gallery/BTS/PXL_20251127_072137584.webp",  category: "bts" },
+   { img: "../assets/img/Agency Gallery/BTS/PXL_20251127_072218688.LONG_EXPOSURE-01.COVER.webp",  category: "bts" },
+   { img: "../assets/img/Agency Gallery/BTS/PXL_20251127_072259836.webp",  category: "bts" },
+   { img: "../assets/img/Agency Gallery/BTS/Sir_with_Batman.webp",  category: "bts" },
+   { img: "../assets/img/Agency Gallery/BTS/with_shyam_prasad.webp",  category: "bts" },
+  
+];
+
+
+let filteredWorks = [...gallery];
+let currentLightboxIndex = 0;
+
+function renderGallery(itemsToRender) {
+    const galleryMarkup = itemsToRender.map((item, index) => `
+        <div class="gallery-item ${item.category}">
+            <div class="position-relative overflow-hidden rounded-1 border border-dark bg-dark">
+                <img src="${item.img}" alt="${item.name}" class="img-fluid w-100 d-block" onclick="openLightbox(${index})">
+           
+            </div>
+        </div>
+    `).join('');
+
+    // Inject elements smoothly directly into the masonry grid pipeline
+    galleryTrack.innerHTML = galleryMarkup;
+}
+
+// Initial render call track pipeline
+renderGallery(gallery);
+
+// 3. Standard Failsafe Filtering Processing Core Logic Action
+function filterGallery(category) {
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('onclick').includes(category));
+    });
+
+    const items = document.querySelectorAll('.gallery-item');
+    items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+            item.style.display = "inline-block";
+            setTimeout(() => { item.style.opacity = "1"; item.style.transform = "scale(1)"; }, 10);
+        } else {
+            item.style.opacity = "0"; item.style.transform = "scale(0.96)";
+            setTimeout(() => { item.style.display = "none"; }, 350);
+        }
+    });
+
+    // Update the local tracker variable for lightbox navigation logic track execution
+    filteredWorks = category === 'all' ? [...gallery] : gallery.filter(item => item.category === category);
+}
+
+// 4. Cinematic Lightbox Controller Lifecycle Pipeline
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxCaption = document.getElementById("lightbox-caption");
+
+// Open Lightbox
+function openLightbox(index) {
+    currentLightboxIndex = index;
+    updateLightboxContent();
+    lightbox.classList.remove("d-none");
+    setTimeout(() => {
+        lightbox.classList.add("d-flex");
+    }, 10);
+}
+
+// Close Lightbox
+function closeLightbox() {
+    lightbox.classList.remove("d-flex");
+    setTimeout(() => {
+        lightbox.classList.add("d-none");
+    }, 400); 
+}
+
+// Navigate Lightbox (Previous/Next)
+function changeLightboxImage(direction) {
+    currentLightboxIndex = (currentLightboxIndex + direction + filteredWorks.length) % filteredWorks.length;
+    updateLightboxContent();
+}
+
+// Update Lightbox Content
+function updateLightboxContent() {
+    const imageData = filteredWorks[currentLightboxIndex];
+    lightboxImg.src = imageData.img;
+    lightboxImg.alt = imageData.name;
+    // lightboxCaption.textContent = imageData.name.toUpperCase();
+}
+
+// Event Listeners initialization controller track execution pipeline
+document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+document.getElementById("lightbox-prev").addEventListener("click", () => changeLightboxImage(-1));
+document.getElementById("lightbox-next").addEventListener("click", () => changeLightboxImage(1));
+
+// Keyboard Navigation support
+document.addEventListener("keydown", (e) => {
+    if (lightbox.classList.contains("d-flex")) {
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") changeLightboxImage(-1);
+        if (e.key === "ArrowRight") changeLightboxImage(1);
+    }
+});
+
+// Close lightbox on clicking the blurred background layer mask
+lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox || e.target.closest('.lightbox-content-wrapper') && !e.target.closest('.position-relative')) {
+        closeLightbox();
+    }
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="/assets/js/studio.js"></script>
+</html>

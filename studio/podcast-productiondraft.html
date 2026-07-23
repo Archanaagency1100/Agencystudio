@@ -1,0 +1,1376 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Podcast Production in South Delhi | AgencyEleven100 Studio</title>
+
+    <meta
+        name="description"
+        content="Professional podcast production in South Delhi with premium audio, multi-camera setup and complete production support."
+    >
+
+    <link rel="canonical" href="https://1100.in/studio/podcast-production">
+
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/assets/img/favicon.png?v=6"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/studio.css">
+
+    <style>
+        /* ================================================================
+           PODCAST PRODUCTION SERVICE PAGE
+           Every page-specific class uses the podcast-production- prefix.
+           ================================================================ */
+
+        body.podcast-production-body {
+            margin: 0;
+            overflow-x: hidden;
+            background: #090909;
+            color: #f5f1e7;
+        }
+
+        .podcast-production-page {
+            --podcast-production-bg: #090909;
+            --podcast-production-bg-soft: #111111;
+            --podcast-production-panel: #151515;
+            --podcast-production-panel-light: #1a1a1a;
+            --podcast-production-accent: #e5b400;
+            --podcast-production-accent-soft: #f3ce43;
+            --podcast-production-text: #f5f1e7;
+            --podcast-production-muted: #aaa69b;
+            --podcast-production-line: rgba(255, 255, 255, 0.13);
+            --podcast-production-accent-line: rgba(229, 180, 0, 0.42);
+
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background:
+                radial-gradient(
+                    circle at 92% 5%,
+                    rgba(229, 180, 0, 0.09),
+                    transparent 25%
+                ),
+                var(--podcast-production-bg);
+            color: var(--podcast-production-text);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .podcast-production-page *,
+        .podcast-production-page *::before,
+        .podcast-production-page *::after {
+            box-sizing: border-box;
+        }
+
+        .podcast-production-page a {
+            text-decoration: none;
+        }
+
+        .podcast-production-page h1,
+        .podcast-production-page h2,
+        .podcast-production-page h3,
+        .podcast-production-page p {
+            margin-top: 0;
+        }
+
+        .podcast-production-page h1,
+        .podcast-production-page h2,
+        .podcast-production-page h3,
+        .podcast-production-page .podcast-production-section-label,
+        .podcast-production-page .podcast-production-type-number {
+            font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+        }
+
+        /* ---------- Shared section styling ---------- */
+
+        .podcast-production-section {
+            position: relative;
+            padding: 120px 0;
+        }
+
+        .podcast-production-section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 13px;
+            margin-bottom: 22px;
+            color: var(--podcast-production-accent);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.22em;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .podcast-production-section-label::before {
+            width: 42px;
+            height: 1px;
+            content: "";
+            background: var(--podcast-production-accent);
+        }
+
+        .podcast-production-section-heading {
+            max-width: 870px;
+            margin-bottom: 0;
+            color: var(--podcast-production-text);
+            font-size: clamp(2.35rem, 5vw, 5.2rem);
+            font-weight: 900;
+            letter-spacing: -0.055em;
+            line-height: 0.95;
+            text-transform: uppercase;
+        }
+
+        .podcast-production-section-rule {
+            width: 100%;
+            height: 1px;
+            margin-top: 48px;
+            background: var(--podcast-production-line);
+        }
+
+        /* ---------- Hero ---------- */
+
+        .podcast-production-hero {
+            position: relative;
+            display: flex;
+            min-height: 92vh;
+            align-items: center;
+            isolation: isolate;
+            overflow: hidden;
+            padding: 170px 0 110px;
+            border-bottom: 1px solid var(--podcast-production-line);
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5, 5, 5, 0.99) 0%,
+                    rgba(5, 5, 5, 0.92) 42%,
+                    rgba(5, 5, 5, 0.4) 72%,
+                    rgba(5, 5, 5, 0.74) 100%
+                ),
+                url("/assets/img/podcast-production/podcast-hero.webp")
+                center / cover no-repeat;
+        }
+
+        .podcast-production-hero::before {
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            content: "";
+            opacity: 0.25;
+            background-image:
+                linear-gradient(
+                    rgba(255, 255, 255, 0.035) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, 0.035) 1px,
+                    transparent 1px
+                );
+            background-size: 70px 70px;
+            mask-image:
+                linear-gradient(
+                    to right,
+                    #000 0%,
+                    transparent 75%
+                );
+        }
+
+        .podcast-production-hero::after {
+            position: absolute;
+            z-index: -1;
+            top: 8%;
+            right: -7%;
+            width: min(48vw, 660px);
+            aspect-ratio: 1;
+            content: "";
+            border: 1px solid rgba(229, 180, 0, 0.35);
+            border-radius: 50%;
+            box-shadow:
+                0 0 0 70px rgba(229, 180, 0, 0.025),
+                0 0 0 140px rgba(229, 180, 0, 0.018);
+        }
+
+        .podcast-production-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 840px;
+        }
+
+        .podcast-production-hero-kicker {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 27px;
+            color: var(--podcast-production-accent);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.27em;
+            text-transform: uppercase;
+        }
+
+        .podcast-production-hero-kicker::before {
+            width: 54px;
+            height: 2px;
+            content: "";
+            background: var(--podcast-production-accent);
+        }
+
+        .podcast-production-hero-title {
+            max-width: 820px;
+            margin-bottom: 27px;
+            color: #ffffff;
+            font-size: clamp(4rem, 9vw, 8.7rem);
+            font-weight: 900;
+            letter-spacing: -0.072em;
+            line-height: 0.82;
+            text-transform: uppercase;
+        }
+
+        .podcast-production-hero-title span {
+            display: block;
+            color: var(--podcast-production-accent);
+        }
+
+        .podcast-production-hero-description {
+            max-width: 680px;
+            margin-bottom: 40px;
+            color: #d5d1c9;
+            font-size: clamp(1rem, 1.45vw, 1.22rem);
+            line-height: 1.8;
+        }
+
+        .podcast-production-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .podcast-production-btn {
+            position: relative;
+            display: inline-flex;
+            min-height: 56px;
+            align-items: center;
+            justify-content: center;
+            gap: 13px;
+            overflow: hidden;
+            padding: 14px 25px;
+            border: 1px solid transparent;
+            border-radius: 0;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.13em;
+            line-height: 1.2;
+            text-transform: uppercase;
+            transition:
+                color 0.3s ease,
+                background-color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .podcast-production-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .podcast-production-btn-primary {
+            border-color: var(--podcast-production-accent);
+            background: var(--podcast-production-accent);
+            color: #080808;
+        }
+
+        .podcast-production-btn-primary:hover {
+            border-color: var(--podcast-production-accent-soft);
+            background: var(--podcast-production-accent-soft);
+            color: #080808;
+        }
+
+        .podcast-production-btn-outline {
+            border-color: rgba(255, 255, 255, 0.38);
+            background: rgba(0, 0, 0, 0.2);
+            color: #ffffff;
+            backdrop-filter: blur(10px);
+        }
+
+        .podcast-production-btn-outline:hover {
+            border-color: var(--podcast-production-accent);
+            background: var(--podcast-production-accent);
+            color: #080808;
+        }
+
+        .podcast-production-hero-index {
+            position: absolute;
+            right: max(24px, 5vw);
+            bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.46);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .podcast-production-hero-index::before {
+            width: 80px;
+            height: 1px;
+            content: "";
+            background: var(--podcast-production-accent);
+        }
+
+        /* ---------- Podcast types ---------- */
+
+        .podcast-production-types {
+            background:
+                linear-gradient(
+                    180deg,
+                    #0b0b0b 0%,
+                    #101010 100%
+                );
+        }
+
+        .podcast-production-types-grid {
+            margin-top: 55px;
+            border-top: 1px solid var(--podcast-production-line);
+            border-left: 1px solid var(--podcast-production-line);
+        }
+
+        .podcast-production-type-card {
+            position: relative;
+            display: flex;
+            min-height: 340px;
+            flex-direction: column;
+            padding: 34px;
+            overflow: hidden;
+            border-right: 1px solid var(--podcast-production-line);
+            border-bottom: 1px solid var(--podcast-production-line);
+            background: rgba(255, 255, 255, 0.012);
+            transition:
+                background-color 0.35s ease,
+                transform 0.35s ease;
+        }
+
+        .podcast-production-type-card::after {
+            position: absolute;
+            right: -90px;
+            bottom: -90px;
+            width: 190px;
+            height: 190px;
+            content: "";
+            border: 1px solid rgba(229, 180, 0, 0.22);
+            border-radius: 50%;
+            opacity: 0;
+            transition:
+                right 0.45s ease,
+                bottom 0.45s ease,
+                opacity 0.45s ease;
+        }
+
+        .podcast-production-type-card:hover {
+            z-index: 1;
+            background: var(--podcast-production-panel-light);
+            transform: translateY(-4px);
+        }
+
+        .podcast-production-type-card:hover::after {
+            right: -55px;
+            bottom: -55px;
+            opacity: 1;
+        }
+
+        .podcast-production-type-number {
+            display: block;
+            margin-bottom: auto;
+            color: var(--podcast-production-accent);
+            font-size: 0.84rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+        }
+
+        .podcast-production-type-card h3 {
+            position: relative;
+            z-index: 1;
+            max-width: 310px;
+            margin: 65px 0 15px;
+            color: #ffffff;
+            font-size: clamp(1.55rem, 2.2vw, 2.2rem);
+            font-weight: 900;
+            letter-spacing: -0.035em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .podcast-production-type-lead {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 12px;
+            color: #f0ece3;
+            font-size: 0.99rem;
+            font-weight: 700;
+            line-height: 1.55;
+        }
+
+        .podcast-production-type-copy {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 0;
+            color: var(--podcast-production-muted);
+            font-size: 0.94rem;
+            line-height: 1.75;
+        }
+
+        /* ---------- Included features ---------- */
+
+        .podcast-production-includes {
+            border-top: 1px solid var(--podcast-production-line);
+            background:
+                radial-gradient(
+                    circle at 10% 60%,
+                    rgba(229, 180, 0, 0.065),
+                    transparent 25%
+                ),
+                #090909;
+        }
+
+        .podcast-production-includes-intro {
+            position: sticky;
+            top: 120px;
+            padding-right: 35px;
+        }
+
+        .podcast-production-includes-intro
+        .podcast-production-section-heading {
+            max-width: 580px;
+        }
+
+        .podcast-production-feature-list {
+            border-top: 1px solid var(--podcast-production-line);
+        }
+
+        .podcast-production-feature-card {
+            display: grid;
+            grid-template-columns: 64px minmax(0, 1fr) 30px;
+            gap: 24px;
+            align-items: start;
+            padding: 30px 4px;
+            border-bottom: 1px solid var(--podcast-production-line);
+            transition:
+                padding-left 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .podcast-production-feature-card:hover {
+            padding-left: 12px;
+            border-color: var(--podcast-production-accent-line);
+        }
+
+        .podcast-production-feature-icon {
+            display: inline-flex;
+            width: 54px;
+            height: 54px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--podcast-production-accent-line);
+            color: var(--podcast-production-accent);
+            font-size: 1.05rem;
+        }
+
+        .podcast-production-feature-text h3 {
+            margin-bottom: 9px;
+            color: #ffffff;
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .podcast-production-feature-text p {
+            max-width: 670px;
+            margin-bottom: 0;
+            color: var(--podcast-production-muted);
+            font-size: 0.94rem;
+            line-height: 1.72;
+        }
+
+        .podcast-production-feature-arrow {
+            padding-top: 14px;
+            color: rgba(255, 255, 255, 0.28);
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .podcast-production-feature-card:hover
+        .podcast-production-feature-arrow {
+            color: var(--podcast-production-accent);
+            transform: translateX(4px);
+        }
+
+        .podcast-production-closing-note {
+            position: relative;
+            margin-top: 85px;
+            overflow: hidden;
+            padding: 48px 55px;
+            border: 1px solid var(--podcast-production-accent-line);
+            background:
+                linear-gradient(
+                    105deg,
+                    rgba(229, 180, 0, 0.13),
+                    rgba(229, 180, 0, 0.025)
+                );
+        }
+
+        .podcast-production-closing-note::before {
+            position: absolute;
+            top: -70px;
+            right: -40px;
+            width: 210px;
+            height: 210px;
+            content: "";
+            border: 1px solid rgba(229, 180, 0, 0.24);
+            border-radius: 50%;
+        }
+
+        .podcast-production-closing-note p {
+            position: relative;
+            z-index: 1;
+            max-width: 1040px;
+            margin-bottom: 0;
+            color: #ffffff;
+            font-size: clamp(1.35rem, 2.5vw, 2.35rem);
+            font-weight: 700;
+            letter-spacing: -0.035em;
+            line-height: 1.35;
+        }
+
+        /* ---------- FAQ ---------- */
+
+        .podcast-production-faq {
+            border-top: 1px solid var(--podcast-production-line);
+            background: #111111;
+        }
+
+        .podcast-production-faq-layout {
+            align-items: start;
+        }
+
+        .podcast-production-faq-heading-wrap {
+            position: sticky;
+            top: 120px;
+        }
+
+        .podcast-production-faq-list {
+            counter-reset: podcast-production-faq-counter;
+            border-top: 1px solid var(--podcast-production-line);
+        }
+
+        .podcast-production-faq-item {
+            counter-increment: podcast-production-faq-counter;
+            display: grid;
+            grid-template-columns: 52px minmax(0, 1fr) 42px;
+            gap: 20px;
+            align-items: center;
+            min-height: 96px;
+            padding: 20px 2px;
+            border-bottom: 1px solid var(--podcast-production-line);
+            transition:
+                padding-left 0.3s ease,
+                border-color 0.3s ease,
+                background-color 0.3s ease;
+        }
+
+        .podcast-production-faq-item:hover {
+            padding-left: 12px;
+            border-color: var(--podcast-production-accent-line);
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+        .podcast-production-faq-item::before {
+            content: counter(
+                podcast-production-faq-counter,
+                decimal-leading-zero
+            );
+            color: var(--podcast-production-accent);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+        }
+
+        .podcast-production-faq-question {
+            margin-bottom: 0;
+            color: #ffffff;
+            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            font-weight: 700;
+            line-height: 1.45;
+        }
+
+        .podcast-production-faq-plus {
+            position: relative;
+            width: 28px;
+            height: 28px;
+            justify-self: end;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 50%;
+        }
+
+        .podcast-production-faq-plus::before,
+        .podcast-production-faq-plus::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 1px;
+            content: "";
+            background: var(--podcast-production-accent);
+            transform: translate(-50%, -50%);
+        }
+
+        .podcast-production-faq-plus::after {
+            transform:
+                translate(-50%, -50%)
+                rotate(90deg);
+        }
+
+        /* ---------- Responsive ---------- */
+
+        @media (max-width: 1199.98px) {
+            .podcast-production-section {
+                padding: 100px 0;
+            }
+
+            .podcast-production-hero {
+                min-height: 820px;
+            }
+
+            .podcast-production-type-card {
+                min-height: 320px;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .podcast-production-section {
+                padding: 85px 0;
+            }
+
+            .podcast-production-hero {
+                min-height: auto;
+                padding: 155px 0 100px;
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(5, 5, 5, 0.98),
+                        rgba(5, 5, 5, 0.76)
+                    ),
+                    url("/assets/img/podcast-production/podcast-hero.webp")
+                    center / cover no-repeat;
+            }
+
+            .podcast-production-hero::after {
+                top: 19%;
+                right: -25%;
+                width: 520px;
+            }
+
+            .podcast-production-hero-title {
+                max-width: 700px;
+            }
+
+            .podcast-production-includes-intro,
+            .podcast-production-faq-heading-wrap {
+                position: static;
+                margin-bottom: 45px;
+                padding-right: 0;
+            }
+
+            .podcast-production-closing-note {
+                padding: 42px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .podcast-production-section {
+                padding: 72px 0;
+            }
+
+            .podcast-production-section-heading {
+                font-size: clamp(2.25rem, 11vw, 4.2rem);
+                line-height: 0.96;
+            }
+
+            .podcast-production-section-rule {
+                margin-top: 34px;
+            }
+
+            .podcast-production-hero {
+                padding: 135px 0 85px;
+            }
+
+            .podcast-production-hero::before {
+                background-size: 45px 45px;
+            }
+
+            .podcast-production-hero::after {
+                top: 27%;
+                right: -62%;
+                width: 520px;
+                opacity: 0.62;
+            }
+
+            .podcast-production-hero-title {
+                font-size: clamp(3.45rem, 17vw, 6rem);
+            }
+
+            .podcast-production-hero-description {
+                max-width: 570px;
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+
+            .podcast-production-hero-actions {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .podcast-production-btn {
+                width: 100%;
+            }
+
+            .podcast-production-hero-index {
+                display: none;
+            }
+
+            .podcast-production-types-grid {
+                margin-top: 42px;
+            }
+
+            .podcast-production-type-card {
+                min-height: 285px;
+                padding: 28px;
+            }
+
+            .podcast-production-type-card h3 {
+                margin-top: 48px;
+            }
+
+            .podcast-production-feature-card {
+                grid-template-columns: 52px minmax(0, 1fr);
+                gap: 18px;
+                padding: 25px 0;
+            }
+
+            .podcast-production-feature-icon {
+                width: 48px;
+                height: 48px;
+            }
+
+            .podcast-production-feature-arrow {
+                display: none;
+            }
+
+            .podcast-production-closing-note {
+                margin-top: 65px;
+                padding: 34px 26px;
+            }
+
+            .podcast-production-faq-item {
+                grid-template-columns: 40px minmax(0, 1fr) 32px;
+                gap: 14px;
+                min-height: 86px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .podcast-production-section {
+                padding: 62px 0;
+            }
+
+            .podcast-production-hero {
+                padding: 120px 0 72px;
+            }
+
+            .podcast-production-hero-kicker,
+            .podcast-production-section-label {
+                font-size: 0.67rem;
+                letter-spacing: 0.17em;
+            }
+
+            .podcast-production-hero-kicker::before {
+                width: 35px;
+            }
+
+            .podcast-production-section-label::before {
+                width: 28px;
+            }
+
+            .podcast-production-hero-title {
+                margin-bottom: 23px;
+                font-size: clamp(3.1rem, 18vw, 4.7rem);
+            }
+
+            .podcast-production-type-card {
+                min-height: 270px;
+                padding: 25px 22px;
+            }
+
+            .podcast-production-type-card h3 {
+                margin-top: 38px;
+                font-size: 1.65rem;
+            }
+
+            .podcast-production-closing-note p {
+                font-size: 1.32rem;
+            }
+
+            .podcast-production-faq-item {
+                grid-template-columns: 34px minmax(0, 1fr) 28px;
+                gap: 11px;
+            }
+
+            .podcast-production-faq-question {
+                font-size: 0.96rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .podcast-production-page *,
+            .podcast-production-page *::before,
+            .podcast-production-page *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="podcast-production-body">
+
+<div id="nav-placeholder"></div>
+
+<main class="podcast-production-page">
+
+    <!-- ================================================================
+         HERO
+         Recommended local hero image:
+         /assets/img/podcast-production/podcast-hero.webp
+         ================================================================ -->
+
+    <section class="podcast-production-hero">
+        <div class="container">
+            <div class="podcast-production-hero-content">
+
+                <h1
+                    class="podcast-production-hero-title"
+                    data-aos="fade-up"
+                >
+                    PODCAST
+                    <span>PRODUCTION</span>
+                </h1>
+
+                <p
+                    class="podcast-production-hero-description"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+                    Professional podcast production in South Delhi with premium audio, multi-camera setup and complete production support.
+                </p>
+
+                <div
+                    class="podcast-production-hero-actions"
+                    data-aos="fade-up"
+                    data-aos-delay="180"
+                >
+                    <a
+                        href="/contact"
+                        class="podcast-production-btn podcast-production-btn-primary"
+                    >
+                        BOOK YOUR PODCAST
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a
+                        href="/studio/gallery"
+                        class="podcast-production-btn podcast-production-btn-outline"
+                    >
+                        VIEW STUDIO &amp; SETUP
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ================================================================
+         PODCAST TYPES
+         ================================================================ -->
+
+    <section class="podcast-production-section podcast-production-types">
+        <div class="container">
+
+            <div data-aos="fade-up">
+                <h2 class="podcast-production-section-heading">
+                    WE SUPPORT EVERY TYPE OF PODCAST HERE
+                </h2>
+
+                <div class="podcast-production-section-rule"></div>
+            </div>
+
+            <div class="row g-0 podcast-production-types-grid">
+
+                <div class="col-lg-4 col-md-6">
+                    <article
+                        class="podcast-production-type-card"
+                        data-aos="fade-up"
+                    >
+                        <span class="podcast-production-type-number">
+                            01 —
+                        </span>
+
+                        <h3>INTERVIEW PODCASTS</h3>
+
+                        <p class="podcast-production-type-lead">
+                            One-on-one conversations that create impact.
+                        </p>
+
+                        <p class="podcast-production-type-copy">
+                            We help you capture engaging interviews with multiple camera angles, crystal-clear audio and a cinematic look.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <article
+                        class="podcast-production-type-card"
+                        data-aos="fade-up"
+                        data-aos-delay="80"
+                    >
+                        <span class="podcast-production-type-number">
+                            02 —
+                        </span>
+
+                        <h3>SOLO PODCASTS</h3>
+
+                        <p class="podcast-production-type-lead">
+                            Share your ideas, knowledge and stories — seamlessly.
+                        </p>
+
+                        <p class="podcast-production-type-copy">
+                            We handle the entire setup so you can focus on your message.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <article
+                        class="podcast-production-type-card"
+                        data-aos="fade-up"
+                        data-aos-delay="160"
+                    >
+                        <span class="podcast-production-type-number">
+                            03 —
+                        </span>
+
+                        <h3>PANEL DISCUSSIONS</h3>
+
+                        <p class="podcast-production-type-lead">
+                            Engaging multi-guest conversations with perfect balance.
+                        </p>
+
+                        <p class="podcast-production-type-copy">
+                            We capture natural discussions with multiple angles and clear audio for every speaker.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-lg-6 col-md-6">
+                    <article
+                        class="podcast-production-type-card"
+                        data-aos="fade-up"
+                    >
+                        <span class="podcast-production-type-number">
+                            04 —
+                        </span>
+
+                        <h3>BUSINESS &amp; BRAND PODCASTS</h3>
+
+                        <p class="podcast-production-type-lead">
+                            Strengthen your brand with credible, on-message content.
+                        </p>
+
+                        <p class="podcast-production-type-copy">
+                            We provide professional production that reflects your brand’s voice and values.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <article
+                        class="podcast-production-type-card"
+                        data-aos="fade-up"
+                        data-aos-delay="80"
+                    >
+                        <span class="podcast-production-type-number">
+                            05 —
+                        </span>
+
+                        <h3>VIDEO PODCASTS</h3>
+
+                        <p class="podcast-production-type-lead">
+                            High-quality video podcasts that look as good as they sound.
+                        </p>
+
+                        <p class="podcast-production-type-copy">
+                            Perfect for YouTube, social media and digital marketing with multi-camera production.
+                        </p>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         EVERY SESSION INCLUDES
+         ================================================================ -->
+
+    <section class="podcast-production-section podcast-production-includes">
+        <div class="container">
+
+            <div class="row g-5">
+
+                <div class="col-lg-5">
+                    <div
+                        class="podcast-production-includes-intro"
+                        data-aos="fade-up"
+                    >
+                        <div class="podcast-production-section-label">
+                            EVERY SESSION INCLUDES
+                        </div>
+
+                        <h2 class="podcast-production-section-heading">
+                            Everything You Need for a Professional Podcast
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="podcast-production-feature-list">
+
+                        <article
+                            class="podcast-production-feature-card"
+                            data-aos="fade-up"
+                        >
+                            <div class="podcast-production-feature-icon">
+                                <i class="fa-solid fa-microphone-lines"></i>
+                            </div>
+
+                            <div class="podcast-production-feature-text">
+                                <h3>Premium Microphones</h3>
+                                <p>
+                                    Industry-grade mics for rich, natural and noise-free recordings.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right podcast-production-feature-arrow"></i>
+                        </article>
+
+                        <article
+                            class="podcast-production-feature-card"
+                            data-aos="fade-up"
+                        >
+                            <div class="podcast-production-feature-icon">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+
+                            <div class="podcast-production-feature-text">
+                                <h3>Multi-Camera Setup</h3>
+                                <p>
+                                    2 or more cameras for dynamic angles and a cinematic look, on request.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right podcast-production-feature-arrow"></i>
+                        </article>
+
+                        <article
+                            class="podcast-production-feature-card"
+                            data-aos="fade-up"
+                        >
+                            <div class="podcast-production-feature-icon">
+                                <i class="fa-solid fa-sliders"></i>
+                            </div>
+
+                            <div class="podcast-production-feature-text">
+                                <h3>Clean Audio Mix</h3>
+                                <p>
+                                    Expert audio recording, mixing and noise enhancement.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right podcast-production-feature-arrow"></i>
+                        </article>
+
+                        <article
+                            class="podcast-production-feature-card"
+                            data-aos="fade-up"
+                        >
+                            <div class="podcast-production-feature-icon">
+                                <i class="fa-solid fa-file-video"></i>
+                            </div>
+
+                            <div class="podcast-production-feature-text">
+                                <h3>Raw Video Files</h3>
+                                <p>
+                                    All recordings delivered in high-quality raw formats.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right podcast-production-feature-arrow"></i>
+                        </article>
+
+                        <article
+                            class="podcast-production-feature-card"
+                            data-aos="fade-up"
+                        >
+                            <div class="podcast-production-feature-icon">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+
+                            <div class="podcast-production-feature-text">
+                                <h3>Studio Lighting</h3>
+                                <p>
+                                    Professional lighting setup to make you look your best on camera.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right podcast-production-feature-arrow"></i>
+                        </article>
+
+                        <article
+                            class="podcast-production-feature-card"
+                            data-aos="fade-up"
+                        >
+                            <div class="podcast-production-feature-icon">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+
+                            <div class="podcast-production-feature-text">
+                                <h3>Technical Support</h3>
+                                <p>
+                                    On-call technical assistance throughout your recording session.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right podcast-production-feature-arrow"></i>
+                        </article>
+
+                        <article
+                            class="podcast-production-feature-card"
+                            data-aos="fade-up"
+                        >
+                            <div class="podcast-production-feature-icon">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+
+                            <div class="podcast-production-feature-text">
+                                <h3>Quick Turnaround</h3>
+                                <p>
+                                    Fast delivery so you can publish and grow your audience.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right podcast-production-feature-arrow"></i>
+                        </article>
+
+                        <article
+                            class="podcast-production-feature-card"
+                            data-aos="fade-up"
+                        >
+                            <div class="podcast-production-feature-icon">
+                                <i class="fa-solid fa-image"></i>
+                            </div>
+
+                            <div class="podcast-production-feature-text">
+                                <h3>Thumbnails</h3>
+                                <p>
+                                    Eye-catching thumbnails to boost clicks and engagement, on request.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right podcast-production-feature-arrow"></i>
+                        </article>
+
+                        <article
+                            class="podcast-production-feature-card"
+                            data-aos="fade-up"
+                        >
+                            <div class="podcast-production-feature-icon">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                            </div>
+
+                            <div class="podcast-production-feature-text">
+                                <h3>Platform-Ready Output</h3>
+                                <p>
+                                    We deliver content that is ready to publish on YouTube, Spotify and more, on request.
+                                </p>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right podcast-production-feature-arrow"></i>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div
+                class="podcast-production-closing-note"
+                data-aos="fade-up"
+            >
+                <p>
+                    From setup to final delivery, we handle the technical side so you can focus on creating great conversations.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================================
+         FAQ
+         Only the supplied questions are displayed. No answer copy added.
+         ================================================================ -->
+
+    <section class="podcast-production-section podcast-production-faq">
+        <div class="container">
+
+            <div class="row g-5 podcast-production-faq-layout">
+
+                <div class="col-lg-5">
+                    <div
+                        class="podcast-production-faq-heading-wrap"
+                        data-aos="fade-up"
+                    >
+                        <div class="podcast-production-section-label">
+                            FAQ
+                        </div>
+
+                        <h2 class="podcast-production-section-heading">
+                            Frequently Asked Questions
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div
+                        class="podcast-production-faq-list"
+                        data-aos="fade-up"
+                    >
+
+                        <div class="podcast-production-faq-item">
+                            <p class="podcast-production-faq-question">
+                                What is the booking process for the studio?
+                            </p>
+                            <span class="podcast-production-faq-plus"></span>
+                        </div>
+
+                        <div class="podcast-production-faq-item">
+                            <p class="podcast-production-faq-question">
+                                How many people can we have in a podcast?
+                            </p>
+                            <span class="podcast-production-faq-plus"></span>
+                        </div>
+
+                        <div class="podcast-production-faq-item">
+                            <p class="podcast-production-faq-question">
+                                Can we bring our own equipment?
+                            </p>
+                            <span class="podcast-production-faq-plus"></span>
+                        </div>
+
+                        <div class="podcast-production-faq-item">
+                            <p class="podcast-production-faq-question">
+                                Do you provide editing for the podcast?
+                            </p>
+                            <span class="podcast-production-faq-plus"></span>
+                        </div>
+
+                        <div class="podcast-production-faq-item">
+                            <p class="podcast-production-faq-question">
+                                How many cameras are used for the recording?
+                            </p>
+                            <span class="podcast-production-faq-plus"></span>
+                        </div>
+
+                        <div class="podcast-production-faq-item">
+                            <p class="podcast-production-faq-question">
+                                Will we get the raw files?
+                            </p>
+                            <span class="podcast-production-faq-plus"></span>
+                        </div>
+
+                        <div class="podcast-production-faq-item">
+                            <p class="podcast-production-faq-question">
+                                Is the studio soundproof?
+                            </p>
+                            <span class="podcast-production-faq-plus"></span>
+                        </div>
+
+                        <div class="podcast-production-faq-item">
+                            <p class="podcast-production-faq-question">
+                                Can you help with podcast publishing?
+                            </p>
+                            <span class="podcast-production-faq-plus"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="/assets/js/studio.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (typeof AOS !== "undefined") {
+            AOS.init({
+                duration: 850,
+                easing: "ease-out-cubic",
+                once: true,
+                offset: 70
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
