@@ -63,7 +63,7 @@
             margin-bottom: 18px;
             color: var(--podcast-production-gold);
             font-size: 0.72rem;
-            font-weight: 800;
+            font-weight: 600;
             letter-spacing: 0.2em;
             text-transform: uppercase;
         }
@@ -76,7 +76,7 @@
         }
 
         .podcast-production-section-heading {
-            max-width: 800px;
+            max-width: 600px;
             margin-bottom: 0;
             color: #ffffff;
             font-size: clamp(2.4rem, 5vw, 5rem);
@@ -163,9 +163,10 @@
             margin-bottom: 22px;
             color: var(--podcast-production-gold);
             font-size: 0.74rem;
-            font-weight: 800;
+            font-weight: 600;
             letter-spacing: 0.24em;
             text-transform: uppercase;
+            margin-top: 20px;
         }
 
         .podcast-production-hero-kicker::before {
@@ -214,7 +215,7 @@
             padding: 13px 23px;
             border: 1px solid transparent;
             font-size: 0.75rem;
-            font-weight: 800;
+            font-weight: 700;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             transition:
@@ -403,7 +404,7 @@
         .podcast-production-type-number {
             color: var(--podcast-production-gold);
             font-size: 0.72rem;
-            font-weight: 800;
+            font-weight: 600;
             letter-spacing: 0.15em;
         }
 
@@ -526,7 +527,7 @@
             padding-top: 3px;
             color: var(--podcast-production-gold);
             font-size: 0.7rem;
-            font-weight: 800;
+            font-weight: 600;
             letter-spacing: 0.12em;
         }
 
@@ -534,7 +535,7 @@
             margin-bottom: 9px;
             color: #ffffff;
             font-size: 1.14rem;
-            font-weight: 800;
+            font-weight: 600;
         }
 
         .podcast-production-includes-content p {
@@ -637,7 +638,7 @@
         .podcast-production-faq-number {
             color: var(--podcast-production-gold);
             font-size: 0.7rem;
-            font-weight: 800;
+            font-weight: 600;
             letter-spacing: 0.12em;
         }
 
