@@ -1,0 +1,1982 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Brand Management | AgencyEleven100</title>
+
+    <meta
+        name="description"
+        content="Grow your business with AgencyEleven100's Brand Management services. We become your dedicated creative and strategic partner, managing every aspect of your brand—from identity and website management to social media, marketing, content creation, advertising, photography, videography, and digital growth."
+    >
+
+    <link
+        rel="canonical"
+        href="https://1100.in/agency/services/brand-management"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/assets/img/favicon.png"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://cdn.jsdelivr.net"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://cdnjs.cloudflare.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://unpkg.com"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"
+    >
+
+    <!-- <link
+        rel="stylesheet"
+        href="/assets/css/global.css"
+    > -->
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/style.css"
+    >
+
+    <style>
+        /* ================================================================
+           BRAND MANAGEMENT — AGENCY WHITE THEME
+           All custom classes use the brand-management- prefix.
+           ================================================================ */
+
+        :root {
+            --brand-management-header-offset: 0px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body.brand-management-body {
+            margin: 0;
+            overflow-x: clip;
+            background: #f6f4ef;
+            color: #111111;
+        }
+
+        .brand-management-page {
+            --brand-management-white: #ffffff;
+            --brand-management-paper: #f6f4ef;
+            --brand-management-paper-deep: #eeeae2;
+            --brand-management-black: #111111;
+            --brand-management-muted: #68645d;
+            --brand-management-line: rgba(17, 17, 17, 0.17);
+            --brand-management-accent: #f0b900;
+            --brand-management-accent-soft: #fff5cc;
+
+            width: 100%;
+            overflow: visible;
+            padding-top: var(--brand-management-header-offset);
+            background: var(--brand-management-paper);
+            color: var(--brand-management-black);
+            font-family: inherit;
+        }
+
+        .brand-management-page *,
+        .brand-management-page *::before,
+        .brand-management-page *::after {
+            box-sizing: border-box;
+        }
+
+        .brand-management-page a {
+            text-decoration: none;
+        }
+
+        .brand-management-page h1,
+        .brand-management-page h2,
+        .brand-management-page h3,
+        .brand-management-page p {
+            margin-top: 0;
+        }
+
+        .brand-management-section {
+            position: relative;
+            padding: 115px 0;
+            border-top: 1px solid var(--brand-management-line);
+        }
+
+        .brand-management-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 19px;
+            color: var(--brand-management-accent);
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .brand-management-eyebrow::before {
+            width: 39px;
+            height: 1px;
+            content: "";
+            background: currentColor;
+        }
+
+        .brand-management-section-title {
+            max-width: 930px;
+            margin-bottom: 0;
+            color: var(--brand-management-black);
+            font-size: clamp(2.45rem, 5.2vw, 5.65rem);
+            font-weight: 800;
+            letter-spacing: -0.065em;
+            line-height: 0.95;
+            text-transform: uppercase;
+        }
+
+        /* ================================================================
+           HERO — WHITE EDITORIAL SPLIT
+           ================================================================ */
+
+        .brand-management-hero {
+            position: relative;
+            min-height: 88vh;
+            overflow: hidden;
+            padding: 155px 0 75px;
+            background: var(--brand-management-white);
+        }
+
+        .brand-management-hero::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 31%;
+            height: 100%;
+            content: "";
+            background: var(--brand-management-accent-soft);
+        }
+
+        .brand-management-hero::after {
+            position: absolute;
+            top: 10%;
+            right: 7%;
+            width: 340px;
+            height: 340px;
+            content: "";
+            border: 1px solid rgba(240, 185, 0, 0.32);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .brand-management-hero-layout {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns:
+                minmax(0, 1.05fr)
+                minmax(360px, 0.72fr);
+            gap: 62px;
+            align-items: center;
+        }
+
+        .brand-management-hero-content {
+            max-width: 980px;
+        }
+
+        .brand-management-hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 13px;
+            margin-bottom: 25px;
+            color: var(--brand-management-accent);
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .brand-management-hero-kicker::before {
+            width: 49px;
+            height: 1px;
+            content: "";
+            background: currentColor;
+        }
+
+        .brand-management-hero-title {
+            max-width: 1000px;
+            margin-bottom: 30px;
+            color: var(--brand-management-black);
+            font-size: clamp(4.4rem, 9vw, 9.6rem);
+            font-weight: 800;
+            letter-spacing: -0.09em;
+            line-height: 0.79;
+            text-transform: uppercase;
+        }
+
+        .brand-management-hero-title span {
+            display: block;
+            color: var(--brand-management-accent);
+        }
+
+        .brand-management-hero-copy {
+            max-width: 830px;
+            margin-bottom: 37px;
+            color: var(--brand-management-muted);
+            font-size: clamp(1rem, 1.32vw, 1.16rem);
+            line-height: 1.82;
+        }
+
+        .brand-management-hero-cta {
+            display: inline-flex;
+            min-height: 57px;
+            align-items: center;
+            justify-content: center;
+            gap: 13px;
+            padding: 14px 27px;
+            border: 1px solid var(--brand-management-black);
+            background: var(--brand-management-black);
+            color: var(--brand-management-white);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            transition:
+                transform 0.28s ease,
+                background-color 0.28s ease,
+                border-color 0.28s ease,
+                color 0.28s ease;
+        }
+
+        .brand-management-hero-cta:hover {
+            transform: translateY(-4px);
+            border-color: var(--brand-management-accent);
+            background: var(--brand-management-accent);
+            color: var(--brand-management-white);
+        }
+
+        .brand-management-hero-visual {
+            position: relative;
+            min-height: 610px;
+        }
+
+        .brand-management-hero-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 88%;
+            height: 83%;
+            overflow: hidden;
+            border-radius: 46% 46% 4px 4px;
+            background:
+                url("/assets/img/agency/brand_management.webp")
+                center / cover no-repeat;
+            box-shadow: 0 28px 70px rgba(17, 17, 17, 0.14);
+        }
+
+        .brand-management-hero-image::after {
+            position: absolute;
+            inset: 0;
+            content: "";
+            background:
+                linear-gradient(
+                    180deg,
+                    transparent 55%,
+                    rgba(0, 0, 0, 0.34)
+                );
+        }
+
+        .brand-management-hero-number {
+            position: absolute;
+            right: 62%;
+            bottom: 5%;
+            color: var(--brand-management-black);
+            font-size: clamp(5.5rem, 10vw, 10rem);
+            font-weight: 800;
+            letter-spacing: -0.1em;
+            line-height: 0.72;
+        }
+
+        .brand-management-hero-note {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 70%;
+            padding: 22px 25px;
+            border: 1px solid var(--brand-management-line);
+            background: var(--brand-management-white);
+            color: var(--brand-management-black);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        /* ================================================================
+           COMPLETE BRAND MANAGEMENT — PREMIUM SERVICE ORBITS
+           Inspired by the Agency homepage's circular service language.
+           ================================================================ */
+
+        .brand-management-services {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            background:
+                radial-gradient(
+                    circle at 82% 18%,
+                    rgba(240, 185, 0, 0.10),
+                    transparent 24%
+                ),
+                var(--brand-management-white);
+        }
+
+        .brand-management-services::before {
+            position: absolute;
+            z-index: -1;
+            top: 7%;
+            left: 41%;
+            width: 460px;
+            height: 460px;
+            content: "";
+            border: 1px solid rgba(240, 185, 0, 0.22);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .brand-management-services::after {
+            position: absolute;
+            z-index: -1;
+            right: -1%;
+            bottom: -2%;
+            content: "SERVICES";
+            color: rgba(17, 17, 17, 0.075);
+            font-size: clamp(7rem, 16vw, 17rem);
+            font-weight: 800;
+            letter-spacing: -0.08em;
+            line-height: 0.72;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .brand-management-services-layout {
+            display: grid;
+            grid-template-columns:
+                minmax(270px, 0.34fr)
+                minmax(0, 1.66fr);
+            gap: 55px;
+            align-items: start;
+        }
+
+        .brand-management-services-heading {
+            position: sticky;
+            top: calc(
+                var(--brand-management-header-offset) + 34px
+            );
+            z-index: 2;
+            padding-top: 26px;
+        }
+
+        .brand-management-services-heading
+        .brand-management-section-title {
+            max-width: 470px;
+            font-size: clamp(2.6rem, 4.8vw, 5.2rem);
+        }
+
+        .brand-management-services-heading::after {
+            display: block;
+            width: 115px;
+            height: 3px;
+            margin-top: 32px;
+            content: "";
+            background: var(--brand-management-accent);
+        }
+
+        .brand-management-orbit-stage {
+            position: relative;
+            min-height: 980px;
+        }
+
+        .brand-management-orbit-card {
+            position: absolute;
+            display: flex;
+            width: 350px;
+            aspect-ratio: 1;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 56px 48px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 50%;
+            background:
+                radial-gradient(
+                    circle at 35% 28%,
+                    rgba(255, 255, 255, 0.07),
+                    transparent 28%
+                ),
+                #0b0b0b;
+            color: #ffffff;
+            text-align: center;
+            box-shadow:
+                0 24px 65px rgba(17, 17, 17, 0.16);
+            transition:
+                transform 0.4s cubic-bezier(.2, .75, .2, 1),
+                box-shadow 0.4s ease,
+                border-color 0.4s ease;
+        }
+
+        .brand-management-orbit-card::before {
+            position: absolute;
+            inset: 14px;
+            content: "";
+            border: 1px solid rgba(240, 185, 0, 0);
+            border-radius: 50%;
+            transition: border-color 0.4s ease;
+        }
+
+        .brand-management-orbit-card::after {
+            position: absolute;
+            top: 18px;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            content: "";
+            border-radius: 50%;
+            background: var(--brand-management-accent);
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 7px rgba(240, 185, 0, 0.11);
+        }
+
+        .brand-management-orbit-card:hover {
+            z-index: 10;
+            border-color: rgba(240, 185, 0, 0.62);
+            box-shadow:
+                0 34px 90px rgba(17, 17, 17, 0.25);
+            transform: translateY(-10px) scale(1.025);
+        }
+
+        .brand-management-orbit-card:hover::before {
+            border-color: rgba(240, 185, 0, 0.28);
+        }
+
+        .brand-management-orbit-card:nth-child(1) {
+            top: 0;
+            left: 5%;
+            width: 345px;
+        }
+
+        .brand-management-orbit-card:nth-child(2) {
+            top: 80px;
+            right: 2%;
+            width: 380px;
+        }
+
+        .brand-management-orbit-card:nth-child(3) {
+            top: 350px;
+            left: 0;
+            width: 365px;
+        }
+
+        .brand-management-orbit-card:nth-child(4) {
+            top: 430px;
+            right: 12%;
+            width: 385px;
+        }
+
+        .brand-management-orbit-card:nth-child(5) {
+            right: 38%;
+            bottom: 0;
+            width: 395px;
+        }
+
+        .brand-management-orbit-top {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 19px;
+        }
+
+        .brand-management-orbit-number {
+            color: var(--brand-management-accent);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+        }
+
+        .brand-management-orbit-icon {
+            display: inline-flex;
+            color: var(--brand-management-accent);
+            font-size: 0.8rem;
+        }
+
+        .brand-management-orbit-card h3 {
+            position: relative;
+            z-index: 1;
+            max-width: 245px;
+            margin-bottom: 15px;
+            color: #ffffff;
+            font-size: clamp(1.18rem, 1.65vw, 1.6rem);
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            line-height: 1.08;
+        }
+
+        .brand-management-orbit-card p {
+            position: relative;
+            z-index: 1;
+            max-width: 270px;
+            margin-bottom: 0;
+            color: #bdb8ae;
+            font-size: 0.84rem;
+            line-height: 1.62;
+        }
+
+        @media (max-width: 1399.98px) {
+            .brand-management-orbit-stage {
+                min-height: 900px;
+            }
+
+            .brand-management-orbit-card:nth-child(1) {
+                width: 315px;
+            }
+
+            .brand-management-orbit-card:nth-child(2) {
+                width: 345px;
+            }
+
+            .brand-management-orbit-card:nth-child(3) {
+                top: 325px;
+                width: 330px;
+            }
+
+            .brand-management-orbit-card:nth-child(4) {
+                top: 390px;
+                width: 350px;
+            }
+
+            .brand-management-orbit-card:nth-child(5) {
+                width: 360px;
+            }
+
+            .brand-management-orbit-card {
+                padding: 48px 42px;
+            }
+        }
+
+        @media (max-width: 1199.98px) {
+            .brand-management-services-layout {
+                grid-template-columns:
+                    minmax(235px, 0.4fr)
+                    minmax(0, 1.6fr);
+                gap: 35px;
+            }
+
+            .brand-management-orbit-stage {
+                min-height: 820px;
+            }
+
+            .brand-management-orbit-card:nth-child(1) {
+                left: 2%;
+                width: 285px;
+            }
+
+            .brand-management-orbit-card:nth-child(2) {
+                width: 315px;
+            }
+
+            .brand-management-orbit-card:nth-child(3) {
+                top: 295px;
+                width: 300px;
+            }
+
+            .brand-management-orbit-card:nth-child(4) {
+                top: 355px;
+                right: 6%;
+                width: 320px;
+            }
+
+            .brand-management-orbit-card:nth-child(5) {
+                right: 31%;
+                width: 330px;
+            }
+
+            .brand-management-orbit-card {
+                padding: 42px 36px;
+            }
+
+            .brand-management-orbit-card p {
+                font-size: 0.79rem;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .brand-management-services-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .brand-management-services-heading {
+                position: static;
+                max-width: 760px;
+                padding-top: 0;
+            }
+
+            .brand-management-orbit-stage {
+                display: grid;
+                min-height: 0;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 24px;
+                align-items: stretch;
+            }
+
+            .brand-management-orbit-card,
+            .brand-management-orbit-card:nth-child(n) {
+                position: relative;
+                top: auto;
+                right: auto;
+                bottom: auto;
+                left: auto;
+                width: 100%;
+                max-width: 390px;
+                justify-self: center;
+            }
+
+            .brand-management-orbit-card:nth-child(5) {
+                grid-column: 1 / -1;
+            }
+
+            .brand-management-services::after {
+                bottom: 0;
+                font-size: 22vw;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .brand-management-orbit-stage {
+                grid-template-columns: 1fr;
+            }
+
+            .brand-management-orbit-card:nth-child(5) {
+                grid-column: auto;
+            }
+
+            .brand-management-orbit-card,
+            .brand-management-orbit-card:nth-child(n) {
+                width: min(86vw, 370px);
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .brand-management-services-heading
+            .brand-management-section-title {
+                font-size: clamp(2.2rem, 11vw, 3.5rem);
+            }
+
+            .brand-management-orbit-card,
+            .brand-management-orbit-card:nth-child(n) {
+                width: min(88vw, 340px);
+                padding: 42px 34px;
+            }
+
+            .brand-management-orbit-card h3 {
+                font-size: 1.25rem;
+            }
+
+            .brand-management-orbit-card p {
+                font-size: 0.81rem;
+            }
+        }
+
+        /* ================================================================
+           WHAT'S INCLUDED — CLEAN MAGAZINE GRID
+           ================================================================ */
+
+        .brand-management-included {
+            background: var(--brand-management-white);
+        }
+
+        .brand-management-included-heading {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 45px;
+            margin-bottom: 58px;
+        }
+
+        .brand-management-included-symbol {
+            display: grid;
+            width: 116px;
+            height: 116px;
+            flex: 0 0 auto;
+            place-items: center;
+            border: 1px solid var(--brand-management-black);
+            border-radius: 50%;
+            color: var(--brand-management-accent);
+            font-size: 1.9rem;
+        }
+
+        .brand-management-included-grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            border-top: 1px solid var(--brand-management-black);
+            border-left: 1px solid var(--brand-management-line);
+        }
+
+        .brand-management-included-card {
+            position: relative;
+            grid-column: span 4;
+            min-height: 305px;
+            padding: 27px;
+            overflow: hidden;
+            border-right: 1px solid var(--brand-management-line);
+            border-bottom: 1px solid var(--brand-management-line);
+            background: var(--brand-management-white);
+            transition:
+                background-color 0.32s ease,
+                color 0.32s ease;
+        }
+
+        .brand-management-included-card:nth-child(1),
+        .brand-management-included-card:nth-child(6) {
+            grid-column: span 7;
+        }
+
+        .brand-management-included-card:nth-child(2),
+        .brand-management-included-card:nth-child(5) {
+            grid-column: span 5;
+        }
+
+        .brand-management-included-card:hover {
+            background: var(--brand-management-black);
+        }
+
+        .brand-management-included-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 66px;
+        }
+
+        .brand-management-included-number {
+            color: var(--brand-management-accent);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+        }
+
+        .brand-management-included-icon {
+            display: inline-flex;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--brand-management-line);
+            color: var(--brand-management-black);
+            transition:
+                border-color 0.32s ease,
+                color 0.32s ease;
+        }
+
+        .brand-management-included-card h3 {
+            margin-bottom: 13px;
+            color: var(--brand-management-black);
+            font-size: clamp(1.28rem, 2vw, 1.9rem);
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            line-height: 1.12;
+            transition: color 0.32s ease;
+        }
+
+        .brand-management-included-card p {
+            max-width: 680px;
+            margin-bottom: 0;
+            color: var(--brand-management-muted);
+            font-size: 0.94rem;
+            line-height: 1.8;
+            transition: color 0.32s ease;
+        }
+
+        .brand-management-included-card:hover
+        .brand-management-included-icon,
+        .brand-management-included-card:hover h3 {
+            color: var(--brand-management-white);
+        }
+
+        .brand-management-included-card:hover p {
+            color: #bcb7ae;
+        }
+
+        .brand-management-included-card:hover
+        .brand-management-included-icon {
+            border-color: rgba(255, 255, 255, 0.28);
+        }
+
+        /* ================================================================
+           FAQ — WHITE STICKY EDITORIAL
+           ================================================================ */
+
+        .brand-management-faq {
+            background: var(--brand-management-paper);
+        }
+
+        .brand-management-faq-layout {
+            display: grid;
+            grid-template-columns:
+                minmax(280px, 0.62fr)
+                minmax(0, 1.38fr);
+            gap: 72px;
+            align-items: start;
+        }
+
+        .brand-management-faq-heading {
+            position: sticky;
+            top: calc(
+                var(--brand-management-header-offset) + 28px
+            );
+        }
+
+        .brand-management-faq-mark {
+            margin-top: 45px;
+            color: rgba(17, 17, 17, 0.08);
+            font-size: clamp(6rem, 12vw, 11rem);
+            font-weight: 800;
+            letter-spacing: -0.09em;
+            line-height: 0.78;
+        }
+
+        .brand-management-faq-list {
+            border-top: 1px solid var(--brand-management-black);
+        }
+
+        .brand-management-faq-item {
+            border: 0;
+            border-bottom: 1px solid var(--brand-management-line);
+            border-radius: 0;
+            background: transparent;
+        }
+
+        .brand-management-faq-button {
+            display: grid;
+            width: 100%;
+            grid-template-columns:
+                48px
+                minmax(0, 1fr)
+                32px;
+            gap: 18px;
+            align-items: center;
+            min-height: 100px;
+            padding: 23px 2px;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            color: var(--brand-management-black);
+            text-align: left;
+            box-shadow: none;
+            transition:
+                padding-left 0.3s ease,
+                color 0.3s ease;
+        }
+
+        .brand-management-faq-button::after {
+            display: none;
+        }
+
+        .brand-management-faq-button:hover,
+        .brand-management-faq-button:not(.collapsed) {
+            padding-left: 13px;
+            background: transparent;
+            color: var(--brand-management-black);
+            box-shadow: none;
+        }
+
+        .brand-management-faq-button:focus {
+            border: 0;
+            box-shadow: none;
+        }
+
+        .brand-management-faq-number {
+            color: var(--brand-management-accent);
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.13em;
+        }
+
+        .brand-management-faq-question {
+            color: var(--brand-management-black);
+            font-size: clamp(1rem, 1.45vw, 1.22rem);
+            font-weight: 700;
+            line-height: 1.45;
+        }
+
+        .brand-management-faq-toggle {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            justify-self: end;
+            border: 1px solid var(--brand-management-line);
+            border-radius: 50%;
+            transition:
+                border-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .brand-management-faq-toggle::before,
+        .brand-management-faq-toggle::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 1px;
+            content: "";
+            background: var(--brand-management-accent);
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s ease;
+        }
+
+        .brand-management-faq-toggle::after {
+            transform:
+                translate(-50%, -50%)
+                rotate(90deg);
+        }
+
+        .brand-management-faq-button:not(.collapsed)
+        .brand-management-faq-toggle {
+            border-color: var(--brand-management-accent);
+            transform: rotate(180deg);
+        }
+
+        .brand-management-faq-button:not(.collapsed)
+        .brand-management-faq-toggle::after {
+            transform:
+                translate(-50%, -50%)
+                rotate(0deg);
+        }
+
+        .brand-management-faq-answer {
+            padding: 0 40px 28px 66px;
+            color: var(--brand-management-muted);
+            font-size: 0.95rem;
+            line-height: 1.85;
+        }
+
+        /* ================================================================
+           RESPONSIVE
+           ================================================================ */
+
+        @media (max-width: 1199.98px) {
+            .brand-management-section {
+                padding: 100px 0;
+            }
+
+            .brand-management-hero {
+                min-height: 820px;
+            }
+
+            .brand-management-hero-visual {
+                min-height: 560px;
+            }
+
+            .brand-management-service-row {
+                grid-template-columns:
+                    68px
+                    minmax(220px, 0.72fr)
+                    minmax(0, 1.28fr)
+                    45px;
+                gap: 22px;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .brand-management-section {
+                padding: 86px 0;
+            }
+
+            .brand-management-hero {
+                min-height: auto;
+                padding: 140px 0 75px;
+            }
+
+            .brand-management-hero::before {
+                width: 38%;
+            }
+
+            .brand-management-hero-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .brand-management-hero-visual {
+                min-height: 570px;
+                margin-top: 15px;
+            }
+
+            .brand-management-hero-image {
+                width: 76%;
+            }
+
+            .brand-management-hero-number {
+                right: 72%;
+            }
+
+            .brand-management-services-heading {
+                grid-template-columns: 1fr;
+            }
+
+            .brand-management-services-aside {
+                justify-self: start;
+            }
+
+            .brand-management-service-row {
+                grid-template-columns:
+                    60px
+                    minmax(230px, 0.78fr)
+                    minmax(0, 1.22fr);
+            }
+
+            .brand-management-service-arrow {
+                display: none;
+            }
+
+            .brand-management-included-card,
+            .brand-management-included-card:nth-child(n) {
+                grid-column: span 6;
+            }
+
+            .brand-management-faq-layout {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .brand-management-faq-heading {
+                position: static;
+            }
+
+            .brand-management-faq-mark {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .brand-management-section {
+                padding: 72px 0;
+            }
+
+            .brand-management-hero {
+                padding: 120px 0 65px;
+            }
+
+            .brand-management-hero::before {
+                width: 100%;
+                height: 31%;
+                top: auto;
+                bottom: 0;
+            }
+
+            .brand-management-hero-title {
+                font-size: clamp(3.7rem, 17vw, 6.2rem);
+            }
+
+            .brand-management-hero-visual {
+                min-height: 510px;
+            }
+
+            .brand-management-hero-image {
+                width: 86%;
+                height: 82%;
+            }
+
+            .brand-management-hero-number {
+                right: auto;
+                left: 0;
+            }
+
+            .brand-management-hero-note {
+                width: 78%;
+            }
+
+            .brand-management-service-row {
+                grid-template-columns:
+                    46px
+                    minmax(0, 1fr);
+                gap: 15px;
+                min-height: 0;
+                padding: 27px 2px;
+            }
+
+            .brand-management-service-row p {
+                grid-column: 2;
+            }
+
+            .brand-management-included-heading {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .brand-management-included-symbol {
+                width: 94px;
+                height: 94px;
+            }
+
+            .brand-management-included-card,
+            .brand-management-included-card:nth-child(n) {
+                grid-column: span 12;
+                min-height: 275px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .brand-management-section {
+                padding: 58px 0;
+            }
+
+            .brand-management-eyebrow,
+            .brand-management-hero-kicker {
+                font-size: 0.65rem;
+                letter-spacing: 0.15em;
+            }
+
+            .brand-management-eyebrow::before {
+                width: 27px;
+            }
+
+            .brand-management-hero-kicker::before {
+                width: 34px;
+            }
+
+            .brand-management-hero {
+                padding: 105px 0 55px;
+            }
+
+            .brand-management-hero-title {
+                font-size: clamp(3.2rem, 18vw, 4.8rem);
+            }
+
+            .brand-management-hero-copy {
+                font-size: 0.95rem;
+                line-height: 1.75;
+            }
+
+            .brand-management-hero-cta {
+                width: 100%;
+            }
+
+            .brand-management-hero-visual {
+                min-height: 430px;
+            }
+
+            .brand-management-hero-image {
+                width: 88%;
+                height: 80%;
+            }
+
+            .brand-management-hero-number {
+                font-size: 5rem;
+            }
+
+            .brand-management-hero-note {
+                width: 84%;
+                padding: 18px 19px;
+                font-size: 0.64rem;
+            }
+
+            .brand-management-service-row {
+                grid-template-columns:
+                    36px
+                    minmax(0, 1fr);
+            }
+
+            .brand-management-included-card {
+                min-height: 250px;
+                padding: 24px 21px;
+            }
+
+            .brand-management-included-card-top {
+                margin-bottom: 46px;
+            }
+
+            .brand-management-faq-button {
+                grid-template-columns:
+                    33px
+                    minmax(0, 1fr)
+                    28px;
+                gap: 10px;
+                min-height: 86px;
+                padding: 19px 0;
+            }
+
+            .brand-management-faq-answer {
+                padding-right: 12px;
+                padding-left: 43px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .brand-management-page *,
+            .brand-management-page *::before,
+            .brand-management-page *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="brand-management-body">
+
+<div id="nav-placeholder"></div>
+
+<main class="brand-management-page">
+
+    <!-- ================================================================
+         HERO
+         ================================================================ -->
+
+    <section class="brand-management-hero">
+        <div class="container-fluid px-3 px-md-5">
+
+            <div class="brand-management-hero-layout">
+
+                <div class="brand-management-hero-content">
+
+                    <div
+                        class="brand-management-hero-kicker"
+                        data-aos="fade-right"
+                    >
+                        BRAND MANAGEMENT
+                    </div>
+
+                    <h1
+                        class="brand-management-hero-title"
+                        data-aos="fade-up"
+                        data-aos-delay="70"
+                    >
+                        BRAND
+                        <span>MANAGEMENT</span>
+                    </h1>
+
+                    <p
+                        class="brand-management-hero-copy"
+                        data-aos="fade-up"
+                        data-aos-delay="130"
+                    >
+                        Grow your business with AgencyEleven100's Brand Management services. We become your dedicated creative and strategic partner, managing every aspect of your brand—from identity and website management to social media, marketing, content creation, advertising, photography, videography, and digital growth. Our goal is to build a consistent, recognizable, and impactful brand that drives long-term business success.
+                    </p>
+
+                    <a
+                        href="/contact"
+                        class="brand-management-hero-cta"
+                        data-aos="fade-up"
+                        data-aos-delay="190"
+                    >
+                        GROW YOUR BRAND
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <div
+                    class="brand-management-hero-visual"
+                    data-aos="fade-left"
+                    data-aos-delay="100"
+                >
+                    <div class="brand-management-hero-image"></div>
+
+                    <div class="brand-management-hero-number">
+                        01
+                    </div>
+
+                    <div class="brand-management-hero-note">
+                        AgencyEleven100 / Brand Management
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         COMPLETE BRAND MANAGEMENT — PREMIUM SERVICE ORBITS
+         ================================================================ -->
+
+    <section class="brand-management-section brand-management-services">
+        <div class="container-fluid px-3 px-md-5">
+
+            <div class="brand-management-services-layout">
+
+                <div
+                    class="brand-management-services-heading"
+                    data-aos="fade-right"
+                >
+                    <div class="brand-management-eyebrow">
+                        BRAND MANAGEMENT
+                    </div>
+
+                    <h2 class="brand-management-section-title">
+                        COMPLETE BRAND MANAGEMENT FOR EVERY BUSINESS
+                    </h2>
+                </div>
+
+                <div class="brand-management-orbit-stage">
+
+                    <article
+                        class="brand-management-orbit-card"
+                        data-aos="zoom-in"
+                        data-aos-delay="0"
+                    >
+                        <div class="brand-management-orbit-top">
+                            <span class="brand-management-orbit-number">
+                                01 —
+                            </span>
+
+                            <span class="brand-management-orbit-icon">
+                                <i class="fa-solid fa-fingerprint"></i>
+                            </span>
+                        </div>
+
+                        <h3>
+                            BRAND STRATEGY &amp; IDENTITY
+                        </h3>
+
+                        <p>
+                            Develop and maintain a strong brand identity with clear positioning, messaging, visual guidelines, and communication that reflects your business across every platform.
+                        </p>
+                    </article>
+
+                    <article
+                        class="brand-management-orbit-card"
+                        data-aos="zoom-in"
+                        data-aos-delay="70"
+                    >
+                        <div class="brand-management-orbit-top">
+                            <span class="brand-management-orbit-number">
+                                02 —
+                            </span>
+
+                            <span class="brand-management-orbit-icon">
+                                <i class="fa-solid fa-display"></i>
+                            </span>
+                        </div>
+
+                        <h3>
+                            DIGITAL &amp; WEBSITE MANAGEMENT
+                        </h3>
+
+                        <p>
+                            Manage and optimize your website to ensure it remains updated, user-friendly, SEO-optimized, and aligned with your brand identity while supporting your business goals.
+                        </p>
+                    </article>
+
+                    <article
+                        class="brand-management-orbit-card"
+                        data-aos="zoom-in"
+                        data-aos-delay="140"
+                    >
+                        <div class="brand-management-orbit-top">
+                            <span class="brand-management-orbit-number">
+                                03 —
+                            </span>
+
+                            <span class="brand-management-orbit-icon">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </span>
+                        </div>
+
+                        <h3>
+                            SOCIAL MEDIA &amp; CONTENT MANAGEMENT
+                        </h3>
+
+                        <p>
+                            Plan, create, and manage engaging social media content, campaigns, photography, videography, and creative assets that strengthen your online presence and audience engagement.
+                        </p>
+                    </article>
+
+                    <article
+                        class="brand-management-orbit-card"
+                        data-aos="zoom-in"
+                        data-aos-delay="210"
+                    >
+                        <div class="brand-management-orbit-top">
+                            <span class="brand-management-orbit-number">
+                                04 —
+                            </span>
+
+                            <span class="brand-management-orbit-icon">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </span>
+                        </div>
+
+                        <h3>
+                            MARKETING &amp; BRAND PROMOTION
+                        </h3>
+
+                        <p>
+                            Execute strategic marketing campaigns, digital advertising, SEO, performance marketing, and promotional activities that increase brand awareness, generate leads, and drive business growth.
+                        </p>
+                    </article>
+
+                    <article
+                        class="brand-management-orbit-card"
+                        data-aos="zoom-in"
+                        data-aos-delay="280"
+                    >
+                        <div class="brand-management-orbit-top">
+                            <span class="brand-management-orbit-number">
+                                05 —
+                            </span>
+
+                            <span class="brand-management-orbit-icon">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                            </span>
+                        </div>
+
+                        <h3>
+                            BRAND MONITORING &amp; GROWTH
+                        </h3>
+
+                        <p>
+                            Continuously monitor your brand's performance, maintain consistency across all communication channels, and implement strategies that improve visibility, customer trust, and long-term growth.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         WHAT'S INCLUDED
+         ================================================================ -->
+
+    <section class="brand-management-section brand-management-included">
+        <div class="container-fluid px-3 px-md-5">
+
+            <div class="brand-management-included-heading">
+
+                <div data-aos="fade-right">
+                    <div class="brand-management-eyebrow">
+                        WHAT'S INCLUDED
+                    </div>
+
+                    <h2 class="brand-management-section-title">
+                        WHAT'S INCLUDED
+                    </h2>
+                </div>
+
+                <div
+                    class="brand-management-included-symbol"
+                    data-aos="zoom-in"
+                >
+                    <i class="fa-solid fa-asterisk"></i>
+                </div>
+
+            </div>
+
+            <div class="brand-management-included-grid">
+
+                <article
+                    class="brand-management-included-card"
+                    data-aos="fade-up"
+                >
+                    <div class="brand-management-included-card-top">
+                        <span class="brand-management-included-number">
+                            01
+                        </span>
+
+                        <span class="brand-management-included-icon">
+                            <i class="fa-solid fa-chess-knight"></i>
+                        </span>
+                    </div>
+
+                    <h3>BRAND STRATEGY</h3>
+
+                    <p>
+                        Comprehensive brand planning, positioning, messaging, and long-term growth strategy.
+                    </p>
+                </article>
+
+                <article
+                    class="brand-management-included-card"
+                    data-aos="fade-up"
+                    data-aos-delay="50"
+                >
+                    <div class="brand-management-included-card-top">
+                        <span class="brand-management-included-number">
+                            02
+                        </span>
+
+                        <span class="brand-management-included-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </span>
+                    </div>
+
+                    <h3>WEBSITE MANAGEMENT</h3>
+
+                    <p>
+                        Website updates, content management, SEO optimization, performance improvements, and user experience enhancements.
+                    </p>
+                </article>
+
+                <article
+                    class="brand-management-included-card"
+                    data-aos="fade-up"
+                >
+                    <div class="brand-management-included-card-top">
+                        <span class="brand-management-included-number">
+                            03
+                        </span>
+
+                        <span class="brand-management-included-icon">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </span>
+                    </div>
+
+                    <h3>SOCIAL MEDIA MANAGEMENT</h3>
+
+                    <p>
+                        Content planning, creative design, post scheduling, community engagement, and platform management.
+                    </p>
+                </article>
+
+                <article
+                    class="brand-management-included-card"
+                    data-aos="fade-up"
+                    data-aos-delay="50"
+                >
+                    <div class="brand-management-included-card-top">
+                        <span class="brand-management-included-number">
+                            04
+                        </span>
+
+                        <span class="brand-management-included-icon">
+                            <i class="fa-solid fa-clapperboard"></i>
+                        </span>
+                    </div>
+
+                    <h3>CREATIVE CONTENT PRODUCTION</h3>
+
+                    <p>
+                        Professional graphic design, photography, videography, reels, advertising creatives, and branded content.
+                    </p>
+                </article>
+
+                <article
+                    class="brand-management-included-card"
+                    data-aos="fade-up"
+                >
+                    <div class="brand-management-included-card-top">
+                        <span class="brand-management-included-number">
+                            05
+                        </span>
+
+                        <span class="brand-management-included-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </span>
+                    </div>
+
+                    <h3>DIGITAL MARKETING</h3>
+
+                    <p>
+                        SEO, social media marketing, paid advertising, campaign management, and digital growth strategies.
+                    </p>
+                </article>
+
+                <article
+                    class="brand-management-included-card"
+                    data-aos="fade-up"
+                    data-aos-delay="50"
+                >
+                    <div class="brand-management-included-card-top">
+                        <span class="brand-management-included-number">
+                            06
+                        </span>
+
+                        <span class="brand-management-included-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </span>
+                    </div>
+
+                    <h3>CONTINUOUS BRAND SUPPORT</h3>
+
+                    <p>
+                        Ongoing monitoring, creative consultation, reporting, and strategic recommendations to help your brand evolve and remain competitive.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+         FAQ
+         ================================================================ -->
+
+    <section class="brand-management-section brand-management-faq">
+        <div class="container-fluid px-3 px-md-5">
+
+            <div class="brand-management-faq-layout">
+
+                <div
+                    class="brand-management-faq-heading"
+                    data-aos="fade-right"
+                >
+                    <div class="brand-management-eyebrow">
+                        FREQUENTLY ASKED QUESTIONS
+                    </div>
+
+                    <h2 class="brand-management-section-title">
+                        FREQUENTLY ASKED QUESTIONS
+                    </h2>
+
+                    <div class="brand-management-faq-mark">
+                        07
+                    </div>
+                </div>
+
+                <div
+                    class="accordion brand-management-faq-list"
+                    id="brandManagementFaqAccordion"
+                >
+
+                    <div
+                        class="accordion-item brand-management-faq-item"
+                        data-aos="fade-up"
+                    >
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed brand-management-faq-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#brandManagementFaqOne"
+                                aria-expanded="false"
+                                aria-controls="brandManagementFaqOne"
+                            >
+                                <span class="brand-management-faq-number">
+                                    01
+                                </span>
+
+                                <span class="brand-management-faq-question">
+                                    What is brand management?
+                                </span>
+
+                                <span
+                                    class="brand-management-faq-toggle"
+                                    aria-hidden="true"
+                                ></span>
+                            </button>
+                        </h3>
+
+                        <div
+                            id="brandManagementFaqOne"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#brandManagementFaqAccordion"
+                        >
+                            <div class="accordion-body brand-management-faq-answer">
+                                Brand management is the continuous process of managing every aspect of a brand, including its identity, website, marketing, social media, content, communication, and overall customer perception to ensure consistent growth.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="accordion-item brand-management-faq-item"
+                        data-aos="fade-up"
+                    >
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed brand-management-faq-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#brandManagementFaqTwo"
+                                aria-expanded="false"
+                                aria-controls="brandManagementFaqTwo"
+                            >
+                                <span class="brand-management-faq-number">
+                                    02
+                                </span>
+
+                                <span class="brand-management-faq-question">
+                                    What services are included in brand management?
+                                </span>
+
+                                <span
+                                    class="brand-management-faq-toggle"
+                                    aria-hidden="true"
+                                ></span>
+                            </button>
+                        </h3>
+
+                        <div
+                            id="brandManagementFaqTwo"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#brandManagementFaqAccordion"
+                        >
+                            <div class="accordion-body brand-management-faq-answer">
+                                AgencyEleven100's brand management services include brand strategy, website management, social media management, graphic design, content creation, photography, videography, SEO, digital marketing, advertising, and ongoing brand support.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="accordion-item brand-management-faq-item"
+                        data-aos="fade-up"
+                    >
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed brand-management-faq-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#brandManagementFaqThree"
+                                aria-expanded="false"
+                                aria-controls="brandManagementFaqThree"
+                            >
+                                <span class="brand-management-faq-number">
+                                    03
+                                </span>
+
+                                <span class="brand-management-faq-question">
+                                    Is brand management suitable for startups?
+                                </span>
+
+                                <span
+                                    class="brand-management-faq-toggle"
+                                    aria-hidden="true"
+                                ></span>
+                            </button>
+                        </h3>
+
+                        <div
+                            id="brandManagementFaqThree"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#brandManagementFaqAccordion"
+                        >
+                            <div class="accordion-body brand-management-faq-answer">
+                                Yes, Brand management helps startups establish a strong identity, maintain consistency, and build credibility from the beginning while supporting long-term business growth.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="accordion-item brand-management-faq-item"
+                        data-aos="fade-up"
+                    >
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed brand-management-faq-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#brandManagementFaqFour"
+                                aria-expanded="false"
+                                aria-controls="brandManagementFaqFour"
+                            >
+                                <span class="brand-management-faq-number">
+                                    04
+                                </span>
+
+                                <span class="brand-management-faq-question">
+                                    Can you manage our existing brand?
+                                </span>
+
+                                <span
+                                    class="brand-management-faq-toggle"
+                                    aria-hidden="true"
+                                ></span>
+                            </button>
+                        </h3>
+
+                        <div
+                            id="brandManagementFaqFour"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#brandManagementFaqAccordion"
+                        >
+                            <div class="accordion-body brand-management-faq-answer">
+                                Absolutely. We can work with your existing brand by improving its strategy, marketing, digital presence, content, and overall brand performance.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="accordion-item brand-management-faq-item"
+                        data-aos="fade-up"
+                    >
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed brand-management-faq-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#brandManagementFaqFive"
+                                aria-expanded="false"
+                                aria-controls="brandManagementFaqFive"
+                            >
+                                <span class="brand-management-faq-number">
+                                    05
+                                </span>
+
+                                <span class="brand-management-faq-question">
+                                    Do you create marketing campaigns?
+                                </span>
+
+                                <span
+                                    class="brand-management-faq-toggle"
+                                    aria-hidden="true"
+                                ></span>
+                            </button>
+                        </h3>
+
+                        <div
+                            id="brandManagementFaqFive"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#brandManagementFaqAccordion"
+                        >
+                            <div class="accordion-body brand-management-faq-answer">
+                                Yes, We plan and manage integrated marketing campaigns across digital platforms to improve visibility, engagement, and lead generation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="accordion-item brand-management-faq-item"
+                        data-aos="fade-up"
+                    >
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed brand-management-faq-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#brandManagementFaqSix"
+                                aria-expanded="false"
+                                aria-controls="brandManagementFaqSix"
+                            >
+                                <span class="brand-management-faq-number">
+                                    06
+                                </span>
+
+                                <span class="brand-management-faq-question">
+                                    Will you manage our website and social media?
+                                </span>
+
+                                <span
+                                    class="brand-management-faq-toggle"
+                                    aria-hidden="true"
+                                ></span>
+                            </button>
+                        </h3>
+
+                        <div
+                            id="brandManagementFaqSix"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#brandManagementFaqAccordion"
+                        >
+                            <div class="accordion-body brand-management-faq-answer">
+                                Yes, As part of our brand management services, we can manage your website, social media platforms, content, and digital communication to ensure brand consistency.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="accordion-item brand-management-faq-item"
+                        data-aos="fade-up"
+                    >
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed brand-management-faq-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#brandManagementFaqSeven"
+                                aria-expanded="false"
+                                aria-controls="brandManagementFaqSeven"
+                            >
+                                <span class="brand-management-faq-number">
+                                    07
+                                </span>
+
+                                <span class="brand-management-faq-question">
+                                    How do I get started?
+                                </span>
+
+                                <span
+                                    class="brand-management-faq-toggle"
+                                    aria-hidden="true"
+                                ></span>
+                            </button>
+                        </h3>
+
+                        <div
+                            id="brandManagementFaqSeven"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#brandManagementFaqAccordion"
+                        >
+                            <div class="accordion-body brand-management-faq-answer">
+                                Contact AgencyEleven100 to discuss your business goals, and we'll create a customized brand management plan tailored to your brand's needs.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="/assets/js/agency.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const root = document.documentElement;
+
+
+        /*
+         * Replays whenever the element enters the viewport again.
+         */
+        if (typeof AOS !== "undefined") {
+            AOS.init({
+                duration: 700,
+                easing: "ease-out-cubic",
+                once: false,
+                mirror: true,
+                offset: 60,
+                anchorPlacement: "top-bottom"
+            });
+
+            window.setTimeout(function () {
+                AOS.refreshHard();
+            }, 300);
+        }
+    });
+</script>
+
+</body>
+</html>
