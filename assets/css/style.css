@@ -1808,12 +1808,13 @@ footer.footer .copyright p {
   background: #ffffff;
   border-top: 1px solid rgba(5, 5, 5, 0.05);
   border-bottom: 1px solid rgba(5, 5, 5, 0.05);
-  background: url("/assets/img/agency/brand_managemet.webp");
-  background: url("/assets/img/agency/Banners for Agency (1).webp");
+  background: url("/assets/img/agency/brand.webp");
+  background-image: var(--hero-background);
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  padding: 50px 0px;
 }
 .brand-management-hero::before {
   position: absolute;
