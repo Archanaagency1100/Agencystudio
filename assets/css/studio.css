@@ -1094,3 +1094,58 @@ footer{
         font-size:14.5px;
     }
 }
+/* -------home page num section---------- */
+.legacy-numbers-section {
+    --legacy-counter-color: #ccff00;
+}
+
+.legacy-counter {
+    margin-bottom: 10px;
+    color: var(--legacy-counter-color);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    letter-spacing: -0.04em;
+
+    /*
+     * Clean solid 3D depth.
+     * No blur and no neon glow.
+     */
+    text-shadow:
+        1px 1px 0 rgba(0, 0, 0, 0.28),
+        2px 2px 0 rgba(0, 0, 0, 0.20),
+        3px 3px 0 rgba(0, 0, 0, 0.12);
+
+    transition:
+        color 0.35s ease,
+        transform 0.3s ease;
+
+    &.is-counting {
+        transform: translateY(-2px);
+    }
+
+    &.is-complete {
+        animation: legacyCounterComplete 0.5s ease;
+    }
+}
+
+@keyframes legacyCounterComplete {
+    0% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .legacy-counter {
+        text-shadow:
+            1px 1px 0 rgba(0, 0, 0, 0.25),
+            2px 2px 0 rgba(0, 0, 0, 0.14);
+    }
+}

@@ -226,7 +226,7 @@
         { img: "../assets/img/Trusted By Brands/voice.png" },
         { img: "../assets/img/Trusted By Brands/vowels.png" },
         { img: "../assets/img/Trusted By Brands/vvakalma.png" },
-        { img: "../assets/img/Trusted By Brands/weddings-chant.png" },
+        { img: "../assets/img/Trusted By Brands/Wedding-chants.png" },
         { img: "../assets/img/Trusted By Brands/weddography.png" },
         { img: "../assets/img/Trusted By Brands/wholistic-fitness.png" },
         { img: "../assets/img/Trusted By Brands/wood-burns.png" },
