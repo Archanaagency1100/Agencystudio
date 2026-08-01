@@ -1,5 +1,11 @@
 "use strict";
 
+if (!document.querySelector('script[src="/assets/js/aos-loader.js"]')) {
+    const aosLoader = document.createElement("script");
+    aosLoader.src = "/assets/js/aos-loader.js";
+    document.body.appendChild(aosLoader);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const navPlaceholder = document.getElementById('nav-placeholder');
 

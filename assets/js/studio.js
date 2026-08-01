@@ -257,3 +257,138 @@ document.addEventListener("DOMContentLoaded", function () {
         counterObserver.observe(counter);
     });
 });
+
+// Featured productions: cinematic autoplay slider.
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".featured-productions-swiper");
+
+    if (!slider || typeof Swiper === "undefined") {
+        return;
+    }
+
+    new Swiper(slider, {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        speed: 900,
+        spaceBetween: 22,
+        grabCursor: true,
+        watchSlidesProgress: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        },
+        navigation: {
+            prevEl: ".portfolio-slider-control--prev",
+            nextEl: ".portfolio-slider-control--next"
+        }
+    });
+});
+
+// Open Vimeo films in an on-page cinema modal.
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("filmModal");
+    const player = document.getElementById("filmModalPlayer");
+    const modalTitle = document.getElementById("filmModalTitle");
+    const vimeoLink = document.getElementById("filmModalVimeoLink");
+    const productionLinks = document.querySelectorAll(".featured-productions-swiper .portfolio-item-col > a");
+    const productionSwiper = document.querySelector(".featured-productions-swiper").swiper;
+
+    if (!modal || !player || !modalTitle || !vimeoLink || !productionLinks.length) {
+        return;
+    }
+
+    let previouslyFocusedElement = null;
+
+    function getVimeoEmbedUrl(link) {
+        const url = new URL(link.href);
+        const pathParts = url.pathname.split("/").filter(Boolean);
+        const videoIndex = pathParts.findIndex(function (part) {
+            return /^\d+$/.test(part);
+        });
+
+        if (videoIndex === -1) {
+            return "";
+        }
+
+        const videoId = pathParts[videoIndex];
+        const privacyHash = pathParts[videoIndex + 1] || "";
+        const embedUrl = new URL("https://player.vimeo.com/video/" + videoId);
+
+        if (privacyHash) {
+            embedUrl.searchParams.set("h", privacyHash);
+        }
+
+        embedUrl.searchParams.set("autoplay", "1");
+        embedUrl.searchParams.set("controls", "1");
+        embedUrl.searchParams.set("title", "0");
+        embedUrl.searchParams.set("byline", "0");
+        embedUrl.searchParams.set("portrait", "0");
+        embedUrl.searchParams.set("badge", "0");
+        embedUrl.searchParams.set("dnt", "1");
+
+        return embedUrl.toString();
+    }
+
+    function openFilmModal(link) {
+        const embedUrl = getVimeoEmbedUrl(link);
+
+        if (!embedUrl) {
+            return;
+        }
+
+        // const title = link.querySelector(".portfolio-text-fallback");
+
+        previouslyFocusedElement = document.activeElement;
+        modalTitle.textContent = title ? title.textContent.trim() : "Featured Production";
+        vimeoLink.href = link.href;
+        player.src = embedUrl;
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("film-modal-open");
+
+        if (productionSwiper && productionSwiper.autoplay) {
+            productionSwiper.autoplay.pause();
+        }
+
+        modal.querySelector(".film-modal__close").focus();
+    }
+
+    function closeFilmModal() {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        player.src = "";
+        document.body.classList.remove("film-modal-open");
+
+        if (productionSwiper && productionSwiper.autoplay) {
+            productionSwiper.autoplay.resume();
+        }
+
+        if (previouslyFocusedElement) {
+            previouslyFocusedElement.focus();
+        }
+    }
+
+    productionLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            openFilmModal(link);
+        });
+    });
+
+    modal.querySelectorAll("[data-film-modal-close]").forEach(function (control) {
+        control.addEventListener("click", closeFilmModal);
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && modal.classList.contains("is-open")) {
+            closeFilmModal();
+        }
+    });
+});
+if (!document.querySelector('script[src="/assets/js/aos-loader.js"]')) {
+  const aosLoader = document.createElement("script");
+  aosLoader.src = "/assets/js/aos-loader.js";
+  document.body.appendChild(aosLoader);
+}

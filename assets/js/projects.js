@@ -5,42 +5,42 @@ document.addEventListener("DOMContentLoaded", function () {
     // videoUrl: "https://vimeo.com/VIDEO_ID"
     // desktopImgUrl: "/assets/img/project-desktop.png"
     // phoneImgUrl: "/assets/img/project-phone.png"
-    { title: "ALAP NGO", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/alap.png", meta: "Website / Creative Direction" },
+    { title: "ALAP NGO", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/alap.webp", meta: "Website / Creative Direction" },
     { title: "7D STUDIO", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/7d-1.jpg", meta: "Logo Design / Identity" },
     { title: "10 SF PARA", categories: "films", gridClass: "item-normal", videoUrl: "https://vimeo.com/1032973329/885b9ad0a6?fl=pl&fe=sh", imgUrl: "/assets/img/film_poster/10SF PARA.webp", meta: "Films / Video Production" },
     { title: "AAHAR WAYS", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/aahar-ways.jpg", meta: "Branding / Identity Design" },
-    { title: "ALAP NGO MUSIC", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/allahabadmusicclub.png", meta: "Website / Creative Direction" },
+    { title: "ALAP NGO MUSIC", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/allahabadmusicclub.webp", meta: "Website / Creative Direction" },
     { title: "AAJ TAK", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/aajtak2.jpg", meta: "Branding / Graphic Assets" },
     { title: "ACD LOGISTICS", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/acd.jpg", meta: "Logo Design / Branding" },
     { title: "CENLUB", categories: "films", gridClass: "item-normal", videoUrl: "https://vimeo.com/136477665?fl=pl&fe=sh", imgUrl: "/assets/img/film_poster/cenlub.webp", meta: "Films / Video Production" },
     { title: "AEROCRATE", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/aerocrate.jpg", meta: "Corporate Identity" },
-    { title: "BAJAJMOTORS", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/bajajmotors.png", meta: "Website / Creative Direction" },
+    { title: "BAJAJMOTORS", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/bajajmotors.webp", meta: "Website / Creative Direction" },
     { title: "AHT LABS", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/aht.jpg", meta: "Identity / Minimal Design" },
-    { title: "AARTI RANA DIVE", categories: "websites campaigns ui-ux", gridClass: "item-double-wide", imgUrl: "/assets/img/recentwork/web/aarti.png", meta: "Website / Event Design" },
+    { title: "AARTI RANA DIVE", categories: "websites campaigns ui-ux", gridClass: "item-double-wide", imgUrl: "/assets/img/recentwork/web/aartiranadive.webp", meta: "Website / Event Design" },
     { title: "AWDORG FOUNDATION", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/awd-logo.jpg", meta: "NGO Branding / Minimal Identity" },
     { title: "DR SK LAL", categories: "films", gridClass: "item-normal", videoUrl: "https://vimeo.com/190959638/f982241a7a?fl=pl&fe=sh", imgUrl: "/assets/img/film_poster/Dr lal centenary film.webp", meta: "Films / Video Production" },
     { title: "APRIL 9 STUDIO", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/april-9.jpg", meta: "Creative Studio Identity" },
-    { title: "CLEAR LIFE SCIENCE", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/CLEARLIFESCIENCE.png", meta: "Website / Creative Direction" },
+    { title: "CLEAR LIFE SCIENCE", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/clearlifescience.webp", meta: "Website / Creative Direction" },
     { title: "ARTISANS CREATIVE", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/artisans.jpg", meta: "Logo Structure / Identity" },
     { title: "HAWS", categories: "films", gridClass: "item-normal", videoUrl: "https://vimeo.com/1040043501/a40fbc507e?fl=ls&fe=ec", imgUrl: "/assets/img/film_poster/haws.webp", meta: "Films / Video Production" },
     { title: "BAY 15 GOA", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/bay15.jpg", meta: "Hospitality Branding" },
-    { title: "GEMINY", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/geminy.png", meta: "Website / Creative Direction" },
+    { title: "GEMINY", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/geminy.webp", meta: "Website / Creative Direction" },
     { title: "BESTLIFE INSURE", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/bestlife.jpg", meta: "Brand Identity Design" },
     { title: "IFR GLOBAL", categories: "films", gridClass: "item-normal", videoUrl: "https://vimeo.com/1032973329/885b9ad0a6?share=copy&fl=sv&fe=ci", imgUrl: "/assets/img/film_poster/IFR.webp", meta: "Films / Video Production" },
     { title: "BHAU EKAD DHABA", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/bhaueekadbhaba.jpg", meta: "Food Venture Branding" },
-    { title: "ILVF METAVERSE", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/ilvf.png", meta: "Website / Creative Direction" },
+    { title: "ILVF METAVERSE", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/ilvf.webp", meta: "Website / Creative Direction" },
     { title: "BLESSING READY", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/blessing-ready.jpg", meta: "Minimal Logo Identity" },
     { title: "NAMAK", categories: "films", gridClass: "item-normal", videoUrl: "https://vimeo.com/517460807?fl=pl&fe=sh", imgUrl: "/assets/img/film_poster/namak.webp", meta: "Films / Video Production" },
-    { title: "INDICQUOTIENT", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/indicquotient.png", meta: "Website / Creative Direction" },
+    { title: "INDICQUOTIENT", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/indicquotient.webp", meta: "Website / Creative Direction" },
     { title: "TGF PRODUCTION", categories: "films", gridClass: "item-normal", videoUrl: "https://vimeo.com/1008843411/36fe004385?fl=pl&fe=sh", imgUrl: "/assets/img/film_poster/TGF.webp", meta: "Films / Video Production" },
-    { title: "LOVELY TAILORS", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/lovelytailors.png", meta: "Website / Creative Direction" },
+    { title: "LOVELY TAILORS", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/lovelytailors.webp", meta: "Website / Creative Direction" },
     { title: "THANK YOU MAN", categories: "films", gridClass: "item-wide", videoUrl: "https://vimeo.com/875478150/484fdff530", imgUrl: "/assets/img/film_poster/Thank_you_men.webp", meta: "Films / Video Production" },
-    { title: "MANASISISCOTT", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/manasiscott.png", meta: "Website / Creative Direction" },
-    { title: "MASTERSOUND", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/mastersound.png", meta: "Website / Creative Direction" },
+    { title: "MANASISISCOTT", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/manasiscott.webp", meta: "Website / Creative Direction" },
+    { title: "MASTERSOUND", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/mastersound.webp", meta: "Website / Creative Direction" },
     { title: "DR LAL 75th ANNIVERSARY", categories: "films", gridClass: "item-normal", videoUrl: "https://vimeo.com/945663650/64a7259449?tq=75#t=683", imgUrl: "/assets/img/film_poster/Dr Lal PathLabs 75th Anniversary Film 2024.webp", meta: "Films / Video Production" },
-    { title: "NAB CENTRE FOR WOMEN", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/nabcentreforwomen.png", meta: "Website / Creative Direction" },
-    { title: "SHIBANI KASHYAP", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/shibanikashyap.png", meta: "Website / Creative Direction" },
-    { title: "THE SLAY NUTRITION", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/theslaynutrition.png", meta: "Website / Creative Direction" },
+    { title: "NAB CENTRE FOR WOMEN", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/nabcentreforwomen.webp", meta: "Website / Creative Direction" },
+    { title: "SHIBANI KASHYAP", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/shibanikashyap.webp", meta: "Website / Creative Direction" },
+    { title: "THE SLAY NUTRITION", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/theslaynutrition.webp", meta: "Website / Creative Direction" },
 ];
 
     function alternateDataset(array) {
@@ -170,6 +170,7 @@ function openPortfolioModal(projectIndex) {
     const isWebsite = project.categories.includes("websites");
     
     if (modal && imgElement && videoElement && titleElement) {
+        modal.classList.toggle("is-film-modal", Boolean(project.videoUrl));
         titleElement.innerText = project.title;
         mediaFrame.className = "modal-img-container";
         deviceControls.style.display = isWebsite ? "flex" : "none";
@@ -243,6 +244,7 @@ function closePortfolioModal() {
     const modal = document.getElementById("portfolioAssetModal");
     if (modal) {
         modal.style.display = "none";
+        modal.classList.remove("is-film-modal");
         document.body.style.overflow = "auto";
     }
     const videoElement = document.getElementById("modalPreviewVideo");

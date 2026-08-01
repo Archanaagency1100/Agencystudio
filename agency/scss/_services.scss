@@ -81,7 +81,7 @@
     overflow: hidden;
 
     img {
-      filter: grayscale(100%);
+      // filter: grayscale(100%);
       transition: filter $transition-smooth, transform $transition-cinematic;
       
       &:hover {

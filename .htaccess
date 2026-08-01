@@ -13,6 +13,10 @@ RewriteRule ^studio/articles/([^/]+)/?$ /studio/articles.html?slug=$1 [L,QSA,NC]
 RewriteCond %{THE_REQUEST} \s/+studio/articles\.html\?slug=([^&\s]+) [NC]
 RewriteRule ^studio/articles\.html$ /studio/articles/%1? [R=301,L,NE]
 
+# Keep a single indexable URL for the Agency services page
+RewriteCond %{THE_REQUEST} \s/+agency/services\.html(?:[?\s]) [NC]
+RewriteRule ^agency/services\.html$ /agency/services [R=301,L,NE]
+
 # Load .html pages through clean URLs
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
