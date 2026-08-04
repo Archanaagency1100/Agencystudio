@@ -714,7 +714,7 @@
     left: 50%;
     transform: translate(-50%, 50%);
     font-family: $font-primary;
-    font-size: clamp(4rem, 13vw, 22rem); 
+    font-size: clamp(3rem, 13vw, 22rem); 
     font-weight: $weight-black;
     line-height: 1;
     letter-spacing: 0.02em;
@@ -802,6 +802,13 @@
       width: 300px; 
       padding: 24px;
     }
+    &__bg-watermark{
+     
+    top: 85%;
+    left: 50%;
+  
+    
+  }
   }
 }
 // -----------footer-------------------

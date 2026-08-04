@@ -1127,7 +1127,7 @@ body.loaded #agency-loader {
   left: 50%;
   transform: translate(-50%, 50%);
   font-family: Arial, sans-serif;
-  font-size: clamp(4rem, 13vw, 22rem);
+  font-size: clamp(3rem, 13vw, 22rem);
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0.02em;
@@ -1216,6 +1216,10 @@ body.loaded #agency-loader {
   .review-marquee__card {
     width: 300px;
     padding: 24px;
+  }
+  .review-marquee__bg-watermark {
+    top: 85%;
+    left: 50%;
   }
 }
 .footer {
