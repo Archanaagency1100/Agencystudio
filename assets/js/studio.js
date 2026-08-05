@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // const title = link.querySelector(".portfolio-text-fallback");
+        const title = link.querySelector(".portfolio-text-fallback");
 
         previouslyFocusedElement = document.activeElement;
         modalTitle.textContent = title ? title.textContent.trim() : "Featured Production";
