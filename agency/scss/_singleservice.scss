@@ -13,11 +13,11 @@
     border-top: 1px solid $color-border-light;
     border-bottom: 1px solid $color-border-light;
     // background: url('/assets/img/agency/brand_managemet.webp');
-    background: url('/assets/img/agency/brand.webp');
+    // background: url('/assets/img/agency/brand.webp');
      background-image: var(--hero-background);
-    background-position:right;
+    background-position: right;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
     padding: 50px 0px;
 

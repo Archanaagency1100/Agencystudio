@@ -121,3 +121,8 @@ document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener('resize', initServicesSlider);
     }
 });
+if (!document.querySelector('script[src="/assets/js/accent.js"]')) {
+    const accentScript = document.createElement("script");
+    accentScript.src = "/assets/js/accent.js";
+    document.head.appendChild(accentScript);
+}

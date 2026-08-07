@@ -1,4 +1,10 @@
 
+if (!document.querySelector('script[src="/assets/js/accent.js"]')) {
+    const accentScript = document.createElement("script");
+    accentScript.src = "/assets/js/accent.js";
+    document.head.appendChild(accentScript);
+}
+
 // Studio page header footer js-------
 document.addEventListener("DOMContentLoaded", function () {
     const navPlaceholder = document.getElementById('nav-placeholder');
@@ -116,52 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!section || !counters.length) {
         return;
     }
-
-    /*
-     * One colour is selected for every number.
-     * The same colour will not repeat on the next refresh.
-     */
-    const counterColours = [
-        "#dae275", // Lime
-        "#00f5ff", // Electric cyan
-        "#ff2bd6", // Neon pink
-        "#ff6b00", // Bright orange
-        "#a855f7", // Electric purple
-        "#58f47b", // Mint green
-        "#ffe600", // Bright yellow
-        "#3b82ff"  // Electric blue
-    ];
-
-    const storageKey = "legacyCounterPreviousColour";
-
-    const previousColour =
-        localStorage.getItem(storageKey);
-
-    const availableColours = counterColours.filter(
-        function (colour) {
-            return colour !== previousColour;
-        }
-    );
-
-    const selectedColour =
-        availableColours[
-            Math.floor(
-                Math.random() * availableColours.length
-            )
-        ];
-
-    localStorage.setItem(
-        storageKey,
-        selectedColour
-    );
-
-    /*
-     * Apply the same colour to every counter.
-     */
-    section.style.setProperty(
-        "--legacy-counter-color",
-        selectedColour
-    );
 
     function animateCounter(counter) {
         if (counter.dataset.counted === "true") {

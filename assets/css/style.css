@@ -2234,11 +2234,10 @@ footer.footer .copyright p {
   background: #ffffff;
   border-top: 1px solid rgba(5, 5, 5, 0.05);
   border-bottom: 1px solid rgba(5, 5, 5, 0.05);
-  background: url("/assets/img/agency/brand.webp");
   background-image: var(--hero-background);
   background-position: right;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
   padding: 50px 0px;
 }

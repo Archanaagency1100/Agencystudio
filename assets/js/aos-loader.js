@@ -32,3 +32,8 @@
   aosScript.onload = loadGlobalAos;
   document.body.appendChild(aosScript);
 })();
+if (!document.querySelector('script[src="/assets/js/accent.js"]')) {
+  const accentScript = document.createElement("script");
+  accentScript.src = "/assets/js/accent.js";
+  document.head.appendChild(accentScript);
+}
