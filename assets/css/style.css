@@ -3551,6 +3551,48 @@ footer.footer .copyright p {
     animation: none;
   }
 }
+
+/* Shared mobile safeguards for every agency page. */
+html { width: 100%; overflow-x: hidden; -webkit-text-size-adjust: 100%; }
+img, picture, video, canvas, svg, iframe { max-width: 100%; }
+img, video { height: auto; }
+input, select, textarea, button { max-width: 100%; }
+
+@media (max-width: 767.98px) {
+  .container, .container-fluid { --bs-gutter-x: 1.5rem; }
+  section.px-5, footer.px-5, .footer-inner.px-5 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+  .row > [class*="col-"] { min-width: 0; }
+  h1, h2, h3, h4, h5, h6, p, a, span, label { overflow-wrap: anywhere; }
+  .display-1 { font-size: clamp(2.25rem, 12vw, 4rem); }
+  .display-2 { font-size: clamp(2rem, 10vw, 3.5rem); }
+  .display-3 { font-size: clamp(1.8rem, 9vw, 3rem); }
+  .a11-navbar__logo-side { min-width: 0; max-width: calc(100vw - 80px); }
+  .a11-navbar__logo-side .logo-main-img { width: min(190px, 58vw); height: auto; }
+  .a11-navbar #mobileNavDrawer .mobile-drawer-inner {
+    height: calc(100dvh - 80px);
+    padding: 1.75rem 1.25rem !important;
+    overscroll-behavior: contain;
+  }
+  .a11-navbar #mobileNavDrawer .mobile-menu-links-list {
+    gap: 1.25rem !important;
+    margin-bottom: 1.75rem !important;
+  }
+  .a11-navbar #mobileNavDrawer .mobile-drawer-inner .nav-link {
+    font-size: clamp(1.1rem, 6vw, 1.35rem);
+  }
+  .a11-navbar .mobile-drawer-actions a { white-space: normal; }
+  .table-responsive { -webkit-overflow-scrolling: touch; }
+}
+
+@media (max-width: 575.98px) {
+  .a11-navbar { height: 70px; }
+  .a11-navbar #mobileNavDrawer { top: 70px; }
+  .a11-navbar #mobileNavDrawer .mobile-drawer-inner { height: calc(100dvh - 70px); }
+  .btn, [class*="btn-"] { white-space: normal; }
+}
 * {
   margin: 0;
   padding: 0;
