@@ -360,6 +360,7 @@
           </div>
           <div class="col-lg-6 p-0 hero-img-container" data-aos="fade-left">
             <img
+              id="founderPortrait"
               src="./assets/img/founder_agency.webp"
               alt="Charanjeet Dhiman, Founder of AgencyEleven100, creative agency and production house in Delhi "
               class="main-man-img"
@@ -538,6 +539,69 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/aos-loader.js"></script>
+    <script src="/assets/js/accent.js"></script>
+    <script>
+      (function () {
+        const portrait = document.getElementById("founderPortrait");
+        if (!portrait) return;
+
+        const selectedColour = document.documentElement.dataset.siteAccent || "#e5b400";
+
+        function hexToRgb(hex) {
+          return [1, 3, 5].map(function (offset) {
+            return parseInt(hex.slice(offset, offset + 2), 16);
+          });
+        }
+
+        function recolourFounderScratches() {
+          if (!portrait.naturalWidth || portrait.dataset.recoloured === "true") return;
+
+          const canvas = document.createElement("canvas");
+          const context = canvas.getContext("2d", { willReadFrequently: true });
+          if (!context) return;
+
+          canvas.width = portrait.naturalWidth;
+          canvas.height = portrait.naturalHeight;
+          context.drawImage(portrait, 0, 0);
+
+          try {
+            const frame = context.getImageData(0, 0, canvas.width, canvas.height);
+            const pixels = frame.data;
+            const target = hexToRgb(selectedColour);
+
+            for (let index = 0; index < pixels.length; index += 4) {
+              const red = pixels[index];
+              const green = pixels[index + 1];
+              const blue = pixels[index + 2];
+
+              const isYellowScratch =
+                red > 145 &&
+                green > 100 &&
+                blue < 125 &&
+                red > blue * 1.35 &&
+                green > blue * 1.2;
+
+              if (!isYellowScratch) continue;
+
+              const brightness = Math.max(red, green, blue) / 255;
+              const texture = Math.min(34, Math.abs(red - green) * 0.22);
+              pixels[index] = Math.min(255, target[0] * brightness + texture);
+              pixels[index + 1] = Math.min(255, target[1] * brightness + texture);
+              pixels[index + 2] = Math.min(255, target[2] * brightness + texture);
+            }
+
+            context.putImageData(frame, 0, 0);
+            portrait.dataset.recoloured = "true";
+            portrait.src = canvas.toDataURL("image/webp", 0.94);
+          } catch (error) {
+            console.warn("Founder scratch recolouring was skipped.", error);
+          }
+        }
+
+        if (portrait.complete) recolourFounderScratches();
+        else portrait.addEventListener("load", recolourFounderScratches, { once: true });
+      }());
+    </script>
     <script>
       AOS.init({
         duration: 1000,

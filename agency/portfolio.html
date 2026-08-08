@@ -40,6 +40,37 @@
   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
 />
     <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        /* Portfolio filters use the accent colour selected on each reload. */
+        .agency-portfolio .filter-nav .filter-btn {
+            color: #666666 !important;
+            background: transparent !important;
+            opacity: 1 !important;
+            transform: none !important;
+            text-decoration: none !important;
+            cursor: pointer;
+            transition: color 0.2s ease, background-color 0.2s ease !important;
+        }
+
+        .agency-portfolio .filter-nav .filter-btn:hover,
+        .agency-portfolio .filter-nav .filter-btn:focus-visible {
+            color: #050505 !important;
+            background-color: var(--accent-yellow, #e5b400) !important;
+            transform: none !important;
+        }
+
+        /* The current filter keeps a subtle accent indicator. */
+        .agency-portfolio .filter-nav .filter-btn.is-current-filter,
+        .agency-portfolio .filter-nav .filter-btn.is-current-filter:visited {
+            color: #050505 !important;
+            box-shadow: inset 0 -2px 0 var(--accent-yellow, #e5b400) !important;
+        }
+
+        .agency-portfolio .filter-nav .filter-btn:focus-visible {
+            outline: 2px solid var(--accent-yellow, #e5b400) !important;
+            outline-offset: 2px;
+        }
+    </style>
          <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K5EB5EZBQ5"></script>
     <script>
@@ -63,12 +94,12 @@
             <p class="portfolio-lead text-muted mx-auto">Explore our portfolio of websites, film production, branding, photography, and graphic design projects created for brands, businesses, and creators.</p>
             
             <div class="filter-nav d-flex flex-wrap justify-content-center mt-4 gap-2">
-                <button class="filter-btn active" data-filter="all">ALL</button>
-                <button class="filter-btn" data-filter="websites">UI/UX</button>
-                <button class="filter-btn" data-filter="films">FILMS</button>
-                <button class="filter-btn" data-filter="branding">BRANDING</button>
+                <button type="button" class="filter-btn active is-current-filter" data-filter="all" aria-pressed="true" onclick="setCurrentPortfolioFilter(this)">ALL</button>
+                <button type="button" class="filter-btn" data-filter="websites" aria-pressed="false" onclick="setCurrentPortfolioFilter(this)">UI/UX</button>
+                <button type="button" class="filter-btn" data-filter="films" aria-pressed="false" onclick="setCurrentPortfolioFilter(this)">FILMS</button>
+                <button type="button" class="filter-btn" data-filter="branding" aria-pressed="false" onclick="setCurrentPortfolioFilter(this)">BRANDING</button>
                 <!-- <button class="filter-btn" data-filter="songs">MUSIC VIDEOS</button> -->
-                <a href="https://weddography.com/photo-gallery/" class="filter-btn" >WEDDINGs</a>
+                <a href="https://weddography.com/" class="filter-btn" onclick="setCurrentPortfolioFilter(this)">WEDDINGS</a>
                 <!-- <button class="filter-btn" data-filter="photography">PHOTOGRAPHY</button> -->
             </div>
         </div>
@@ -77,7 +108,7 @@
         <div class="portfolio-full-bleed-container">
             <div class="portfolio-grid" id="dynamic-portfolio-grid"></div>
         </div>
-    </section>
+    </section>      
 
     <!-- ==========================================================================
          LUXURY ULTRA-SCROLL ASSET PREVIEW LIGHTBOX MODAL (YOUR SPECIFICATIONS)
@@ -115,5 +146,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="/assets/js/agency.js"></script>
     <script src="/assets/js/projects.js"></script>
+    <script>
+        function setCurrentPortfolioFilter(selectedFilter) {
+            const portfolioFilters = document.querySelectorAll(
+                ".agency-portfolio .filter-nav .filter-btn"
+            );
+
+            portfolioFilters.forEach(function (item) {
+                item.classList.remove("is-current-filter");
+                item.setAttribute("aria-pressed", "false");
+            });
+
+            selectedFilter.classList.add("is-current-filter");
+            selectedFilter.setAttribute("aria-pressed", "true");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const portfolioFilters = document.querySelectorAll(
+                ".agency-portfolio button.filter-btn[data-filter]"
+            );
+
+            portfolioFilters.forEach(function (filter) {
+                filter.addEventListener("click", function () {
+                    setCurrentPortfolioFilter(filter);
+                    filter.blur();
+                });
+            });
+        });
+    </script>
 </body>
 </html>
