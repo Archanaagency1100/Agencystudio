@@ -1281,8 +1281,19 @@ footer{
 
 .artical-detail-sidebar{
     padding-left:25px;
-    position:sticky;
-    top:90px;
+}
+
+@media (min-width:992px){
+    .newspaper-frame > .row{
+        align-items:flex-start;
+    }
+
+    .newspaper-frame > .row > .col-lg-4{
+        position:sticky;
+        top:100px;
+        align-self:flex-start;
+        height:fit-content;
+    }
 }
 
 .sidebar-title{
