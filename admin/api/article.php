@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Studio925 Single Article Detail API

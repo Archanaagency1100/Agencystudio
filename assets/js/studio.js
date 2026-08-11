@@ -11,15 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (navPlaceholder) {
        
-        const path = window.location.pathname;
-        let prefix = "";
-
-        if (path.includes('/agency/') || path.includes('/studio/')) {
-            prefix = "../"; 
-        }
-
-       
-        const navbarPath = `${prefix}components/studio/navbar.html`;
+        const navbarPath = "/components/studio/navbar.html";
 
         
         fetch(navbarPath)
@@ -80,15 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (footerPlaceholder) {
 
      
-        const path = window.location.pathname;
-        let prefix = "";
-
-        if (path.includes('/agency/') || path.includes('/studio/')) {
-            prefix = "../";
-        }
-
-
-        const footerPath = `${prefix}components/studio/footer.html`;
+        const footerPath = "/components/studio/footer.html";
 
  
         fetch(footerPath)
