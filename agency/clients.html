@@ -49,10 +49,59 @@
             letter-spacing: 0.5px;
         }
         .gallery-container {
-            max-width: 1440px;
+            /* max-width: 1440px; */
             margin: 0 auto;
             padding: 0 40px 100px;
         }
+        .clients-section-title {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin: 0 0 28px;
+            color: #050505;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: clamp(1.35rem, 2.4vw, 2rem);
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .clients-section-title::after {
+            height: 1px;
+            flex: 1;
+            content: "";
+            background: linear-gradient(90deg, #e5b400, rgba(229, 180, 0, 0));
+        }
+        .client-toggle {
+            display: inline-flex;
+            gap: 6px;
+            margin-bottom: 32px;
+            padding: 6px;
+            border: 1px solid rgba(5, 5, 5, 0.1);
+            border-radius: 999px;
+            background: #f4f4f4;
+        }
+        .client-toggle__button {
+            min-height: 44px;
+            padding: 10px 22px;
+            border: 0;
+            border-radius: 999px;
+            background: transparent;
+            color: #777777;
+            font: inherit;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .client-toggle__button:hover { color: #050505; }
+        .client-toggle__button.active {
+            background: #050505;
+            color: #e5b400;
+            box-shadow: 0 8px 20px rgba(5, 5, 5, 0.18);
+        }
+        .client-toggle__button:active { transform: scale(0.97); }
+        .client-panel[hidden] { display: none !important; }
         .artist-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -81,7 +130,7 @@
         .artist-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+            background: linear-gradient(to top, rgb(0 0 0 / 91%) 0%, rgb(0 0 0 / 0%) 50%, #00000000 100%);  
             display: flex;
             align-items: flex-end;
             justify-content: center;
@@ -109,9 +158,30 @@
         .artist-box:hover .artist-name {
             color: #e5b400;
         }
+        #brand_logo {
+            display: grid !important;
+            width: 100% !important;
+            height: auto !important;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            flex-wrap: wrap !important;
+            overflow: visible !important;
+            animation: none !important;
+            transform: none !important;
+        }
+        #brand_logo .artist-box img {
+            padding: 22px 24px 58px;
+            object-fit: contain;
+            object-position: center;
+            background: radial-gradient(circle at 50% 38%, #292929, #111111 70%);
+        }
+        #brand_logo .artist-overlay {
+            padding: 24px;
+        }
         @media (max-width: 991px) {
             .gallery-container { padding: 0 24px 80px; }
             .artist-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+            #brand_logo { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
             .client-header h1 { font-size: 2.8rem; }
         }
         @media (max-width: 575px) {
@@ -122,6 +192,11 @@
             .artist-box { height: 220px; border-radius: 8px; }
             .artist-overlay { padding: 12px; }
             .artist-name { font-size: 10px; letter-spacing: 1.5px; }
+            .clients-section-title { gap: 12px; font-size: 1.2rem; }
+            .client-toggle { display: flex; width: 100%; }
+            .client-toggle__button { flex: 1; padding-right: 12px; padding-left: 12px; font-size: 9px; }
+            #brand_logo { grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); gap: 12px; }
+            #brand_logo .artist-box img { padding: 16px 14px 48px; }
         }
     </style>
          <!-- Google tag (gtag.js) -->
@@ -144,7 +219,12 @@
     </header>
 
     <main class="gallery-container">
-        <div class="artist-grid" id="gallery">
+        <h2 class="clients-section-title" id="clientSectionTitle">Celebrities &amp; Artists</h2>
+        <div class="client-toggle" role="tablist" aria-label="Choose client type">
+            <button class="client-toggle__button active" id="artistsTab" type="button" role="tab" aria-selected="true" aria-controls="artistsPanel" data-client-view="artists">Celebrities &amp; Artists</button>
+            <button class="client-toggle__button" id="brandsTab" type="button" role="tab" aria-selected="false" aria-controls="brandsPanel" data-client-view="brands">Brands</button>
+        </div>
+        <div class="artist-grid client-panel" id="artistsPanel" role="tabpanel" aria-labelledby="artistsTab">
             <article class="artist-box"><img src="/assets/img/Clients/ISHWAK_SINGH.webp" alt="ISHWAK SINGH" loading="lazy"><div class="artist-overlay"><h3 class="artist-name">ISHWAK SINGH</h3></div></article>
             <article class="artist-box"><img src="/assets/img/Clients/Kapil_Sharma.jpg" alt="Kapil Sharma" loading="lazy"><div class="artist-overlay"><h3 class="artist-name">Kapil Sharma</h3></div></article>
             <article class="artist-box"><img src="/assets/img/Clients/Nawazuddin_Siddiqui.webp" alt="Nawazuddin Siddiqui" loading="lazy"><div class="artist-overlay"><h3 class="artist-name">Nawazuddin Siddiqui</h3></div></article>
@@ -243,8 +323,61 @@
             <article class="artist-box"><img src="/assets/img/Clients/VINNIL_MARKAN.webp" alt="VINNIL MARKAN" loading="lazy"><div class="artist-overlay"><h3 class="artist-name">VINNIL MARKAN</h3></div></article>
             <article class="artist-box"><img src="/assets/img/Clients/VIPIN_ANEJA.webp" alt="VIPIN ANEJA" loading="lazy"><div class="artist-overlay"><h3 class="artist-name">VIPIN ANEJA</h3></div></article>
         </div>
+        <div class="client-panel" id="brandsPanel" role="tabpanel" aria-labelledby="brandsTab" hidden>
+            <div class="artist-grid" id="brand_logo"></div>
+        </div>
     </main>
 <div id="footer-placeholder"></div>
  <script src="/assets/js/agency.js"></script>
+ <script src="/assets/js/brand.js"></script>
+ <script>
+    // brand.js duplicates logos for the studio marquee. This page uses one set.
+    const brandGrid = document.getElementById('brand_logo');
+    if (brandGrid && brandGrid.children.length > 1) {
+        const uniqueCount = brandGrid.children.length / 2;
+        while (brandGrid.children.length > uniqueCount) {
+            brandGrid.lastElementChild.remove();
+        }
+
+        // Use precisely the same card markup and classes as celebrity cards.
+        [...brandGrid.children].forEach((card) => {
+            const label = card.querySelector('div');
+            card.className = 'artist-box';
+
+            if (label) {
+                label.className = 'artist-overlay';
+                label.removeAttribute('style');
+                label.innerHTML = `<h3 class="artist-name">${label.textContent.trim()}</h3>`;
+            }
+        });
+    }
+
+    const clientTitle = document.getElementById('clientSectionTitle');
+    const clientTabs = document.querySelectorAll('[data-client-view]');
+    const clientPanels = {
+        artists: document.getElementById('artistsPanel'),
+        brands: document.getElementById('brandsPanel')
+    };
+
+    function showClientView(view) {
+        Object.entries(clientPanels).forEach(([name, panel]) => {
+            panel.hidden = name !== view;
+        });
+
+        clientTabs.forEach((tab) => {
+            const isActive = tab.dataset.clientView === view;
+            tab.classList.toggle('active', isActive);
+            tab.setAttribute('aria-selected', String(isActive));
+        });
+
+        clientTitle.textContent = view === 'brands'
+            ? 'See the Brands Who Trust Us'
+            : 'Celebrities & Artists';
+    }
+
+    clientTabs.forEach((tab) => {
+        tab.addEventListener('click', () => showClientView(tab.dataset.clientView));
+    });
+ </script>
 </body>
 </html>
