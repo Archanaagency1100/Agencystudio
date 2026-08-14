@@ -1500,19 +1500,22 @@ body.article-detail-page{
     justify-content:center;
     align-items:center;
     padding:15px 18px;
-    border:1px solid #e5b400;
-    color:#e5b400;
+    border:1px solid var(--accent-yellow, #e5b400);
+    background:transparent;
+    color:var(--accent-yellow, #e5b400);
     text-decoration:none;
     font-family:Arial,sans-serif;
     font-size:11px;
     font-weight:800;
     letter-spacing:1.8px;
     text-transform:uppercase;
-    transition:.35s ease;
+    transition:background-color .35s ease, color .35s ease, border-color .35s ease;
 }
 
-.artical-detail-btn:hover{
-    background:#e5b400;
+.artical-detail-btn:hover,
+.artical-detail-btn:focus-visible{
+    background:var(--accent-yellow, #e5b400);
+    border-color:var(--accent-yellow, #e5b400);
     color:#030303;
 }
 
