@@ -1326,6 +1326,12 @@ footer{
         #030303;
 }
 
+/* Keep the page from creating an overflow ancestor that breaks sticky sidebars. */
+html.article-detail-page,
+body.article-detail-page{
+    overflow-x:clip;
+}
+
 .newspaper-frame{
     border-top:1px solid gray;
     border-bottom:1px solid gray;
@@ -1428,6 +1434,7 @@ footer{
 
 @media (min-width:992px){
     .artical-detail-wrapper,
+    .artical-detail-wrapper > .container,
     .newspaper-frame{
         overflow:visible;
     }
