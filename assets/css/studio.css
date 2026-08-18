@@ -667,9 +667,7 @@ footer{
 /* --- Editorial masonry gallery --- */
 .studio-gallery-section {
     padding: clamp(72px, 9vw, 140px) 0;
-    background:
-        radial-gradient(circle at 85% 8%, rgba(229, 180, 0, .08), transparent 24%),
-        #070707;
+    background: #050505;
 }
 
 .gallery-shell {
