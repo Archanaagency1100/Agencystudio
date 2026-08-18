@@ -72,17 +72,6 @@
 <!-- -------------gallery section-------------- -->
 <section id="studio-gallery" class="studio-gallery-section text-white position-relative">
     <div class="container-fluid gallery-shell">
-        <div class="gallery-section-header">
-            <div>
-                <span class="gallery-eyebrow">Studio journal / behind the scenes</span>
-                <h2>Frames from<br><em>the process.</em></h2>
-            </div>
-            <div class="gallery-section-meta">
-                <p>Unscripted moments, working sets and the people who turn ideas into images.</p>
-                <span><strong id="gallery-count">00</strong> photographs</span>
-            </div>
-        </div>
-
         <div class="gallery-masonry-grid" id="masonry-gallery-track" aria-live="polite"></div>
     </div>
 </section>
@@ -257,7 +246,8 @@ function renderGallery(itemsToRender) {
 
     // Inject elements smoothly directly into the masonry grid pipeline
     galleryTrack.innerHTML = galleryMarkup;
-    document.getElementById('gallery-count').textContent = String(itemsToRender.length).padStart(2, '0');
+    const galleryCount = document.getElementById('gallery-count');
+    if (galleryCount) galleryCount.textContent = String(itemsToRender.length).padStart(2, '0');
     initialiseGalleryAnimations();
 }
 
