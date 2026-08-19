@@ -55,12 +55,14 @@ a{
   flex-wrap: nowrap !important;
   width: max-content !important; 
   animation: scroll 155s linear infinite;
+  will-change: transform;
 }
 #brand_logo {
   display: flex !important;
   flex-wrap: nowrap !important;
   width: max-content !important; 
   animation: scroll 250s linear infinite; 
+  will-change: transform;
 }
 
 .podcast .box2, .podcast .box {
@@ -668,6 +670,14 @@ footer{
 .studio-gallery-section {
     padding: clamp(72px, 9vw, 140px) 0;
     background: #050505;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #gallery,
+  #brand_logo {
+    animation: none;
+    transform: none;
+  }
 }
 
 .gallery-shell {

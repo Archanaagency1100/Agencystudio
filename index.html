@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-accent-css-only>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,7 +68,7 @@
       .hero-section {
          padding: 20px 0 0 0; 
         position: relative;
-        border-bottom: #e5b400 1.5px solid;
+        border-bottom: var(--accent-yellow) 1.5px solid;
       }
 
       .label-text {
@@ -88,7 +88,7 @@
       }
 
       .hero-title span {
-        color: #e5b400;
+        color: var(--accent-yellow);
       }
 
       .hero-description {
@@ -154,7 +154,7 @@
         top: 0;
         z-index: 1000;
         color: var(--text-dark);
-        background: #e5b400;
+        background: var(--accent-yellow);
         border: 1.5px solid var(--accent-yellow);
         display: inline-block;
         padding: 0px 50px;
@@ -555,70 +555,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/assets/js/aos-loader.js"></script>
-    <script src="/assets/js/accent.js"></script>
-    <script>
-      (function () {
-        const portrait = document.getElementById("founderPortrait");
-        if (!portrait) return;
-
-        const selectedColour = document.documentElement.dataset.siteAccent || "#e5b400";
-
-        function hexToRgb(hex) {
-          return [1, 3, 5].map(function (offset) {
-            return parseInt(hex.slice(offset, offset + 2), 16);
-          });
-        }
-
-        function recolourFounderScratches() {
-          if (!portrait.naturalWidth || portrait.dataset.recoloured === "true") return;
-
-          const canvas = document.createElement("canvas");
-          const context = canvas.getContext("2d", { willReadFrequently: true });
-          if (!context) return;
-
-          canvas.width = portrait.naturalWidth;
-          canvas.height = portrait.naturalHeight;
-          context.drawImage(portrait, 0, 0);
-
-          try {
-            const frame = context.getImageData(0, 0, canvas.width, canvas.height);
-            const pixels = frame.data;
-            const target = hexToRgb(selectedColour);
-
-            for (let index = 0; index < pixels.length; index += 4) {
-              const red = pixels[index];
-              const green = pixels[index + 1];
-              const blue = pixels[index + 2];
-
-              const isYellowScratch =
-                red > 145 &&
-                green > 100 &&
-                blue < 125 &&
-                red > blue * 1.35 &&
-                green > blue * 1.2;
-
-              if (!isYellowScratch) continue;
-
-              const brightness = Math.max(red, green, blue) / 255;
-              const texture = Math.min(34, Math.abs(red - green) * 0.22);
-              pixels[index] = Math.min(255, target[0] * brightness + texture);
-              pixels[index + 1] = Math.min(255, target[1] * brightness + texture);
-              pixels[index + 2] = Math.min(255, target[2] * brightness + texture);
-            }
-
-            context.putImageData(frame, 0, 0);
-            portrait.dataset.recoloured = "true";
-            portrait.src = canvas.toDataURL("image/webp", 0.94);
-          } catch (error) {
-            console.warn("Founder scratch recolouring was skipped.", error);
-          }
-        }
-
-        if (portrait.complete) recolourFounderScratches();
-        else portrait.addEventListener("load", recolourFounderScratches, { once: true });
-      }());
-    </script>
+    <script src="/assets/js/accent.js?v=20260819-2"></script>
     <script>
       AOS.init({
         duration: 1000,
