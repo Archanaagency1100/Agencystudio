@@ -83,9 +83,9 @@
         display:none !important;
         writing-mode:vertical-rl;
         transform:translateY(-50%) rotate(180deg);
-        background:#e5b400;
+        background:var(--accent-yellow);
         color:#050505;
-        border:1px solid rgba(229,180,0,0.5);
+        border:1px solid color-mix(in srgb, var(--accent-yellow) 50%, transparent);
         backdrop-filter:blur(10px);
         letter-spacing:2px;
         text-transform:uppercase;
@@ -95,13 +95,13 @@
 
     onmouseover="
         this.style.background='rgba(5,5,5,0.9)';
-        this.style.color='#e5b400';
-        this.style.border='1px solid rgba(229,180,0,0.5)';
+        this.style.color='var(--accent-yellow)';
+        this.style.border='1px solid color-mix(in srgb, var(--accent-yellow) 50%, transparent)';
     "
     onmouseout="
-        this.style.background='#e5b400';
+        this.style.background='var(--accent-yellow)';
         this.style.color='#050505';
-        this.style.border='1px solid #e5b400';
+        this.style.border='1px solid var(--accent-yellow)';
     "
 >
 
@@ -154,7 +154,7 @@
                 transition: color 0.3s ease;
                 outline: none;
             "
-            onmouseover="this.style.color='#e5b400';"
+            onmouseover="this.style.color='var(--accent-yellow)';"
             onmouseout="this.style.color='#ffffff';">
         View All
     </button>
@@ -819,7 +819,7 @@
     <!-- Legacy page-only recolor retained as inert reference; shared accent.js now handles the whole site. -->
     <script type="application/json" data-legacy-accent-script>
       (function(){  
-        const TARGET_RGB = [229,180,0]; // rgb of #e5b400
+        const TARGET_RGB = [229,180,0]; // rgb of var(--accent-yellow)
         function parseRgb(s){ if(!s) return null; const m = s.match(/rgba?\(([^)]+)\)/); if(!m) return null; return m[1].split(',').slice(0,3).map(x=>parseInt(x,10)); }
         function eqRgb(s, arr){ const p = parseRgb(s); if(!p) return false; return p[0]===arr[0] && p[1]===arr[1] && p[2]===arr[2]; }
         function setImp(el, prop, val){ try{ el.style.setProperty(prop, val, 'important'); }catch(e){} }

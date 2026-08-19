@@ -13,7 +13,7 @@
         :root {
             --bg-color: #050505;
             --bg-charcoal: #111111;
-            --accent-gold: #e5b400;
+            --accent-gold: var(--accent-yellow);
             --text-light: #ffffff;
             --text-secondary: #cccccc;
             --text-muted: #8a8a8a;
@@ -45,7 +45,7 @@
             border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 2.5rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(229, 180, 0, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 25px color-mix(in srgb, var(--accent-yellow) 5%, transparent);
             position: relative;
         }
 
@@ -109,7 +109,7 @@
         .form-control:focus {
             outline: none;
             border-color: var(--accent-gold);
-            box-shadow: 0 0 8px rgba(229, 180, 0, 0.25);
+            box-shadow: 0 0 8px color-mix(in srgb, var(--accent-yellow) 25%, transparent);
         }
 
         textarea.form-control {
@@ -137,7 +137,7 @@
         .btn:hover {
             background-color: #ffffff;
             color: #050505;
-            box-shadow: 0 0 15px rgba(229, 180, 0, 0.4);
+            box-shadow: 0 0 15px color-mix(in srgb, var(--accent-yellow) 40%, transparent);
         }
 
         .btn:disabled {

@@ -332,7 +332,7 @@
 }
 
 .agency-portfolio .portfolio-item:focus-visible {
-  outline: 3px solid #e5b400;
+  outline: 3px solid var(--accent-yellow);
   outline-offset: 4px;
 }
 
@@ -426,7 +426,7 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: #e5b400;
+  background: var(--accent-yellow);
   color: #111;
   font-size: 17px;
   opacity: 0;
@@ -619,8 +619,8 @@
 
   &:hover,
   &.active {
-    border-color: #e5b400;
-    background: #e5b400;
+    border-color: var(--accent-yellow);
+    background: var(--accent-yellow);
     color: #111;
   }
 }
@@ -635,7 +635,7 @@
   margin-left: auto;
   background: #fff;
   scrollbar-width: thin;
-  scrollbar-color: #e5b400 #181818;
+  scrollbar-color: var(--accent-yellow) #181818;
   transition: width 0.35s ease, height 0.35s ease, border-radius 0.35s ease;
 
   img {

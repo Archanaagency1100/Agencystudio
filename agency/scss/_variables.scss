@@ -5,7 +5,7 @@ $color-black-pure:    #000000;
 $color-black-brand:   #050505;
 $color-black-dark:    #111111;
 $color-gold-brand:    #e5b400;
-$color-gold-hover:    #d1a400;
+$color-gold-hover:    color-mix(in srgb, var(--accent-yellow) 88%, black);
 $color-white-pure:    #ffffff;
 $color-white-bg:      #f9f9f9;
 $color-white-mute:    #fafafa;

@@ -69,7 +69,7 @@
             height: 1px;
             flex: 1;
             content: "";
-            background: linear-gradient(90deg, #e5b400, rgba(229, 180, 0, 0));
+            background: linear-gradient(90deg, var(--accent-yellow), color-mix(in srgb, var(--accent-yellow) 0%, transparent));
         }
         .client-toggle {
             display: inline-flex;
@@ -97,7 +97,7 @@
         .client-toggle__button:hover { color: #050505; }
         .client-toggle__button.active {
             background: #050505;
-            color: #e5b400;
+            color: var(--accent-yellow);
             box-shadow: 0 8px 20px rgba(5, 5, 5, 0.18);
         }
         .client-toggle__button:active { transform: scale(0.97); }
@@ -148,7 +148,7 @@
         }
         .artist-box:hover {
             transform: translateY(-6px);
-            border-color: rgba(229, 180, 0, 0.3);
+            border-color: color-mix(in srgb, var(--accent-yellow) 30%, transparent);
         }
         .artist-box:hover img {
             transform: scale(1.04);
@@ -156,7 +156,7 @@
             opacity: 1;
         }
         .artist-box:hover .artist-name {
-            color: #e5b400;
+            color: var(--accent-yellow);
         }
         #brand_logo {
             display: grid !important;

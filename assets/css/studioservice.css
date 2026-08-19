@@ -19,8 +19,8 @@
             --podcast-production-black-soft: #0d0d0d;
             --podcast-production-card: #121212;
             --podcast-production-card-hover: #171717;
-            --podcast-production-gold: #e5b400;
-            --podcast-production-gold-hover: #f1c527;
+            --podcast-production-gold: var(--accent-yellow);
+            --podcast-production-gold-hover: color-mix(in srgb, var(--accent-yellow) 88%, white);
             --podcast-production-white: #ffffff;
             --podcast-production-muted: #aaa69d;
             --podcast-production-line: rgba(255, 255, 255, 0.12);
@@ -142,11 +142,11 @@
             width: min(43vw, 580px);
             aspect-ratio: 1;
             content: "";
-            border: 1px solid rgba(229, 180, 0, 0.35);
+            border: 1px solid color-mix(in srgb, var(--accent-yellow) 35%, transparent);
             border-radius: 50%;
             box-shadow:
-                0 0 0 58px rgba(229, 180, 0, 0.022),
-                0 0 0 116px rgba(229, 180, 0, 0.014);
+                0 0 0 58px color-mix(in srgb, var(--accent-yellow) 2.2%, transparent),
+                0 0 0 116px color-mix(in srgb, var(--accent-yellow) 1.4%, transparent);
             transform: translateY(-50%);
         }
 
@@ -262,7 +262,7 @@
             background:
                 radial-gradient(
                     circle at 90% 15%,
-                    rgba(229, 180, 0, 0.095),
+                    color-mix(in srgb, var(--accent-yellow) 9.5%, transparent),
                     transparent 29%
                 ),
                 #090909;
@@ -386,7 +386,7 @@
 
         .podcast-production-type-card:hover {
             transform: translateY(-7px);
-            border-color: rgba(229, 180, 0, 0.52);
+            border-color: color-mix(in srgb, var(--accent-yellow) 52%, transparent);
             background-color: var(--podcast-production-card-hover);
         }
 
@@ -414,7 +414,7 @@
             height: 45px;
             align-items: center;
             justify-content: center;
-            border: 1px solid rgba(229, 180, 0, 0.38);
+            border: 1px solid color-mix(in srgb, var(--accent-yellow) 38%, transparent);
             color: var(--podcast-production-gold);
         }
 
@@ -519,7 +519,7 @@
 
         .podcast-production-includes-card:hover {
             transform: translateX(6px);
-            border-color: rgba(229, 180, 0, 0.52);
+            border-color: color-mix(in srgb, var(--accent-yellow) 52%, transparent);
             background-color: var(--podcast-production-card-hover);
         }
 
@@ -552,7 +552,7 @@
             align-items: center;
             justify-content: center;
             justify-self: end;
-            border: 1px solid rgba(229, 180, 0, 0.34);
+            border: 1px solid color-mix(in srgb, var(--accent-yellow) 34%, transparent);
             color: var(--podcast-production-gold);
         }
 
@@ -560,7 +560,7 @@
             margin-top: 22px;
             padding: 25px 28px;
             border-left: 3px solid var(--podcast-production-gold);
-            background: rgba(229, 180, 0, 0.05);
+            background: color-mix(in srgb, var(--accent-yellow) 5%, transparent);
         }
 
         .podcast-production-includes-note p {
@@ -578,7 +578,7 @@
             background:
                 radial-gradient(
                     circle at 91% 15%,
-                    rgba(229, 180, 0, 0.07),
+                    color-mix(in srgb, var(--accent-yellow) 7%, transparent),
                     transparent 27%
                 ),
                 #090909;
@@ -603,7 +603,7 @@
 
         .podcast-production-faq-item:hover {
             transform: translateX(-6px);
-            border-color: rgba(229, 180, 0, 0.52);
+            border-color: color-mix(in srgb, var(--accent-yellow) 52%, transparent);
             background-color: var(--podcast-production-card-hover);
         }
 

@@ -355,7 +355,7 @@ body.film-modal-open {
     z-index: 1;
     width: min(1180px, 94vw);
     overflow: hidden;
-    border: 1px solid rgba(229, 180, 0, 0.45);
+    border: 1px solid color-mix(in srgb, var(--accent-yellow) 45%, transparent);
     border-radius: 4px;
     background: #050505;
     box-shadow: 0 30px 100px rgba(0, 0, 0, 0.9);
@@ -412,8 +412,8 @@ body.film-modal-open {
 .film-modal__vimeo-link:hover,
 .film-modal__vimeo-link:focus-visible {
     color: #050505;
-    border-color: #e5b400;
-    background: #e5b400;
+    border-color: var(--accent-yellow);
+    background: var(--accent-yellow);
 }
 
 .film-modal__close {
@@ -429,7 +429,7 @@ body.film-modal-open {
 
 .film-modal__close:hover,
 .film-modal__close:focus-visible {
-    color: #e5b400;
+    color: var(--accent-yellow);
 }
 
 .film-modal__video {
@@ -484,7 +484,7 @@ body.film-modal-open {
 .portfolio-slider-control:hover,
 .portfolio-slider-control:focus-visible {
     color: #050505;
-    background: #e5b400;
+    background: var(--accent-yellow);
 }
 
 .portfolio-slider-control:disabled {
@@ -493,7 +493,7 @@ body.film-modal-open {
 }
 
 .portfolio-slider-control:disabled:hover {
-    color: #e5b400;
+    color: var(--accent-yellow);
     background: #050505;
 }
 
@@ -622,13 +622,13 @@ footer{
 .custom-radio {
     width: 18px;
     height: 18px;
-    border: 1px solid #e5b400 !important;
+    border: 1px solid var(--accent-yellow) !important;
 }
 
 .custom-radio:checked {
-    background-color: #e5b400 !important;
-    border-color: #e5b400 !important;
-    shadow: 0 0 0 2px rgba(229, 180, 0, 0.5) !important;
+    background-color: var(--accent-yellow) !important;
+    border-color: var(--accent-yellow) !important;
+    shadow: 0 0 0 2px color-mix(in srgb, var(--accent-yellow) 50%, transparent) !important;
 }
 
 
@@ -707,7 +707,7 @@ footer{
 .gallery-eyebrow {
     display: block;
     margin-bottom: 18px;
-    color: #e5b400;
+    color: var(--accent-yellow);
     font: 800 11px/1.2 Arial, sans-serif;
     letter-spacing: 2.4px;
     text-transform: uppercase;
@@ -749,7 +749,7 @@ footer{
 }
 
 .gallery-section-meta strong {
-    color: #e5b400;
+    color: var(--accent-yellow);
     font-size: 25px;
     letter-spacing: -.04em;
 }
@@ -878,7 +878,7 @@ footer{
 .gallery-card:hover::after,
 .gallery-card:focus-visible::after {
     inset: 7px;
-    border-color: rgba(229, 180, 0, .62);
+    border-color: color-mix(in srgb, var(--accent-yellow) 62%, transparent);
 }
 
 .gallery-card:hover .gallery-card-shade,
@@ -895,7 +895,7 @@ footer{
 .gallery-card:hover .gallery-card-action i,
 .gallery-card:focus-visible .gallery-card-action i { transform: rotate(90deg) scale(1.12); }
 
-.gallery-card:focus-visible { outline: 2px solid #e5b400; outline-offset: 3px; }
+.gallery-card:focus-visible { outline: 2px solid var(--accent-yellow); outline-offset: 3px; }
 
 @media (max-width: 1199.98px) { .gallery-masonry-grid { column-count: 3; } }
 
@@ -981,8 +981,8 @@ footer{
 }
 
 .lightbox-btn:hover {
-    color: #e5b400;
-    border-color: #e5b400;
+    color: var(--accent-yellow);
+    border-color: var(--accent-yellow);
 }
 
 .lightbox-close {
@@ -1058,7 +1058,7 @@ footer{
 
 .kicker{
     font-family:Arial,sans-serif;
-    color:#e5b400;
+    color:var(--accent-yellow);
     font-size:11px;
     font-weight:800;
     letter-spacing:2.4px;
@@ -1112,15 +1112,15 @@ footer{
 .form-select:focus{
     background:#080808;
     color:#fff;
-    border-color:#e5b400;
+    border-color:var(--accent-yellow);
     box-shadow:none;
 }
 
 .filter-btn{
     width:100%;
     height:46px;
-    border:1px solid #e5b400;
-    background:#e5b400;
+    border:1px solid var(--accent-yellow);
+    background:var(--accent-yellow);
     color:#030303;
     font-family:Arial,sans-serif;
     font-size:11px;
@@ -1191,7 +1191,7 @@ footer{
 
 .read-link{
     font-family:Arial,sans-serif;
-    color:#e5b400;
+    color:var(--accent-yellow);
     text-decoration:none;
     font-size:11px;
     font-weight:900;
@@ -1216,8 +1216,8 @@ footer{
 
 .page-btn.active,
 .page-btn:hover{
-    border-color:#e5b400;
-    color:#e5b400;
+    border-color:var(--accent-yellow);
+    color:var(--accent-yellow);
 }
 
 .empty-state{
@@ -1293,7 +1293,7 @@ footer{
 
 .kicker{
     font-family:Arial,sans-serif;
-    color:#e5b400;
+    color:var(--accent-yellow);
     font-size:11px;
     font-weight:800;
     letter-spacing:2.4px;
@@ -1415,7 +1415,7 @@ body.article-detail-page{
 }
 
 .artical-detail-content a{
-    color:#e5b400;
+    color:var(--accent-yellow);
 }
 
 .artical-detail-content img{
@@ -1428,8 +1428,8 @@ body.article-detail-page{
 
 .artical-detail-content blockquote{
     break-inside:avoid;
-    border-top:1px solid #e5b400;
-    border-bottom:1px solid #e5b400;
+    border-top:1px solid var(--accent-yellow);
+    border-bottom:1px solid var(--accent-yellow);
     padding:24px 0;
     margin:34px 0;
     font-size:21px;
@@ -1476,7 +1476,7 @@ body.article-detail-page{
     font-family:Arial,sans-serif;
     font-size:11px;
     letter-spacing:2px;
-    color:#e5b400;
+    color:var(--accent-yellow);
     text-transform:uppercase;
     padding-bottom:14px;
     border-bottom:1px solid gray;
@@ -1491,7 +1491,7 @@ body.article-detail-page{
 
 .sidebar-box span{
     font-family:Arial,sans-serif;
-    color:#e5b400;
+    color:var(--accent-yellow);
     font-size:11px;   
     letter-spacing:1.5px;
     text-transform:uppercase;
@@ -1518,9 +1518,9 @@ body.article-detail-page{
     justify-content:center;
     align-items:center;
     padding:15px 18px;
-    border:1px solid var(--accent-yellow, #e5b400);
+    border:1px solid var(--accent-yellow);
     background:transparent;
-    color:var(--accent-yellow, #e5b400);
+    color:var(--accent-yellow);
     text-decoration:none;
     font-family:Arial,sans-serif;
     font-size:11px;
@@ -1532,8 +1532,8 @@ body.article-detail-page{
 
 .artical-detail-btn:hover,
 .artical-detail-btn:focus-visible{
-    background:var(--accent-yellow, #e5b400);
-    border-color:var(--accent-yellow, #e5b400);
+    background:var(--accent-yellow);
+    border-color:var(--accent-yellow);
     color:#030303;
 }
 

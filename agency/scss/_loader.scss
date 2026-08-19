@@ -29,14 +29,14 @@ body.loaded {
     background: linear-gradient(
       90deg,
       transparent,
-      #ffcc33,
-      #fff0a6,
+      var(--accent-yellow),
+      color-mix(in srgb, var(--accent-yellow) 35%, white),
       transparent
     );
     filter: blur(1px);
     box-shadow:
-      0 0 25px #ffcc33,
-      0 0 60px rgba(255, 204, 51, 0.8);
+      0 0 25px var(--accent-yellow),
+      0 0 60px color-mix(in srgb, var(--accent-yellow) 80%, transparent);
     animation: streakMove 3s ease-in-out infinite;
   }
 
@@ -86,7 +86,7 @@ body.loaded {
         height: 18px;
         border-radius: 4px;
         background: #080808;
-        border: 1px solid #ffcc33;
+        border: 1px solid var(--accent-yellow);
       }
 
       .lens {
@@ -105,15 +105,15 @@ body.loaded {
           #050505 70%
         );
         box-shadow:
-          0 0 22px rgba(255, 204, 51, 0.55),
-          inset 0 0 18px rgba(255, 204, 51, 0.25);
+          0 0 22px color-mix(in srgb, var(--accent-yellow) 55%, transparent),
+          inset 0 0 18px color-mix(in srgb, var(--accent-yellow) 25%, transparent);
         animation: lensRotate 3s ease-in-out infinite;
 
         .lens-ring {
           position: absolute;
           inset: 9px;
           border-radius: 50%;
-          border: 2px dashed #ffcc33;
+          border: 2px dashed var(--accent-yellow);
         }
 
         .glass {
@@ -179,14 +179,14 @@ body.loaded {
     inset: 50%;
     width: 20px;
     height: 20px;
-    background: #fff3a3;
+    background: color-mix(in srgb, var(--accent-yellow) 35%, white);
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
     opacity: 0;
     box-shadow:
-      0 0 40px #fff3a3,
-      0 0 100px #ffcc33,
-      0 0 220px rgba(255, 204, 51, 0.9);
+      0 0 40px color-mix(in srgb, var(--accent-yellow) 35%, white),
+      0 0 100px var(--accent-yellow),
+      0 0 220px color-mix(in srgb, var(--accent-yellow) 90%, transparent);
     animation: cameraFlash 3s ease-in-out infinite;
   }
 
@@ -195,9 +195,9 @@ body.loaded {
       position: absolute;
       width: 5px;
       height: 5px;
-      background: #ffcc33;
+      background: var(--accent-yellow);
       border-radius: 50%;
-      box-shadow: 0 0 15px #ffcc33;
+      box-shadow: 0 0 15px var(--accent-yellow);
       opacity: 0;
       animation: particleMove 3s ease-in-out infinite;
 
