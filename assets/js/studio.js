@@ -336,3 +336,20 @@ if (!document.querySelector('script[src="/assets/js/aos-loader.js"]')) {
   aosLoader.src = "/assets/js/aos-loader.js";
   document.body.appendChild(aosLoader);
 }
+
+// Continuous marquees should only animate while they are actually visible.
+document.addEventListener("DOMContentLoaded", function () {
+    const strips = document.querySelectorAll(".podcast .slider-wrapper");
+    if (!strips.length || !("IntersectionObserver" in window)) {
+        strips.forEach(function (strip) { strip.classList.add("is-in-view"); });
+        return;
+    }
+
+    const stripObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            entry.target.classList.toggle("is-in-view", entry.isIntersecting);
+        });
+    }, { rootMargin: "100px 0px" });
+
+    strips.forEach(function (strip) { stripObserver.observe(strip); });
+});

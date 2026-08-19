@@ -245,7 +245,7 @@
             let textLabel = logo.img.split('/').pop().split('.')[0].replace(/[-_]/g, ' ').toUpperCase();
             return `
                 <div class="box position-relative overflow-hidden">
-                    <img src="${logo.img}" alt="${textLabel}">
+                    <img src="${logo.img}" alt="${textLabel}" loading="lazy" decoding="async">
                     <div class="position-absolute bottom-0 start-0 w-100 p-2 text-white"
                         style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); font-size: 10px; text-align: center; letter-spacing: 2px; margin-bottom: 20px; font-weight: 600;">
                         ${textLabel}
@@ -255,6 +255,8 @@
         }).join('');
     }
 
-    const brandHTMLString = generateBrandHTML(logos);
+    // Use a representative strip here; the dedicated client page contains
+    // the complete list. This keeps the animated layer small and responsive.
+    const brandHTMLString = generateBrandHTML(logos.slice(0, 36));
 
     brandContainer.innerHTML = brandHTMLString + brandHTMLString;

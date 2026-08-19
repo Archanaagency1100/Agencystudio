@@ -30,7 +30,7 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-light);
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 a{
     text-decoration: none;
@@ -270,7 +270,7 @@ nav-link::after{
         }
 
 /* Cross-site responsive foundations */
-html { width: 100%; overflow-x: hidden; -webkit-text-size-adjust: 100%; }
+html { width: 100%; overflow-x: clip; -webkit-text-size-adjust: 100%; }
 *, *::before, *::after { box-sizing: border-box; }
 img, picture, video, canvas, svg, iframe { max-width: 100%; }
 img, video { height: auto; }

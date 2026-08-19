@@ -485,7 +485,7 @@ function generateGalleryHTML(items) {
             
             
                 <div class="box position-relative overflow-hidden">
-                    <img src="${work.img}" alt="${work.name}">
+                    <img src="${work.img}" alt="${work.name}" loading="lazy" decoding="async">
                     <div class="position-absolute bottom-0 start-0 w-100 p-2 text-white"
                         style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); font-size: 10px; text-align: center; letter-spacing: 2px; margin-bottom: 20px; font-weight: 600;">
                         ${work.name.toUpperCase()}
@@ -497,7 +497,10 @@ function generateGalleryHTML(items) {
 }
 
 
-const baseHTML = generateGalleryHTML(works);
+// The full collection remains available on the client page. Keeping only a
+// representative set in the animated homepage strip prevents hundreds of
+// decoded images from competing with scrolling.
+const baseHTML = generateGalleryHTML(works.slice(0, 24));
 
 //
 gallery.innerHTML = baseHTML + baseHTML;

@@ -55,14 +55,12 @@ a{
   flex-wrap: nowrap !important;
   width: max-content !important; 
   animation: scroll 155s linear infinite;
-  will-change: transform;
 }
 #brand_logo {
   display: flex !important;
   flex-wrap: nowrap !important;
   width: max-content !important; 
   animation: scroll 250s linear infinite; 
-  will-change: transform;
 }
 
 .podcast .box2, .podcast .box {
@@ -78,6 +76,17 @@ a{
   flex-shrink: 0;
   margin: 0;
   padding: 0 5px; 
+  contain: layout paint;
+}
+
+.podcast .slider-wrapper #gallery,
+.podcast .slider-wrapper #brand_logo {
+  animation-play-state: paused;
+}
+
+.podcast .slider-wrapper.is-in-view #gallery,
+.podcast .slider-wrapper.is-in-view #brand_logo {
+  animation-play-state: running;
 }
         
 .podcast .box2 img {
@@ -95,7 +104,8 @@ a{
   object-position: center center;
 }
 
-.podcast .slider-wrapper:hover #gallery, .podcast .slider-wrapper:hover #brand_logo {
+.podcast .slider-wrapper.is-in-view:hover #gallery,
+.podcast .slider-wrapper.is-in-view:hover #brand_logo {
   animation-play-state: paused;
 }
 
