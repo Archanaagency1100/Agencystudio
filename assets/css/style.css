@@ -910,8 +910,12 @@ body.loaded #agency-loader {
 
 @media (min-width: 768px) and (max-width: 1400px) {
   .a11-services {
-    height: 140vh;
-    padding: 10px 0;
+    height: auto;
+    min-height: 0;
+    padding: clamp(32px, 5vw, 64px) 0 20px;
+  }
+  .a11-services__deck {
+    height: 740px;
   }
 }
 @media (max-width: 767px) {
@@ -1117,9 +1121,27 @@ body.loaded #agency-loader {
 @media (min-width: 768px) and (max-width: 1400px) {
   .web-showcase__lane {
     width: 33.33% !important;
+    height: min(620px, 60vh);
+    height: min(620px, 60svh);
   }
   .web-showcase__lane:nth-child(4), .web-showcase__lane:nth-child(5) {
     display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1366px) {
+  .trusted-industries-heading {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem;
+  }
+
+  .podcast {
+    padding-top: 1rem !important;
+  }
+
+  .review-marquee {
+    padding-top: 56px;
+    padding-bottom: 80px;
   }
 }
 @media (max-width: 767px) {
