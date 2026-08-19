@@ -1450,6 +1450,19 @@ body.article-detail-page{
     padding-left:25px;
 }
 
+.artical-detail-sidebar .article-sidebar-ad {
+    position: relative;
+    z-index: 1;
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    max-width: 100%;
+    height: auto !important;
+    margin: 0 0 20px;
+    opacity: 1 !important;
+    object-fit: contain;
+}
+
 @media (min-width:992px){
     .artical-detail-wrapper,
     .artical-detail-wrapper > .container,
