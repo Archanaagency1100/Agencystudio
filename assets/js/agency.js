@@ -6,26 +6,32 @@ if (!document.querySelector('script[src="/assets/js/aos-loader.js"]')) {
     document.body.appendChild(aosLoader);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const navPlaceholder = document.getElementById('nav-placeholder');
-
-    if (navPlaceholder) {
-        // Universal absolute path starting with /
-        const navbarPath = "/components/agency/navbar.html";
-
-        fetch(navbarPath)
-            .then(response => {
-                if (!response.ok) throw new Error('Navbar file not found');
+function fetchAgencyComponent(paths) {
+    return paths.reduce(function (attempt, path) {
+        return attempt.catch(function () {
+            return fetch(path, { cache: "no-cache" }).then(function (response) {
+                if (!response.ok) throw new Error(path + " returned " + response.status);
                 return response.text();
-            })
-            .then(data => {
-                navPlaceholder.innerHTML = data;
-                highlightActiveLink();
-                setupMobileCollapse();
-            })
-            .catch(err => console.error('Error loading navigation:', err));
-    }
-});
+            });
+        });
+    }, Promise.reject());
+}
+
+function loadAgencyNavigation() {
+    const navPlaceholder = document.getElementById("nav-placeholder");
+    if (!navPlaceholder || navPlaceholder.children.length) return;
+
+    fetchAgencyComponent([
+        "/components/agency/navbar.html",
+        "../components/agency/navbar.html"
+    ]).then(function (data) {
+        navPlaceholder.innerHTML = data;
+        highlightActiveLink();
+        setupMobileCollapse();
+    }).catch(function (error) {
+        console.error("Error loading navigation:", error);
+    });
+}
 
 function highlightActiveLink() {
     const currentPath = window.location.pathname;
@@ -55,41 +61,24 @@ function setupMobileCollapse() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+function loadAgencyFooter() {
+    const footerPlaceholder = document.getElementById("footer-placeholder");
+    if (!footerPlaceholder || footerPlaceholder.children.length) return;
 
-    const footerPlaceholder = document.getElementById('footer-placeholder');
+    fetchAgencyComponent([
+        "/components/agency/footer.html",
+        "../components/agency/footer.html"
+    ]).then(function (data) {
+        footerPlaceholder.innerHTML = data;
+    }).catch(function (error) {
+        console.error("Error loading footer:", error);
+    });
+}
 
-
-
-    if (footerPlaceholder) {
-
-       
-
-        const footerPath = "/components/agency/footer.html";
-
-
-
-        fetch(footerPath)
-
-            .then(response => {
-
-                if (!response.ok) throw new Error('Footer file not found');
-
-                return response.text();
-
-            })
-
-            .then(data => {
-
-                footerPlaceholder.innerHTML = data;
-
-            })
-
-            .catch(err => console.error('Error loading footer:', err));
-
-    }
-
-});
+// This file is loaded after both placeholders, so do not wait for another
+// lifecycle event before starting the component requests.
+loadAgencyNavigation();
+loadAgencyFooter();
 // ------------------services circle effect----------------
 
 document.addEventListener("DOMContentLoaded", function () {
