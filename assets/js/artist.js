@@ -4,7 +4,7 @@ const gallery = document.getElementById("gallery");
 
 /* ALL IMAGES ARRAY */
 const works = [
-
+    
     {
         img: "../assets/img/Clients/ISHWAK_SINGH.webp",
         name: "ISHWAK SINGH"
@@ -503,4 +503,4 @@ function generateGalleryHTML(items) {
 const baseHTML = generateGalleryHTML(works.slice(0, 24));
 
 //
-gallery.innerHTML = baseHTML + baseHTML;
+if (gallery) gallery.innerHTML = baseHTML + baseHTML;
