@@ -11,6 +11,16 @@
     const yellowReferences = [[229, 180, 0], [255, 204, 0], [255, 193, 7], [240, 185, 0], [255, 204, 51], [255, 230, 0]];
     const directProperties = ["color", "backgroundColor", "borderTopColor", "borderRightColor", "borderBottomColor", "borderLeftColor", "outlineColor", "textDecorationColor", "columnRuleColor", "caretColor"];
     const compoundProperties = ["backgroundImage", "boxShadow", "textShadow"];
+    const founderHueRotation = {
+        "#14f721": "hue-rotate(78deg)",
+        "#00c8d4": "hue-rotate(137deg)",
+        "#ff2bd6": "hue-rotate(267deg)",
+        "#ff6b00": "hue-rotate(330deg)",
+        "#a855f7": "hue-rotate(218deg)",
+        "#32d75f": "hue-rotate(91deg)",
+        "#ffe600": "hue-rotate(5deg)",
+        "#3b82ff": "hue-rotate(174deg)"
+    };
     const pendingElements = new Set();
     let workScheduled = false;
 
@@ -19,6 +29,7 @@
     ["--accent-yellow", "--accent-gold", "--color-gold-brand", "--podcast-production-gold", "--brand-management-accent"].forEach(function (property) {
         document.documentElement.style.setProperty(property, accent);
     });
+    document.documentElement.style.setProperty("--founder-accent-filter", founderHueRotation[accent] || "none");
 
     // Pages built entirely with accent variables need no computed-style scan.
     if (document.documentElement.hasAttribute("data-accent-css-only")) return;
