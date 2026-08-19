@@ -491,8 +491,10 @@ body.loaded #agency-loader {
 }
 @media (max-width: 991px) {
   .a11-hero {
-    height: 70vh;
-    padding-top: 15vh !important;
+    /* height: 70vh;
+    padding-top: 15vh !important; */
+    height: 56vh;
+    padding-top: 7vh !important;
   }
 }
 .a11-hero__badge {
