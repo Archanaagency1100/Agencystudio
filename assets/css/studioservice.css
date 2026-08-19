@@ -848,7 +848,8 @@
             }
 
             .podcast-production-hero-title {
-                font-size: clamp(3rem, 17vw, 4.6rem);
+                /* font-size: clamp(3rem, 17vw, 4.6rem); */
+                font-size : clamp(2rem, 17vw, 1rem);    
             }
 
             .podcast-production-section-heading {
