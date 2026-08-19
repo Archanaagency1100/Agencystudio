@@ -612,6 +612,49 @@ body.loaded #agency-loader {
   }
 }
 
+/* Tablet hero: covers iPad Mini/Air/Pro in portrait and landscape. */
+@media (min-width: 768px) and (max-width: 1366px) {
+  .a11-hero {
+    height: min(850px, calc(100vh - 48px));
+    height: min(850px, calc(100svh - 48px));
+    min-height: 680px;
+    padding-top: clamp(4rem, 8vh, 6.5rem) !important;
+    padding-top: clamp(4rem, 8svh, 6.5rem) !important;
+  }
+
+  .a11-hero__headline {
+    width: min(88%, 780px);
+    font-size: clamp(2rem, 4.2vw, 3.4rem);
+    line-height: 1.12;
+  }
+
+  .a11-hero__subtext {
+    max-width: 650px;
+  }
+
+  .hero-pic {
+    height: clamp(300px, 36svh, 460px);
+    padding-top: 0;
+    background-size: contain;
+    background-position: center bottom;
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+  .a11-hero {
+    height: min(760px, calc(100vh - 48px));
+    height: min(760px, calc(100svh - 48px));
+    min-height: 620px;
+    padding-top: clamp(3.25rem, 7vh, 5rem) !important;
+    padding-top: clamp(3.25rem, 7svh, 5rem) !important;
+  }
+
+  .hero-pic {
+    height: clamp(260px, 34svh, 390px);
+  }
+}
+
 .a11-services__badge-dot {
   animation: a11DotPulse 2s ease-in-out infinite;
 }
