@@ -217,6 +217,15 @@
 }
 
 @media (max-width: 767.98px) {
+    .service-page--hide-mobile-hero-image .brand-management-hero {
+        min-height: 0;
+        background-image: none;
+    }
+
+    .service-page--hide-mobile-hero-image .brand-management-hero__grid::after {
+        display: none;
+    }
+
     .brand-management-hero {
         background-size: auto 310px;
 
