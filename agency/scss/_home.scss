@@ -477,6 +477,48 @@
   .fluid-ripple-overlay-canvas { display: none !important; }
 }
 
+// Compact phones and small laptop viewports created by display scaling.
+@media (max-width: 575px) {
+  .a11-services {
+    min-height: 520px;
+
+    &__card {
+      width: 250px !important;
+      height: 250px !important;
+      margin-right: -32px !important;
+    }
+  }
+}
+
+@media (max-width: 767px) and (max-height: 600px) {
+  .a11-services {
+    min-height: 430px;
+
+    .row > div:first-child {
+      margin-bottom: 12px !important;
+    }
+
+    .a11-services-swiper {
+      padding-top: 12px !important;
+      padding-bottom: 28px !important;
+    }
+
+    &__heading {
+      font-size: clamp(1.85rem, 7vw, 2.4rem);
+    }
+
+    &__card {
+      width: 220px !important;
+      height: 220px !important;
+      margin-right: -28px !important;
+
+      &-inner {
+        padding: 24px;
+      }
+    }
+  }
+}
+
 
 // ------slidding reels----------------
 
