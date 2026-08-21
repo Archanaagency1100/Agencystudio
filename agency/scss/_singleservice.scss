@@ -163,8 +163,23 @@
 
 @media (max-width: 991.98px) {
     .brand-management-hero {
+        padding-bottom: 0;
+        background-position: right bottom;
+        background-size: auto 390px;
+        background-attachment: scroll;
+
         &__grid {
             grid-template-columns: 1fr;
+            min-height: 0;
+
+            // The desktop artwork occupies the empty second grid column. Once the
+            // layout stacks, reserve a row for it so it does not sit behind text.
+            &::after {
+                display: block;
+                min-height: 390px;
+                content: "";
+                pointer-events: none;
+            }
         }
 
         &__content {
@@ -203,6 +218,12 @@
 
 @media (max-width: 767.98px) {
     .brand-management-hero {
+        background-size: auto 310px;
+
+        &__grid::after {
+            min-height: 310px;
+        }
+
         &__content {
             padding:
                 55px
@@ -239,6 +260,12 @@
 
 @media (max-width: 575.98px) {
     .brand-management-hero {
+        background-size: auto 245px;
+
+        &__grid::after {
+            min-height: 245px;
+        }
+
         &__content {
             padding:
                 46px
