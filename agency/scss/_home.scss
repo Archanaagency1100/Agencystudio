@@ -407,7 +407,8 @@
 
 @media (max-width: 767px) {
   .a11-services {
-    height: 70vh;
+    height: auto;
+    min-height: 560px;
     padding: 10px 0;
 
     &__bg-watermark {
@@ -418,6 +419,8 @@
     .a11-services-swiper {
       width: 100%;
       padding: 30px 10px 60px !important; 
+      touch-action: pan-y;
+      overscroll-behavior-x: contain;
     }
 
     &__deck {

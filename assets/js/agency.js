@@ -98,7 +98,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     speed: 600,
                     resistanceRatio: 0.85,
                     grabCursor: true,
-                    slideToClickedSlide: true, 
+                    slideToClickedSlide: true,
+                    threshold: 5,
+                    touchAngle: 35,
+                    touchStartPreventDefault: false,
+                    touchMoveStopPropagation: false,
                 });
             } else if (!isMobileWidth && servicesSwiper) {
                 servicesSwiper.destroy(true, true);

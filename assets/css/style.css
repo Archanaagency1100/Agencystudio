@@ -920,7 +920,8 @@ body.loaded #agency-loader {
 }
 @media (max-width: 767px) {
   .a11-services {
-    height: 70vh;
+    height: auto;
+    min-height: 560px;
     padding: 10px 0;
   }
   .a11-services__bg-watermark {
@@ -929,6 +930,8 @@ body.loaded #agency-loader {
   .a11-services .a11-services-swiper {
     width: 100%;
     padding: 30px 10px 60px !important;
+    touch-action: pan-y;
+    overscroll-behavior-x: contain;
   }
   .a11-services__deck {
     display: flex !important;
