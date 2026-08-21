@@ -579,7 +579,7 @@ body.loaded #agency-loader {
 @media (min-width: 992px) and (max-width: 1400px) {
   .hero-pic {
     padding-top: 55px;
-    height: 51vh;
+    height: 65vh;
   }
 }
 @media (max-width: 768px) {
