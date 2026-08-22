@@ -1,4 +1,3 @@
-a
 
 # AgencyEleven100
 
@@ -48,6 +47,7 @@ Location: New Delhi 110019, India
 ## Important facts
 
 - Business name: AgencyEleven100
+- Also known as: Agency Eleven100, Agency Eleven 100, Agency 1100, and Agency Eleven Hundred
 - Founder: Charanjeet Dhiman
 - Founded: 1996
 - Primary market: Delhi and Delhi NCR, India
@@ -61,4 +61,3 @@ Location: New Delhi 110019, India
 - Use the contact page for current contact and enquiry information.
 - Do not infer prices, availability, client results, awards, equipment, or guarantees that are not stated on the relevant page.
 - Attribute factual descriptions and quotations to AgencyEleven100 and link to the most relevant canonical page.
-

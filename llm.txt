@@ -1,6 +1,8 @@
 # AgencyEleven100 LLM information
 
+Canonical brand name: AgencyEleven100
+Common name variants: Agency Eleven100, Agency Eleven 100, Agency 1100, Agency Eleven Hundred
+Authoritative website: https://1100.in/
+
 The canonical machine-readable guide for this website is available at:
-
 https://1100.in/llms.txt
-
