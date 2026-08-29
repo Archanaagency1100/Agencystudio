@@ -3230,7 +3230,7 @@ footer.footer .copyright p {
   width: 360px;
   height: 360px;
   content: "";
-  border: 1px solid rgba(229, 180, 0, 0.12);
+  border: 1px solid color-mix(in srgb, var(--accent-yellow) 12%, transparent);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -3251,7 +3251,7 @@ footer.footer .copyright p {
   align-items: center;
   gap: 10px;
   margin-bottom: 13px;
-  color: #e5b400;
+  color: var(--accent-yellow);
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.13em;
@@ -3282,7 +3282,7 @@ footer.footer .copyright p {
   width: 45px;
   height: 3px;
   margin-top: 23px;
-  background: #e5b400;
+  background: var(--accent-yellow);
 }
 .brand-management-faq__visual {
   position: relative;
@@ -3323,7 +3323,7 @@ footer.footer .copyright p {
   z-index: 4;
   top: 0;
   left: 50%;
-  color: #e5b400;
+  color: var(--accent-yellow);
   font-family: Arial, sans-serif;
   font-size: 8.2rem;
   font-weight: 700;
@@ -3374,7 +3374,7 @@ footer.footer .copyright p {
   width: 110px;
   height: 65px;
   opacity: 0.68;
-  background-image: radial-gradient(circle, #e5b400 1.5px, transparent 1.7px);
+  background-image: radial-gradient(circle, var(--accent-yellow) 1.5px, transparent 1.7px);
   background-size: 13px 13px;
   pointer-events: none;
 }
@@ -3393,8 +3393,8 @@ footer.footer .copyright p {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .brand-management-faq__item:has(.brand-management-faq__button:not(.collapsed)) {
-  border-color: rgba(229, 180, 0, 0.35);
-  box-shadow: inset 3px 0 0 #e5b400;
+  border-color: color-mix(in srgb, var(--accent-yellow) 35%, transparent);
+  box-shadow: inset 3px 0 0 var(--accent-yellow);
 }
 .brand-management-faq__button {
   display: grid;
@@ -3424,7 +3424,7 @@ footer.footer .copyright p {
   box-shadow: none;
 }
 .brand-management-faq__button:not(.collapsed) {
-  background: rgba(229, 180, 0, 0.035);
+  background: color-mix(in srgb, var(--accent-yellow) 3.5%, transparent);
   color: #050505;
   box-shadow: none;
 }
@@ -3439,7 +3439,7 @@ footer.footer .copyright p {
   width: 29px;
   height: 29px;
   justify-self: end;
-  border: 1px solid rgba(229, 180, 0, 0.42);
+  border: 1px solid color-mix(in srgb, var(--accent-yellow) 42%, transparent);
   border-radius: 50%;
   transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
@@ -3450,7 +3450,7 @@ footer.footer .copyright p {
   width: 10px;
   height: 1.5px;
   content: "";
-  background: #e5b400;
+  background: var(--accent-yellow);
   transform: translate(-50%, -50%);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -3458,8 +3458,8 @@ footer.footer .copyright p {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 .brand-management-faq__button:hover .brand-management-faq__toggle, .brand-management-faq__button:not(.collapsed) .brand-management-faq__toggle {
-  border-color: #e5b400;
-  background: #e5b400;
+  border-color: var(--accent-yellow);
+  background: var(--accent-yellow);
 }
 .brand-management-faq__button:hover .brand-management-faq__toggle::before, .brand-management-faq__button:hover .brand-management-faq__toggle::after, .brand-management-faq__button:not(.collapsed) .brand-management-faq__toggle::before, .brand-management-faq__button:not(.collapsed) .brand-management-faq__toggle::after {
   background: #050505;
