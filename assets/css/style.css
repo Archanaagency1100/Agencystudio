@@ -191,7 +191,7 @@ body.loaded #agency-loader {
   width: 105px;
   height: 40px;
   background: linear-gradient(145deg, #1c1c1c, #060606);
-  border: 2px solid #d9a61f;
+  border: 2px solid var(--accent-yellow);
   border-radius: 12px 12px 6px 6px;
 }
 #agency-loader .camera .body {
@@ -202,8 +202,8 @@ body.loaded #agency-loader {
   height: 95px;
   border-radius: 18px;
   background: linear-gradient(145deg, #171717, #050505);
-  border: 2px solid #d9a61f;
-  box-shadow: 0 0 20px rgba(255, 198, 45, 0.35), inset 0 0 18px rgba(255, 198, 45, 0.12);
+  border: 2px solid var(--accent-yellow);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--accent-yellow) 35%, transparent), inset 0 0 18px color-mix(in srgb, var(--accent-yellow) 12%, transparent);
 }
 #agency-loader .camera .body .viewfinder {
   position: absolute;
@@ -223,7 +223,7 @@ body.loaded #agency-loader {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, #050505 30%, #151515 55%, #d9a61f 58%, #050505 70%);
+  background: radial-gradient(circle, #050505 30%, #151515 55%, var(--accent-yellow) 58%, #050505 70%);
   box-shadow: 0 0 22px color-mix(in srgb, var(--accent-yellow) 55%, transparent), inset 0 0 18px color-mix(in srgb, var(--accent-yellow) 25%, transparent);
   animation: lensRotate 3s ease-in-out infinite;
 }
@@ -237,7 +237,7 @@ body.loaded #agency-loader {
   position: absolute;
   inset: 22px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #fff4b0, #d9a61f 25%, #050505 70%);
+  background: radial-gradient(circle at 35% 30%, color-mix(in srgb, var(--accent-yellow) 35%, white), var(--accent-yellow) 25%, #050505 70%);
 }
 #agency-loader .camera .body .lens .shutter {
   position: absolute;
