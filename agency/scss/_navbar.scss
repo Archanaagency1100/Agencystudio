@@ -49,7 +49,7 @@
       transition: color $transition-fast;
 
       &:hover, &.active {
-        color: $color-gold-brand !important;
+        color: var(--accent-yellow) !important;
       }
     }
   }
@@ -59,7 +59,7 @@
     display: inline-flex;
     align-items: center;
     padding: 11px 26px;
-    border: 1px solid $color-gold-brand;
+    border: 1px solid var(--accent-yellow);
     border-radius: 50px;
     font-family: $font-primary;
     font-size: 14px;
@@ -85,7 +85,7 @@
     display: inline-flex;
     align-items: center;
     padding: 12px 30px;
-    background-color: $color-gold-brand;
+    background-color: var(--accent-yellow);
     border-radius: 12px;
     font-family: $font-primary;
     font-size: 13px;
@@ -93,7 +93,7 @@
     color: $color-black-brand;
     text-decoration: none;
     letter-spacing: 0.3px;
-    border: 1px solid $color-gold-brand;
+    border: 1px solid var(--accent-yellow);
     transition: background-color $transition-fast, border-color $transition-fast;
 
     &:hover {
@@ -120,7 +120,7 @@
         padding: 0;
 
         &.active, &:hover {
-          color: $color-gold-brand !important;
+          color: var(--accent-yellow) !important;
         }
       }
     }

@@ -77,18 +77,18 @@
   }
 
   &__btn {
-    border: 2.5px solid $color-gold-brand;
+    border: 2.5px solid var(--accent-yellow);
     border-radius: 100px;
     color: $color-black-brand;
     font-weight: $weight-bold;
     transition: $transition-cinematic;
 
     &:hover {
-      background-color: $color-gold-brand;
-      border-color: $color-gold-brand;
+      background-color: var(--accent-yellow);
+      border-color: var(--accent-yellow);
       color: $color-white-pure;
       transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba($color-gold-brand, 0.25);
+      box-shadow: 0 20px 40px color-mix(in srgb, var(--accent-yellow) 25%, transparent);
     }
   }
 }
@@ -117,7 +117,7 @@
   @media (max-width: 768px) {
     
     height: 35vh;
-   
+    
     background-size: cover; 
     
     
