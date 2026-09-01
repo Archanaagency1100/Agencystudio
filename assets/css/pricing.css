@@ -54,14 +54,22 @@
     text-transform: uppercase;
 }
 
+.rate-section-description {
+    max-width: 620px;
+    margin: -8px 0 28px 30px;
+    color: var(--pricing-muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
 .rate-table-wrap {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: visible;
 }
 
 .rate-table {
     width: 100%;
-    min-width: 1120px;
+    min-width: 0;
     border-collapse: collapse;
     table-layout: fixed;
     color: var(--pricing-text);
@@ -71,6 +79,7 @@
 .rate-table td {
     padding: 24px 20px;
     border-bottom: 1px solid var(--pricing-rule);
+    overflow-wrap: anywhere;
     text-align: left;
     vertical-align: top;
 }
@@ -154,6 +163,22 @@
 @media (max-width: 767.98px) {
     .pricing-content { padding-top: 165px; }
     .pricing-footer-note { align-items: flex-start; flex-direction: column; }
+    .rate-section-description { margin-left: 0; }
     .rate-table th,
-    .rate-table td { padding-block: 20px; }
+    .rate-table td {
+        padding: 16px 7px;
+        font-size: 11px;
+    }
+    .rate-table thead th {
+        height: auto;
+        font-size: 9px;
+        letter-spacing: .5px;
+    }
+    .rate-table thead th:first-child,
+    .rate-table tbody th {
+        width: 58px;
+    }
+    .rate-table tbody tr:last-child td {
+        font-size: clamp(16px, 4.5vw, 22px);
+    }
 }
