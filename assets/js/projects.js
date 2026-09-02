@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // phoneImgUrl: "/assets/img/project-phone.png"
     { title: "ALAP NGO", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/alap.webp", meta: "Website / Creative Direction" },
     { title: "7D STUDIO", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/7d-1.jpg", meta: "Logo Design / Identity" },
-    { title: "10 SF PARA", categories: "films", gridClass: "item-normal", videoUrl: "https://vimeo.com/1032973329/885b9ad0a6?fl=pl&fe=sh", imgUrl: "/assets/img/film_poster/10SF PARA.webp", meta: "Films / Video Production" },
+    { title: "10 SF PARA", categories: "films", gridClass: "item-normal", videoUrl: "https://vimeo.com/654834911/577306fb47", imgUrl: "/assets/img/film_poster/10SF PARA.webp", meta: "Films / Video Production" },
     { title: "AAHAR WAYS", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/aahar-ways.jpg", meta: "Branding / Identity Design" },
     { title: "ALAP NGO MUSIC", categories: "websites ui-ux", gridClass: "item-wide", imgUrl: "/assets/img/recentwork/web/allahabadmusicclub.webp", meta: "Website / Creative Direction" },
     { title: "AAJ TAK", categories: " branding", gridClass: "item-normal", imgUrl: "/assets/img/recentwork/logo design/aajtak2.jpg", meta: "Branding / Graphic Assets" },
