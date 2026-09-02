@@ -171,6 +171,10 @@ function openPortfolioModal(projectIndex) {
     
     if (modal && imgElement && videoElement && titleElement) {
         modal.classList.toggle("is-film-modal", Boolean(project.videoUrl));
+        modal.classList.toggle(
+            "is-branding-modal",
+            project.categories.split(/\s+/).includes("branding")
+        );
         titleElement.innerText = project.title;
         mediaFrame.className = "modal-img-container";
         deviceControls.style.display = isWebsite ? "flex" : "none";
@@ -244,7 +248,7 @@ function closePortfolioModal() {
     const modal = document.getElementById("portfolioAssetModal");
     if (modal) {
         modal.style.display = "none";
-        modal.classList.remove("is-film-modal");
+        modal.classList.remove("is-film-modal", "is-branding-modal");
         document.body.style.overflow = "auto";
     }
     const videoElement = document.getElementById("modalPreviewVideo");

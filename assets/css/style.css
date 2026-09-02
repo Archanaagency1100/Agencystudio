@@ -1794,6 +1794,32 @@ footer.footer .copyright p {
   animation: portfolioModalFadeIn 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Keep square branding artwork from filling an oversized desktop modal. */
+@media (min-width: 768px) {
+  .portfolio-modal-wrapper.is-branding-modal {
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .portfolio-modal-wrapper.is-branding-modal .portfolio-modal-content {
+    max-width: 720px;
+    max-height: calc(100dvh - 48px);
+    overflow: hidden;
+  }
+
+  .portfolio-modal-wrapper.is-branding-modal .modal-img-container {
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .portfolio-modal-wrapper.is-branding-modal .modal-img-container img {
+    width: auto !important;
+    max-width: 100%;
+    max-height: calc(100dvh - 220px) !important;
+    margin: 0 auto;
+  }
+}
+
 .portfolio-modal-close {
   position: absolute;
   top: 20px;
@@ -1896,6 +1922,7 @@ footer.footer .copyright p {
          column-gap: 18px !important;
   }
 }
+
 @media (min-width: 1400px) {
   .agency-portfolio .portfolio-grid {
     -moz-column-count: 4 !important;
